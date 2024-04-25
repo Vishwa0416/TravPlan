@@ -37,8 +37,8 @@ class First extends StatelessWidget {
                   decoration: BoxDecoration(
                     boxShadow: [
                       BoxShadow(
-                        color:
-                            Color.fromARGB(255, 186, 189, 144).withOpacity(1),
+                        color: const Color.fromARGB(255, 186, 189, 144)
+                            .withOpacity(1),
                         spreadRadius: 5,
                         blurRadius: 7,
                         offset: const Offset(0, 3),
@@ -72,8 +72,8 @@ class First extends StatelessWidget {
                   decoration: BoxDecoration(
                     boxShadow: [
                       BoxShadow(
-                        color:
-                            Color.fromARGB(255, 186, 189, 144).withOpacity(1),
+                        color: const Color.fromARGB(255, 186, 189, 144)
+                            .withOpacity(1),
                         spreadRadius: 5,
                         blurRadius: 7,
                         offset: const Offset(0, 3),
@@ -97,6 +97,28 @@ class First extends StatelessWidget {
                 ),
               ),
             ),
+            const Positioned(
+                top: 530,
+                left: 30,
+                child: Row(
+                  children: [
+                    Image(image: AssetImage('assets/RememberMe.png')),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Text('Remember Me'),
+                    SizedBox(
+                      width: 100,
+                    ),
+                    Text(
+                      'Forgot Password?',
+                      style: TextStyle(
+                          color: Color.fromARGB(255, 0, 115, 209),
+                          decoration: TextDecoration.underline,
+                          decorationColor: Color.fromARGB(255, 0, 116, 211)),
+                    )
+                  ],
+                ))
           ],
         ),
       ),
