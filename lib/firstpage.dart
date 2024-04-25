@@ -13,16 +13,87 @@ class First extends StatelessWidget {
             fit: BoxFit.cover,
           ),
         ),
-        child: const Stack(
+        child: Stack(
           children: [
-            Positioned(
+            const Positioned(
               top: 50,
               left: 20,
               child: Text(
                 'SignIn',
                 style: TextStyle(
-                  fontSize: 24,
+                  fontSize: 34,
+                  fontWeight: FontWeight.bold,
                   color: Colors.white,
+                ),
+              ),
+            ),
+            Positioned(
+              top: 350,
+              left: 0,
+              right: 0,
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 30.0),
+                child: Container(
+                  decoration: BoxDecoration(
+                    boxShadow: [
+                      BoxShadow(
+                        color:
+                            Color.fromARGB(255, 186, 189, 144).withOpacity(1),
+                        spreadRadius: 5,
+                        blurRadius: 7,
+                        offset: const Offset(0, 3),
+                      ),
+                    ],
+                  ),
+                  child: const TextField(
+                    decoration: InputDecoration(
+                      prefixIcon: Icon(Icons.person),
+                      hintText: 'Username',
+                      hintStyle: TextStyle(color: Color.fromARGB(110, 0, 0, 0)),
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(10)),
+                        borderSide: BorderSide(
+                          color: Color.fromARGB(255, 21, 22, 23),
+                          width: 2.0,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ),
+            Positioned(
+              top: 450,
+              left: 0,
+              right: 0,
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 30.0),
+                child: Container(
+                  decoration: BoxDecoration(
+                    boxShadow: [
+                      BoxShadow(
+                        color:
+                            Color.fromARGB(255, 186, 189, 144).withOpacity(1),
+                        spreadRadius: 5,
+                        blurRadius: 7,
+                        offset: const Offset(0, 3),
+                      ),
+                    ],
+                  ),
+                  child: const TextField(
+                    decoration: InputDecoration(
+                      prefixIcon: Icon(Icons.lock),
+                      hintText: 'Password',
+                      hintStyle: TextStyle(color: Color.fromARGB(110, 0, 0, 0)),
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(10)),
+                        borderSide: BorderSide(
+                          color: Color.fromARGB(255, 21, 22, 23),
+                          width: 2.0,
+                        ),
+                      ),
+                    ),
+                  ),
                 ),
               ),
             ),
