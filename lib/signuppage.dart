@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:test01/signuppage.dart';
 
-class First extends StatelessWidget {
-  const First({Key? key}) : super(key: key);
+class SignUp extends StatelessWidget {
+  const SignUp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +28,42 @@ class First extends StatelessWidget {
               ),
             ),
             Positioned(
-              top: 230,
+              top: 110,
+              left: 0,
+              right: 0,
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 30.0),
+                child: Container(
+                  decoration: BoxDecoration(
+                    boxShadow: [
+                      BoxShadow(
+                        color: const Color.fromARGB(255, 186, 189, 144)
+                            .withOpacity(1),
+                        spreadRadius: 5,
+                        blurRadius: 7,
+                        offset: const Offset(0, 3),
+                      ),
+                    ],
+                  ),
+                  child: const TextField(
+                    decoration: InputDecoration(
+                      prefixIcon: Icon(Icons.person),
+                      hintText: 'Username',
+                      hintStyle: TextStyle(color: Color.fromARGB(110, 0, 0, 0)),
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(10)),
+                        borderSide: BorderSide(
+                          color: Color.fromARGB(255, 21, 22, 23),
+                          width: 2.0,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ),
+            Positioned(
+              top: 190,
               left: 0,
               right: 0,
               child: Padding(
@@ -106,29 +140,20 @@ class First extends StatelessWidget {
                   Image(image: AssetImage('assets/RememberMe.png')),
                   SizedBox(width: 10),
                   Text('Remember Me'),
-                  SizedBox(width: 100),
-                  Text(
-                    'Forgot Password?',
-                    style: TextStyle(
-                      color: Color.fromARGB(255, 0, 115, 209),
-                      decoration: TextDecoration.underline,
-                      decorationColor: Color.fromARGB(255, 0, 116, 211),
-                    ),
-                  )
                 ],
               ),
             ),
             const Positioned(
               top: 480,
               left: 110,
-              child: Image(image: AssetImage('assets/signin1.png')),
+              child: Image(image: AssetImage('assets/signup1.png')),
             ),
             Positioned(
               top: 560,
               left: 75,
               child: Row(
                 children: [
-                  const Text("Don't have an account?"),
+                  const Text("Already have an account?"),
                   const SizedBox(width: 25),
                   GestureDetector(
                     onTap: () {
