@@ -28,7 +28,7 @@ class First extends StatelessWidget {
               ),
             ),
             Positioned(
-              top: 350,
+              top: 230,
               left: 0,
               right: 0,
               child: Padding(
@@ -63,7 +63,7 @@ class First extends StatelessWidget {
               ),
             ),
             Positioned(
-              top: 450,
+              top: 320,
               left: 0,
               right: 0,
               child: Padding(
@@ -98,7 +98,7 @@ class First extends StatelessWidget {
               ),
             ),
             const Positioned(
-                top: 530,
+                top: 420,
                 left: 30,
                 child: Row(
                   children: [
@@ -118,7 +118,11 @@ class First extends StatelessWidget {
                           decorationColor: Color.fromARGB(255, 0, 116, 211)),
                     )
                   ],
-                ))
+                )),
+            const Positioned(
+                top: 500,
+                left: 110,
+                child: Image(image: AssetImage('assets/signin1.png')))
           ],
         ),
       ),
