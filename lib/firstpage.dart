@@ -141,7 +141,19 @@ class First extends StatelessWidget {
                     )
                   ],
                 )),
-            Positioned(top: 580, left: 185, child: Text('or'))
+            const Positioned(top: 580, left: 185, child: Text('or')),
+            const Positioned(
+                top: 610,
+                left: 50,
+                child: Column(
+                  children: [
+                    Image(image: AssetImage('assets/Loginfb.png')),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Image(image: AssetImage('assets/Logingoogle.png'))
+                  ],
+                ))
           ],
         ),
       ),
