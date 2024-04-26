@@ -122,7 +122,26 @@ class First extends StatelessWidget {
             const Positioned(
                 top: 500,
                 left: 110,
-                child: Image(image: AssetImage('assets/signin1.png')))
+                child: Image(image: AssetImage('assets/signin1.png'))),
+            const Positioned(
+                top: 560,
+                left: 75,
+                child: Row(
+                  children: [
+                    Text("Don't have an account?"),
+                    SizedBox(
+                      width: 25,
+                    ),
+                    Text(
+                      'Sign Up',
+                      style: TextStyle(
+                          color: Color.fromARGB(255, 0, 115, 209),
+                          decoration: TextDecoration.underline,
+                          decorationColor: Color.fromARGB(255, 0, 116, 211)),
+                    )
+                  ],
+                )),
+            Positioned(top: 580, left: 185, child: Text('or'))
           ],
         ),
       ),
