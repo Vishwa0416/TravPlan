@@ -83,7 +83,7 @@ class SignUp extends StatelessWidget {
                   ),
                   child: const TextField(
                     decoration: InputDecoration(
-                      prefixIcon: Icon(Icons.person),
+                      prefixIcon: Icon(Icons.email),
                       hintText: 'Email Address',
                       hintStyle: TextStyle(color: Color.fromARGB(110, 0, 0, 0)),
                       border: OutlineInputBorder(
@@ -118,7 +118,7 @@ class SignUp extends StatelessWidget {
                   ),
                   child: const TextField(
                     decoration: InputDecoration(
-                      prefixIcon: Icon(Icons.person),
+                      prefixIcon: Icon(Icons.phone),
                       hintText: 'Phone Number',
                       hintStyle: TextStyle(color: Color.fromARGB(110, 0, 0, 0)),
                       border: OutlineInputBorder(
@@ -188,7 +188,7 @@ class SignUp extends StatelessWidget {
                   ),
                   child: const TextField(
                     decoration: InputDecoration(
-                      prefixIcon: Icon(Icons.person),
+                      prefixIcon: Icon(Icons.lock),
                       hintText: 'Confirm Password',
                       hintStyle: TextStyle(color: Color.fromARGB(110, 0, 0, 0)),
                       border: OutlineInputBorder(
