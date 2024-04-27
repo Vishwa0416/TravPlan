@@ -84,7 +84,7 @@ class SignUp extends StatelessWidget {
                   child: const TextField(
                     decoration: InputDecoration(
                       prefixIcon: Icon(Icons.person),
-                      hintText: 'Username',
+                      hintText: 'Email Address',
                       hintStyle: TextStyle(color: Color.fromARGB(110, 0, 0, 0)),
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.all(Radius.circular(10)),
@@ -99,7 +99,42 @@ class SignUp extends StatelessWidget {
               ),
             ),
             Positioned(
-              top: 320,
+              top: 270,
+              left: 0,
+              right: 0,
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 30.0),
+                child: Container(
+                  decoration: BoxDecoration(
+                    boxShadow: [
+                      BoxShadow(
+                        color: const Color.fromARGB(255, 186, 189, 144)
+                            .withOpacity(1),
+                        spreadRadius: 5,
+                        blurRadius: 7,
+                        offset: const Offset(0, 3),
+                      ),
+                    ],
+                  ),
+                  child: const TextField(
+                    decoration: InputDecoration(
+                      prefixIcon: Icon(Icons.person),
+                      hintText: 'Phone Number',
+                      hintStyle: TextStyle(color: Color.fromARGB(110, 0, 0, 0)),
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(10)),
+                        borderSide: BorderSide(
+                          color: Color.fromARGB(255, 21, 22, 23),
+                          width: 2.0,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ),
+            Positioned(
+              top: 350,
               left: 0,
               right: 0,
               child: Padding(
@@ -133,8 +168,43 @@ class SignUp extends StatelessWidget {
                 ),
               ),
             ),
+            Positioned(
+              top: 430,
+              left: 0,
+              right: 0,
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 30.0),
+                child: Container(
+                  decoration: BoxDecoration(
+                    boxShadow: [
+                      BoxShadow(
+                        color: const Color.fromARGB(255, 186, 189, 144)
+                            .withOpacity(1),
+                        spreadRadius: 5,
+                        blurRadius: 7,
+                        offset: const Offset(0, 3),
+                      ),
+                    ],
+                  ),
+                  child: const TextField(
+                    decoration: InputDecoration(
+                      prefixIcon: Icon(Icons.person),
+                      hintText: 'Confirm Password',
+                      hintStyle: TextStyle(color: Color.fromARGB(110, 0, 0, 0)),
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(10)),
+                        borderSide: BorderSide(
+                          color: Color.fromARGB(255, 21, 22, 23),
+                          width: 2.0,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ),
             const Positioned(
-              top: 420,
+              top: 500,
               left: 30,
               child: Row(
                 children: [
@@ -145,7 +215,7 @@ class SignUp extends StatelessWidget {
               ),
             ),
             Positioned(
-              top: 480,
+              top: 540,
               left: 110,
               child: GestureDetector(
                 onTap: () {
@@ -160,7 +230,7 @@ class SignUp extends StatelessWidget {
               ),
             ),
             Positioned(
-              top: 560,
+              top: 590,
               left: 75,
               child: Row(
                 children: [
@@ -176,7 +246,7 @@ class SignUp extends StatelessWidget {
                       );
                     },
                     child: const Text(
-                      'Sign Up',
+                      'Sign In',
                       style: TextStyle(
                         color: Color.fromARGB(255, 0, 115, 209),
                         decoration: TextDecoration.underline,
@@ -187,18 +257,7 @@ class SignUp extends StatelessWidget {
                 ],
               ),
             ),
-            const Positioned(top: 580, left: 185, child: Text('or')),
-            const Positioned(
-              top: 610,
-              left: 50,
-              child: Column(
-                children: [
-                  Image(image: AssetImage('assets/Loginfb.png')),
-                  SizedBox(height: 10),
-                  Image(image: AssetImage('assets/Logingoogle.png')),
-                ],
-              ),
-            ),
+            const Positioned(top: 620, left: 185, child: Text('or')),
           ],
         ),
       ),
