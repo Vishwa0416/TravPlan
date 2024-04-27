@@ -65,7 +65,8 @@ flutter:
     - assets/Loginfb.png
     - assets/Logingoogle.png
     - assets/signup1.png
-    - assets/phone.png
+    - assets/googlelogo.png
+    - assets/fblogo.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

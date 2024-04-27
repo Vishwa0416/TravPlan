@@ -258,6 +258,18 @@ class SignUp extends StatelessWidget {
               ),
             ),
             const Positioned(top: 620, left: 185, child: Text('or')),
+            Positioned(
+                top: 660,
+                left: 150,
+                child: Row(
+                  children: [
+                    Image(image: AssetImage('assets/googlelogo.png')),
+                    SizedBox(
+                      width: 40,
+                    ),
+                    Image(image: AssetImage('assets/fblogo.png')),
+                  ],
+                ))
           ],
         ),
       ),
