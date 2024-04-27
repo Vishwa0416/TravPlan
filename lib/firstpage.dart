@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:test01/signuppage.dart';
+import 'package:test01/homepage.dart';
 
 class First extends StatelessWidget {
   const First({Key? key}) : super(key: key);
@@ -118,11 +119,20 @@ class First extends StatelessWidget {
                 ],
               ),
             ),
-            const Positioned(
-              top: 480,
-              left: 110,
-              child: Image(image: AssetImage('assets/signin1.png')),
-            ),
+            Positioned(
+                top: 480,
+                left: 110,
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const Home(),
+                      ),
+                    );
+                  },
+                  child: Image(image: AssetImage('assets/signin1.png')),
+                )),
             Positioned(
               top: 560,
               left: 75,
