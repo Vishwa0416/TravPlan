@@ -258,7 +258,7 @@ class SignUp extends StatelessWidget {
               ),
             ),
             const Positioned(top: 620, left: 185, child: Text('or')),
-            Positioned(
+            const Positioned(
                 top: 660,
                 left: 150,
                 child: Row(

@@ -13,7 +13,15 @@ class Home extends StatelessWidget {
             fit: BoxFit.cover,
           ),
         ),
-        child: Stack(children: []),
+        child: const Stack(children: [
+          Positioned(
+              top: 50,
+              left: 10,
+              child: Text(
+                'Hello Vishwa',
+                style: TextStyle(fontSize: 30),
+              ))
+        ]),
       ),
     );
   }
