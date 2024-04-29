@@ -7,6 +7,7 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
+        //background
         decoration: const BoxDecoration(
           image: DecorationImage(
             image: AssetImage('assets/signinback.png'),
@@ -15,6 +16,7 @@ class Home extends StatelessWidget {
         ),
         child: const Stack(children: [
           Positioned(
+              //hello vishwa text
               top: 50,
               left: 10,
               child: Text(

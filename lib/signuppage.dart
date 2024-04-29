@@ -16,6 +16,7 @@ class SignUp extends StatelessWidget {
         ),
         child: Stack(
           children: [
+            //signup text
             const Positioned(
               top: 50,
               left: 20,
@@ -29,6 +30,7 @@ class SignUp extends StatelessWidget {
               ),
             ),
             Positioned(
+              //username
               top: 110,
               left: 0,
               right: 0,
@@ -64,6 +66,7 @@ class SignUp extends StatelessWidget {
               ),
             ),
             Positioned(
+              //email address
               top: 190,
               left: 0,
               right: 0,
@@ -99,6 +102,7 @@ class SignUp extends StatelessWidget {
               ),
             ),
             Positioned(
+              //phone number
               top: 270,
               left: 0,
               right: 0,
@@ -134,6 +138,7 @@ class SignUp extends StatelessWidget {
               ),
             ),
             Positioned(
+              //password
               top: 350,
               left: 0,
               right: 0,
@@ -169,6 +174,7 @@ class SignUp extends StatelessWidget {
               ),
             ),
             Positioned(
+              //confirm password
               top: 430,
               left: 0,
               right: 0,
@@ -204,6 +210,7 @@ class SignUp extends StatelessWidget {
               ),
             ),
             const Positioned(
+              //remember me
               top: 500,
               left: 30,
               child: Row(
@@ -215,6 +222,7 @@ class SignUp extends StatelessWidget {
               ),
             ),
             Positioned(
+              //sign in image
               top: 540,
               left: 110,
               child: GestureDetector(
@@ -230,6 +238,7 @@ class SignUp extends StatelessWidget {
               ),
             ),
             Positioned(
+              //text
               top: 590,
               left: 75,
               child: Row(
@@ -246,6 +255,7 @@ class SignUp extends StatelessWidget {
                       );
                     },
                     child: const Text(
+                      //sign in text
                       'Sign In',
                       style: TextStyle(
                         color: Color.fromARGB(255, 0, 115, 209),
@@ -259,6 +269,7 @@ class SignUp extends StatelessWidget {
             ),
             const Positioned(top: 620, left: 185, child: Text('or')),
             const Positioned(
+                //google and fblogos
                 top: 660,
                 left: 150,
                 child: Row(
