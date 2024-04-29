@@ -10,7 +10,7 @@ class Home extends StatelessWidget {
         //background
         decoration: const BoxDecoration(
           image: DecorationImage(
-            image: AssetImage('assets/signinback.png'),
+            image: AssetImage('assets/Home.png'),
             fit: BoxFit.cover,
           ),
         ),

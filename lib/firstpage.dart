@@ -42,8 +42,8 @@ class First extends StatelessWidget {
                   decoration: BoxDecoration(
                     boxShadow: [
                       BoxShadow(
-                        color: const Color.fromARGB(255, 186, 189, 144)
-                            .withOpacity(1),
+                        color:
+                            Color.fromARGB(255, 186, 189, 144).withOpacity(1),
                         spreadRadius: 5,
                         blurRadius: 7,
                         offset: const Offset(0, 3),
