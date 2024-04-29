@@ -9,6 +9,7 @@ class First extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
+        //background
         decoration: const BoxDecoration(
           image: DecorationImage(
             image: AssetImage('assets/signinback.png'),
@@ -17,6 +18,7 @@ class First extends StatelessWidget {
         ),
         child: Stack(
           children: [
+            //sign in
             const Positioned(
               top: 50,
               left: 20,
@@ -30,6 +32,7 @@ class First extends StatelessWidget {
               ),
             ),
             Positioned(
+              //username
               top: 230,
               left: 0,
               right: 0,
@@ -65,6 +68,7 @@ class First extends StatelessWidget {
               ),
             ),
             Positioned(
+              //password
               top: 320,
               left: 0,
               right: 0,
@@ -100,6 +104,7 @@ class First extends StatelessWidget {
               ),
             ),
             const Positioned(
+              //remember me row
               top: 420,
               left: 30,
               child: Row(
@@ -120,6 +125,7 @@ class First extends StatelessWidget {
               ),
             ),
             Positioned(
+                //sign in image
                 top: 480,
                 left: 110,
                 child: GestureDetector(
@@ -134,6 +140,7 @@ class First extends StatelessWidget {
                   child: Image(image: AssetImage('assets/signin1.png')),
                 )),
             Positioned(
+              //don't have an account
               top: 560,
               left: 75,
               child: Row(
@@ -150,6 +157,7 @@ class First extends StatelessWidget {
                       );
                     },
                     child: const Text(
+                      //sign up
                       'Sign Up',
                       style: TextStyle(
                         color: Color.fromARGB(255, 0, 115, 209),
@@ -163,6 +171,7 @@ class First extends StatelessWidget {
             ),
             const Positioned(top: 580, left: 185, child: Text('or')),
             const Positioned(
+              //logos
               top: 610,
               left: 50,
               child: Column(
