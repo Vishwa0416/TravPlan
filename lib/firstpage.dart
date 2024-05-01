@@ -43,7 +43,23 @@ class First extends StatelessWidget {
             Positioned(
                 top: 530,
                 left: 245,
-                child: Image(image: AssetImage('assets/line.png')))
+                child: Image(image: AssetImage('assets/line.png'))),
+            Positioned(
+                top: 550,
+                left: 30,
+                child: Text(
+                  '  At Friends tours and travel, we customize \nreliable and trustworthy educational tours to \n        destinations all over the world',
+                  style: TextStyle(
+                      fontSize: 17, color: Color.fromARGB(255, 174, 174, 171)),
+                )),
+            Positioned(
+                top: 650,
+                left: 150,
+                child: Image(image: AssetImage('assets/dots.png'))),
+            Positioned(
+                top: 690,
+                left: 35,
+                child: Image(image: AssetImage('assets/started.png')))
           ],
         ),
       ),
