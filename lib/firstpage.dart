@@ -27,11 +27,23 @@ class First extends StatelessWidget {
                 )),
             Positioned(
                 top: 450,
-                left: 100,
+                left: 80,
                 child: Text(
                   'Life is short and \nthe world is ',
                   style: TextStyle(fontSize: 30),
-                ))
+                )),
+            Positioned(
+                top: 493,
+                left: 245,
+                child: Text(
+                  'wide',
+                  style: TextStyle(
+                      fontSize: 30, color: Color.fromARGB(255, 237, 104, 3)),
+                )),
+            Positioned(
+                top: 530,
+                left: 245,
+                child: Image(image: AssetImage('assets/line.png')))
           ],
         ),
       ),
