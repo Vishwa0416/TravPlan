@@ -19,6 +19,7 @@ class First extends StatelessWidget {
         child: const Stack(
           children: [
             Positioned(
+                //skip
                 top: 30,
                 left: 330,
                 child: Text(
@@ -26,6 +27,7 @@ class First extends StatelessWidget {
                   style: TextStyle(fontSize: 20),
                 )),
             Positioned(
+                //Big Text
                 top: 450,
                 left: 80,
                 child: Text(
@@ -33,6 +35,7 @@ class First extends StatelessWidget {
                   style: TextStyle(fontSize: 30),
                 )),
             Positioned(
+                //Small text
                 top: 493,
                 left: 245,
                 child: Text(
@@ -41,10 +44,12 @@ class First extends StatelessWidget {
                       fontSize: 30, color: Color.fromARGB(255, 237, 104, 3)),
                 )),
             Positioned(
+                //underline
                 top: 530,
                 left: 245,
                 child: Image(image: AssetImage('assets/line.png'))),
             Positioned(
+                //small text
                 top: 550,
                 left: 30,
                 child: Text(
@@ -53,10 +58,12 @@ class First extends StatelessWidget {
                       fontSize: 17, color: Color.fromARGB(255, 174, 174, 171)),
                 )),
             Positioned(
+                //three dots
                 top: 650,
                 left: 150,
                 child: Image(image: AssetImage('assets/dots.png'))),
             Positioned(
+                //get started
                 top: 690,
                 left: 35,
                 child: Image(image: AssetImage('assets/started.png')))
