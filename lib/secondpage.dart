@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:test01/secondpage.dart';
 
-class First extends StatelessWidget {
-  const First({Key? key}) : super(key: key);
+class Second extends StatelessWidget {
+  const Second({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -11,7 +10,7 @@ class First extends StatelessWidget {
         //background
         decoration: const BoxDecoration(
           image: DecorationImage(
-            image: AssetImage('assets/firstpageback.png'),
+            image: AssetImage('assets/secondpageback1.png'),
             fit: BoxFit.cover,
           ),
         ),
@@ -31,16 +30,16 @@ class First extends StatelessWidget {
               top: 450,
               left: 80,
               child: Text(
-                'Life is short and \nthe world is ',
+                "It's a big world out \nthere go ",
                 style: TextStyle(fontSize: 30),
               ),
             ),
             const Positioned(
               //Small text
               top: 493,
-              left: 245,
+              left: 205,
               child: Text(
-                'wide',
+                'explore',
                 style: TextStyle(
                     fontSize: 30, color: Color.fromARGB(255, 237, 104, 3)),
               ),
@@ -48,7 +47,7 @@ class First extends StatelessWidget {
             const Positioned(
               //underline
               top: 530,
-              left: 245,
+              left: 225,
               child: Image(image: AssetImage('assets/line.png')),
             ),
             const Positioned(
