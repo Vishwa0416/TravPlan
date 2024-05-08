@@ -72,6 +72,11 @@ flutter:
     - assets/line.png
     - assets/dots.png
     - assets/started.png
+    - assets/backpic.png
+    - assets/next.png
+    - assets/threedots2.png
+    - assets/thirdback.png
+    - assets/threedots3.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

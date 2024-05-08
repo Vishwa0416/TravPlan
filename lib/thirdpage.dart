@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:test01/thirdpage.dart';
 
-class Second extends StatelessWidget {
-  const Second({Key? key}) : super(key: key);
+class Third extends StatelessWidget {
+  const Third({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -11,7 +10,7 @@ class Second extends StatelessWidget {
         //background
         decoration: const BoxDecoration(
           image: DecorationImage(
-            image: AssetImage('assets/backpic.png'),
+            image: AssetImage('assets/thirdback.png'),
             fit: BoxFit.cover,
           ),
         ),
@@ -29,9 +28,9 @@ class Second extends StatelessWidget {
             const Positioned(
               //Big Text
               top: 450,
-              left: 80,
+              left: 50,
               child: Text(
-                "It's a big world out \nthere go ",
+                "People don’t take trips,\n trips take",
                 style: TextStyle(fontSize: 30),
               ),
             ),
@@ -40,7 +39,7 @@ class Second extends StatelessWidget {
               top: 493,
               left: 205,
               child: Text(
-                'explore',
+                'people',
                 style: TextStyle(
                     fontSize: 30, color: Color.fromARGB(255, 237, 104, 3)),
               ),
@@ -65,7 +64,7 @@ class Second extends StatelessWidget {
               //three dots
               top: 650,
               left: 150,
-              child: Image(image: AssetImage('assets/threedots2.png')),
+              child: Image(image: AssetImage('assets/threedots3.png')),
             ),
             Positioned(
               //get started
