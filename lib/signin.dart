@@ -88,6 +88,22 @@ class SignIn extends StatelessWidget {
                   color: Color.fromARGB(255, 2, 133, 215),
                 ))),
         Positioned(top: 590, left: 160, child: Text('or connect')),
+        Positioned(
+            top: 630,
+            left: 100,
+            child: Row(
+              children: [
+                Image(image: AssetImage('assets/fb.png')),
+                SizedBox(
+                  width: 30,
+                ),
+                Image(image: AssetImage('assets/insta.png')),
+                SizedBox(
+                  width: 30,
+                ),
+                Image(image: AssetImage('assets/twitter.png'))
+              ],
+            ))
       ],
     ));
   }

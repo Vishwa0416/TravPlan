@@ -79,6 +79,9 @@ flutter:
     - assets/threedots3.png
     - assets/arrow.png
     - assets/signin.png
+    - assets/fb.png
+    - assets/insta.png
+    - assets/twitter.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
