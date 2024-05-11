@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:test01/signin.dart';
 
 class Third extends StatelessWidget {
   const Third({Key? key}) : super(key: key);
@@ -47,7 +48,7 @@ class Third extends StatelessWidget {
             const Positioned(
               //underline
               top: 530,
-              left: 225,
+              left: 215,
               child: Image(image: AssetImage('assets/line.png')),
             ),
             const Positioned(
@@ -75,7 +76,7 @@ class Third extends StatelessWidget {
                   Navigator.pushReplacement(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => const Third(),
+                      builder: (context) => const SignIn(),
                     ),
                   );
                 },
