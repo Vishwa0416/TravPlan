@@ -60,7 +60,7 @@ class SignIn extends StatelessWidget {
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.all(Radius.circular(10)),
                   borderSide: BorderSide(
-                    color: Colors.blue,
+                    color: Color.fromARGB(255, 1, 134, 244),
                     width: 2.0,
                   ),
                 ),
@@ -68,6 +68,26 @@ class SignIn extends StatelessWidget {
             ),
           ),
         ),
+        Positioned(
+            top: 430,
+            left: 250,
+            child: Text(
+              'Forgot Password',
+              style: TextStyle(color: Color.fromARGB(255, 2, 133, 215)),
+            )),
+        Positioned(
+            top: 480,
+            right: 30,
+            child: Image(image: AssetImage('assets/signin.png'))),
+        Positioned(top: 550, left: 90, child: Text('Don’t have an account?')),
+        Positioned(
+            top: 550,
+            left: 250,
+            child: Text('Signup',
+                style: TextStyle(
+                  color: Color.fromARGB(255, 2, 133, 215),
+                ))),
+        Positioned(top: 590, left: 160, child: Text('or connect')),
       ],
     ));
   }

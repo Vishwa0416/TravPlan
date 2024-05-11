@@ -78,6 +78,7 @@ flutter:
     - assets/thirdback.png
     - assets/threedots3.png
     - assets/arrow.png
+    - assets/signin.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
