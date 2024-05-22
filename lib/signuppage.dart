@@ -10,10 +10,19 @@ class SignUp extends StatelessWidget {
       body: Stack(
         children: [
           Positioned(
-            top: 40,
-            left: 20,
-            child: Image.asset('assets/arrow.png'),
-          ),
+              top: 40,
+              left: 20,
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const SignIn(),
+                    ),
+                  );
+                },
+                child: Image.asset('assets/arrow.png'),
+              )),
           Center(
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 30.0),

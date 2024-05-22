@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:test01/forgotpassword.dart';
 import 'package:test01/signuppage.dart';
 import 'package:test01/firstpage.dart';
 
@@ -73,15 +74,31 @@ class SignIn extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 20),
-                  const Align(
+                  Align(
                     alignment: Alignment.centerRight,
-                    child: Text(
-                      'Forgot Password',
-                      style: TextStyle(color: Color.fromARGB(255, 2, 133, 215)),
+                    child: GestureDetector(
+                      onTap: () {
+                        Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const Forgot(),
+                          ),
+                        );
+                      },
+                      child: const Text(
+                        'Forgot Password',
+                        style:
+                            TextStyle(color: Color.fromARGB(255, 2, 133, 215)),
+                      ),
                     ),
                   ),
                   const SizedBox(height: 40),
-                  Image.asset('assets/signin.png'),
+                  GestureDetector(
+                    onTap: () {
+                      // Implement sign in functionality here
+                    },
+                    child: Image.asset('assets/signin.png'),
+                  ),
                   const SizedBox(height: 30),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
