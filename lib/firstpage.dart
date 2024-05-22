@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:test01/secondpage.dart';
+import 'package:test01/signin.dart';
 
 class First extends StatelessWidget {
   const First({Key? key}) : super(key: key);
@@ -8,7 +9,7 @@ class First extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        //background
+        // Background
         decoration: const BoxDecoration(
           image: DecorationImage(
             image: AssetImage('assets/firstpageback.png'),
@@ -17,17 +18,27 @@ class First extends StatelessWidget {
         ),
         child: Stack(
           children: [
-            const Positioned(
-              //skip
+            Positioned(
+              // Skip
               top: 30,
               left: 330,
-              child: Text(
-                'Skip',
-                style: TextStyle(fontSize: 20),
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const SignIn(),
+                    ),
+                  );
+                },
+                child: const Text(
+                  'Skip',
+                  style: TextStyle(fontSize: 20),
+                ),
               ),
             ),
             const Positioned(
-              //Big Text
+              // Big Text
               top: 450,
               left: 80,
               child: Text(
@@ -36,7 +47,7 @@ class First extends StatelessWidget {
               ),
             ),
             const Positioned(
-              //Small text
+              // Small text
               top: 493,
               left: 245,
               child: Text(
@@ -46,13 +57,13 @@ class First extends StatelessWidget {
               ),
             ),
             const Positioned(
-              //underline
+              // Underline
               top: 530,
               left: 245,
               child: Image(image: AssetImage('assets/line.png')),
             ),
             const Positioned(
-              //small text
+              // Small text
               top: 550,
               left: 30,
               child: Text(
@@ -62,13 +73,13 @@ class First extends StatelessWidget {
               ),
             ),
             const Positioned(
-              //three dots
+              // Three dots
               top: 650,
               left: 150,
               child: Image(image: AssetImage('assets/dots.png')),
             ),
             Positioned(
-              //get started
+              // Get started
               top: 690,
               left: 35,
               child: GestureDetector(

@@ -17,13 +17,23 @@ class Third extends StatelessWidget {
         ),
         child: Stack(
           children: [
-            const Positioned(
-              //skip
+            Positioned(
+              // Skip
               top: 30,
               left: 330,
-              child: Text(
-                'Skip',
-                style: TextStyle(fontSize: 20),
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const SignIn(),
+                    ),
+                  );
+                },
+                child: const Text(
+                  'Skip',
+                  style: TextStyle(fontSize: 20),
+                ),
               ),
             ),
             const Positioned(
