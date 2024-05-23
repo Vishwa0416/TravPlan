@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:test01/signin.dart';
+import 'package:test01/otppage.dart'; // Make sure to import the OTP screen
 
 class Forgot extends StatelessWidget {
   const Forgot({Key? key}) : super(key: key);
@@ -36,7 +37,7 @@ class Forgot extends StatelessWidget {
                   ),
                   const SizedBox(height: 10),
                   const Text(
-                    'Enter your email account to reset  your password',
+                    'Enter your email account to reset your password',
                     style: TextStyle(color: Color.fromARGB(255, 116, 116, 115)),
                   ),
                   const SizedBox(height: 20),
@@ -89,10 +90,16 @@ class Forgot extends StatelessWidget {
               'We have sent password recovery instructions to your email.'),
           actions: <Widget>[
             TextButton(
-              child: const Text('OK'),
               onPressed: () {
-                Navigator.of(context).pop();
+                Navigator.of(context).pop(); // Close the dialog
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const OTP(),
+                  ),
+                );
               },
+              child: const Text('OK'),
             ),
           ],
         );
