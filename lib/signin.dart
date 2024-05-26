@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:test01/forgotpassword.dart';
 import 'package:test01/signuppage.dart';
 import 'package:test01/firstpage.dart';
+import 'package:test01/homepage.dart';
 
 class SignIn extends StatelessWidget {
   const SignIn({Key? key}) : super(key: key);
@@ -95,7 +96,12 @@ class SignIn extends StatelessWidget {
                   const SizedBox(height: 40),
                   GestureDetector(
                     onTap: () {
-                      // Implement sign in functionality here
+                      Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const Home(),
+                        ),
+                      );
                     },
                     child: Image.asset('assets/signin.png'),
                   ),
