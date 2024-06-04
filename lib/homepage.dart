@@ -23,13 +23,16 @@ class Home extends StatelessWidget {
       body: Stack(
         children: [
           Positioned(
-            // Positioned widget to place the container
             top: 50,
             left: 10,
             child: Container(
-                width: 150,
-                height: 50,
-                color: Color.fromARGB(255, 183, 183, 183)),
+              width: 150,
+              height: 50,
+              decoration: BoxDecoration(
+                  color: Color.fromARGB(255, 183, 183, 183),
+                  borderRadius: BorderRadius.circular(10),
+                  image: AssetImage('assets/person.png')),
+            ),
           ),
         ],
       ),
