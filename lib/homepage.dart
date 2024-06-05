@@ -133,7 +133,11 @@ class Home extends StatelessWidget {
                       SizedBox(
                         width: 15,
                       ),
-                      Text('Sigiriya, Sri Lanka')
+                      Text(
+                        'Sigiriya, Sri Lanka',
+                        style: TextStyle(
+                            color: Color.fromARGB(255, 123, 123, 123)),
+                      )
                     ],
                   )
                 ],
