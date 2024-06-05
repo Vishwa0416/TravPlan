@@ -20,16 +20,16 @@ class CustomBottomNavBar extends StatelessWidget {
           label: 'Home',
         ),
         BottomNavigationBarItem(
+          icon: Icon(Icons.calendar_month),
+          label: 'Calendar',
+        ),
+        BottomNavigationBarItem(
           icon: Icon(Icons.search),
           label: 'Search',
         ),
         BottomNavigationBarItem(
-          icon: Icon(Icons.bookmark),
-          label: 'Bookmarks',
-        ),
-        BottomNavigationBarItem(
-          icon: Icon(Icons.notifications),
-          label: 'Notifications',
+          icon: Icon(Icons.message),
+          label: 'Messages',
         ),
         BottomNavigationBarItem(
           icon: Icon(Icons.person),
