@@ -90,6 +90,7 @@ flutter:
     - assets/bell.png
     - assets/sigiriya1.jpg
     - assets/star.png
+    - assets/location.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

@@ -124,6 +124,18 @@ class Home extends StatelessWidget {
                       Text('4.7')
                     ],
                   ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Row(
+                    children: [
+                      Image(image: AssetImage('assets/location.png')),
+                      SizedBox(
+                        width: 15,
+                      ),
+                      Text('Sigiriya, Sri Lanka')
+                    ],
+                  )
                 ],
               ))
         ],
