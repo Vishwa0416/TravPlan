@@ -22,6 +22,7 @@ class Home extends StatelessWidget {
     return Scaffold(
       body: Stack(
         children: [
+          //Image and name box
           Positioned(
             top: 50,
             left: 10,
@@ -45,9 +46,35 @@ class Home extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(width: 200),
+                //Bell icon
                 const Image(image: AssetImage('assets/bell.png')),
               ],
             ),
+          ),
+          const Positioned(
+            //Big Text
+            top: 120,
+            left: 50,
+            child: Text(
+              "Explore the \nBeautiful ",
+              style: TextStyle(fontSize: 35),
+            ),
+          ),
+          const Positioned(
+            //Small text
+            top: 170,
+            left: 205,
+            child: Text(
+              'world',
+              style: TextStyle(
+                  fontSize: 35, color: Color.fromARGB(255, 237, 104, 3)),
+            ),
+          ),
+          const Positioned(
+            //underline
+            top: 210,
+            left: 220,
+            child: Image(image: AssetImage('assets/line.png')),
           ),
         ],
       ),
