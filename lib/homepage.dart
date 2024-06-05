@@ -95,6 +95,8 @@ class Home extends StatelessWidget {
                   )
                 ],
               )),
+
+          //Sigiriya
           const Positioned(
               top: 300,
               left: 30,
@@ -135,6 +137,55 @@ class Home extends StatelessWidget {
                       ),
                       Text(
                         'Sigiriya, Sri Lanka',
+                        style: TextStyle(
+                            color: Color.fromARGB(255, 123, 123, 123)),
+                      )
+                    ],
+                  )
+                ],
+              )),
+
+          //Kandy
+          const Positioned(
+              top: 300,
+              left: 300,
+              child: Column(
+                children: [
+                  Image(
+                    image: AssetImage('assets/kandy.jpg'),
+                    width: 290,
+                    height: 336,
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Row(
+                    children: [
+                      Text(
+                        'Kandy',
+                        style: TextStyle(fontSize: 20),
+                      ),
+                      SizedBox(
+                        width: 85,
+                      ),
+                      Image(image: AssetImage('assets/star.png')),
+                      SizedBox(
+                        width: 15,
+                      ),
+                      Text('4.9')
+                    ],
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Row(
+                    children: [
+                      Image(image: AssetImage('assets/location.png')),
+                      SizedBox(
+                        width: 15,
+                      ),
+                      Text(
+                        'Kandy, Sri Lanka',
                         style: TextStyle(
                             color: Color.fromARGB(255, 123, 123, 123)),
                       )
