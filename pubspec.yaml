@@ -88,6 +88,8 @@ flutter:
     - assets/verify.png
     - assets/person.png
     - assets/bell.png
+    - assets/sigiriya1.jpg
+    - assets/star.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

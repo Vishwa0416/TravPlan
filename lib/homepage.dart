@@ -54,7 +54,7 @@ class Home extends StatelessWidget {
           const Positioned(
             //Big Text
             top: 120,
-            left: 50,
+            left: 40,
             child: Text(
               "Explore the \nBeautiful ",
               style: TextStyle(fontSize: 35),
@@ -63,7 +63,7 @@ class Home extends StatelessWidget {
           const Positioned(
             //Small text
             top: 170,
-            left: 205,
+            left: 195,
             child: Text(
               'world',
               style: TextStyle(
@@ -73,9 +73,59 @@ class Home extends StatelessWidget {
           const Positioned(
             //underline
             top: 210,
-            left: 220,
+            left: 210,
             child: Image(image: AssetImage('assets/line.png')),
           ),
+          const Positioned(
+              top: 250,
+              left: 40,
+              child: Row(
+                children: [
+                  Text(
+                    'Best Destination',
+                    style: TextStyle(fontSize: 20),
+                  ),
+                  SizedBox(
+                    width: 125,
+                  ),
+                  Text(
+                    'view all',
+                    style: TextStyle(
+                        fontSize: 15, color: Color.fromARGB(255, 49, 145, 255)),
+                  )
+                ],
+              )),
+          const Positioned(
+              top: 300,
+              left: 30,
+              child: Column(
+                children: [
+                  Image(
+                    image: AssetImage('assets/sigiriya1.jpg'),
+                    width: 290,
+                    height: 336,
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Row(
+                    children: [
+                      Text(
+                        'Sigiriya',
+                        style: TextStyle(fontSize: 20),
+                      ),
+                      SizedBox(
+                        width: 85,
+                      ),
+                      Image(image: AssetImage('assets/star.png')),
+                      SizedBox(
+                        width: 15,
+                      ),
+                      Text('4.7')
+                    ],
+                  ),
+                ],
+              ))
         ],
       ),
     );
