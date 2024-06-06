@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-import 'bottom_nav_bar.dart'; // Import the bottom nav bar widget
+import 'package:test01/location.dart';
+import 'bottom_nav_bar.dart';
 
 void main() {
   runApp(MyApp());
@@ -9,7 +9,7 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       home: Home(),
     );
   }
@@ -46,7 +46,7 @@ class _HomeState extends State<Home> {
                   width: 120,
                   height: 50,
                   decoration: BoxDecoration(
-                    color: Color.fromARGB(255, 230, 230, 230),
+                    color: const Color.fromARGB(255, 230, 230, 230),
                     borderRadius: BorderRadius.circular(10.0),
                   ),
                   child: const Row(
@@ -111,10 +111,19 @@ class _HomeState extends State<Home> {
               )),
 
           //Sigiriya
-          const Positioned(
-              top: 300,
-              left: 30,
-              child: Column(
+          Positioned(
+            top: 300,
+            left: 30,
+            child: GestureDetector(
+              onTap: () {
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const Location(),
+                  ),
+                );
+              },
+              child: const Column(
                 children: [
                   Image(
                     image: AssetImage('assets/sigiriya1.jpg'),
@@ -157,56 +166,59 @@ class _HomeState extends State<Home> {
                     ],
                   )
                 ],
-              )),
+              ),
+            ),
+          ),
 
           //Kandy
           const Positioned(
-              top: 300,
-              left: 300,
-              child: Column(
-                children: [
-                  Image(
-                    image: AssetImage('assets/kandy.jpg'),
-                    width: 290,
-                    height: 336,
-                  ),
-                  SizedBox(
-                    height: 10,
-                  ),
-                  Row(
-                    children: [
-                      Text(
-                        'Kandy',
-                        style: TextStyle(fontSize: 20),
-                      ),
-                      SizedBox(
-                        width: 85,
-                      ),
-                      Image(image: AssetImage('assets/star.png')),
-                      SizedBox(
-                        width: 15,
-                      ),
-                      Text('4.9')
-                    ],
-                  ),
-                  SizedBox(
-                    height: 10,
-                  ),
-                  Row(
-                    children: [
-                      Image(image: AssetImage('assets/location.png')),
-                      SizedBox(
-                        width: 15,
-                      ),
-                      Text(
-                        'Kandy, Sri Lanka',
-                        style: TextStyle(
-                            color: Color.fromARGB(255, 123, 123, 123)),
-                      )
-                    ],
-                  )
-                ],
-              ))
+            top: 300,
+            left: 300,
+            child: Column(
+              children: [
+                Image(
+                  image: AssetImage('assets/kandy.jpg'),
+                  width: 290,
+                  height: 336,
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                Row(
+                  children: [
+                    Text(
+                      'Kandy',
+                      style: TextStyle(fontSize: 20),
+                    ),
+                    SizedBox(
+                      width: 85,
+                    ),
+                    Image(image: AssetImage('assets/star.png')),
+                    SizedBox(
+                      width: 15,
+                    ),
+                    Text('4.9')
+                  ],
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                Row(
+                  children: [
+                    Image(image: AssetImage('assets/location.png')),
+                    SizedBox(
+                      width: 15,
+                    ),
+                    Text(
+                      'Kandy, Sri Lanka',
+                      style:
+                          TextStyle(color: Color.fromARGB(255, 123, 123, 123)),
+                    )
+                  ],
+                )
+              ],
+            ),
+          ),
         ],
       ),
       bottomNavigationBar: CustomBottomNavBar(
