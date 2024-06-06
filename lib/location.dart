@@ -9,6 +9,15 @@ class Location extends StatelessWidget {
     return Scaffold(
       body: Stack(
         children: [
+          // Background image
+          Container(
+            decoration: const BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage('assets/sigiriya1.jpg'),
+                fit: BoxFit.cover,
+              ),
+            ),
+          ),
           Positioned(
             top: 40,
             left: 20,
