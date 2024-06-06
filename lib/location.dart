@@ -9,7 +9,6 @@ class Location extends StatelessWidget {
     return Scaffold(
       body: Stack(
         children: [
-          // Background image
           Container(
             decoration: const BoxDecoration(
               image: DecorationImage(
@@ -31,6 +30,39 @@ class Location extends StatelessWidget {
                 );
               },
               child: Image.asset('assets/arrow.png'),
+            ),
+          ),
+          Positioned(
+            bottom: 0,
+            left: 0,
+            right: 0,
+            child: Container(
+              height: MediaQuery.of(context).size.height * 0.5,
+              decoration: const BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(30),
+                  topRight: Radius.circular(30),
+                ),
+              ),
+              child: const Padding(
+                padding: EdgeInsets.all(16.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Sigiriya',
+                      style:
+                          TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                    ),
+                    SizedBox(height: 10),
+                    Text(
+                      'Sigiriya, Sri Lanka',
+                      style: TextStyle(fontSize: 16),
+                    ),
+                  ],
+                ),
+              ),
             ),
           ),
         ],
