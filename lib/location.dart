@@ -60,6 +60,24 @@ class Location extends StatelessWidget {
                       'Sigiriya, Sri Lanka',
                       style: TextStyle(fontSize: 16),
                     ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Row(
+                      children: [
+                        Image(image: AssetImage('assets/location.png')),
+                        Text('  Sigiriya'),
+                        SizedBox(width: 40),
+                        Image(image: AssetImage('assets/star.png')),
+                        Text('  4.7 (2498)'),
+                        SizedBox(width: 40),
+                        Text(
+                          ' Rs. 2500/=',
+                          style: TextStyle(color: Colors.blue),
+                        ),
+                        Text('/Per.')
+                      ],
+                    )
                   ],
                 ),
               ),
