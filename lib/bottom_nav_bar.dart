@@ -1,4 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:test01/homepage.dart';
+import 'package:test01/calendar.dart';
+import 'package:test01/messages.dart';
+import 'package:test01/profile.dart';
+import 'package:test01/search.dart';
 
 class CustomBottomNavBar extends StatelessWidget {
   final int selectedIndex;
@@ -38,7 +43,46 @@ class CustomBottomNavBar extends StatelessWidget {
       ],
       currentIndex: selectedIndex,
       selectedItemColor: Color.fromARGB(255, 18, 132, 245),
-      onTap: onItemTapped,
+      onTap: (index) {
+        if (index == 0) {
+          Navigator.pushReplacement(
+            context,
+            MaterialPageRoute(
+              builder: (context) => const Home(),
+            ),
+          );
+        } else if (index == 1) {
+          Navigator.pushReplacement(
+            context,
+            MaterialPageRoute(
+              builder: (context) => const Calendar(),
+            ),
+          );
+        } else if (index == 2) {
+          Navigator.pushReplacement(
+            context,
+            MaterialPageRoute(
+              builder: (context) => const Search(),
+            ),
+          );
+        } else if (index == 3) {
+          Navigator.pushReplacement(
+            context,
+            MaterialPageRoute(
+              builder: (context) => const Messages(),
+            ),
+          );
+        } else if (index == 4) {
+          Navigator.pushReplacement(
+            context,
+            MaterialPageRoute(
+              builder: (context) => const Profile(),
+            ),
+          );
+        } else {
+          onItemTapped(index);
+        }
+      },
     );
   }
 }

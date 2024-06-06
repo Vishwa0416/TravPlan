@@ -46,7 +46,7 @@ class _HomeState extends State<Home> {
                   width: 120,
                   height: 50,
                   decoration: BoxDecoration(
-                    color: Color.fromARGB(255, 183, 183, 183),
+                    color: Color.fromARGB(255, 230, 230, 230),
                     borderRadius: BorderRadius.circular(10.0),
                   ),
                   child: const Row(
