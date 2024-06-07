@@ -86,15 +86,49 @@ class Location extends StatelessWidget {
                           height: 80,
                         ),
                         SizedBox(
-                          width: 10,
+                          width: 15,
                         ),
                         Image(
                           image: AssetImage('assets/sig2.jpg'),
                           width: 60,
                           height: 80,
+                        ),
+                        SizedBox(
+                          width: 15,
+                        ),
+                        Image(
+                          image: AssetImage('assets/sig3.png'),
+                          width: 60,
+                          height: 80,
+                        ),
+                        SizedBox(
+                          width: 15,
+                        ),
+                        Image(
+                          image: AssetImage('assets/sig4.jpg'),
+                          width: 60,
+                          height: 80,
+                        ),
+                        SizedBox(
+                          width: 15,
+                        ),
+                        Image(
+                          image: AssetImage('assets/sig5.png'),
+                          width: 60,
+                          height: 80,
                         )
                       ],
-                    )
+                    ),
+                    Text(
+                      'About Destination',
+                      style: TextStyle(fontSize: 20),
+                    ),
+                    Text(
+                        "Sigiriya or Sinhagiri is an ancient rock fortress located in the northern Matale District near the town of Dambulla in the Central Province, Sri Lanka.Sigiriya was designated as a world heritage site in 1982. "),
+                    Text('Read more...',
+                        style: TextStyle(
+                          color: Color.fromARGB(255, 237, 104, 3),
+                        ))
                   ],
                 ),
               ),
