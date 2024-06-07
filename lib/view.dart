@@ -9,6 +9,14 @@ class View extends StatelessWidget {
     return Scaffold(
       body: Stack(
         children: [
+          Container(
+            decoration: const BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage('assets/sigiriya12.jpg'),
+                fit: BoxFit.cover,
+              ),
+            ),
+          ),
           Positioned(
             top: 40,
             left: 20,
