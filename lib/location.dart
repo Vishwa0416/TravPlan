@@ -32,7 +32,7 @@ class Location extends StatelessWidget {
               child: Image.asset('assets/arrow.png'),
             ),
           ),
-          Positioned(
+          const Positioned(
               top: 40,
               left: 150,
               child: Text(
