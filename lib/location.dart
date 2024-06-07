@@ -77,6 +77,23 @@ class Location extends StatelessWidget {
                         ),
                         Text('/Per.')
                       ],
+                    ),
+                    Row(
+                      children: [
+                        Image(
+                          image: AssetImage('assets/sig1.jpg'),
+                          width: 60,
+                          height: 80,
+                        ),
+                        SizedBox(
+                          width: 10,
+                        ),
+                        Image(
+                          image: AssetImage('assets/sig2.jpg'),
+                          width: 60,
+                          height: 80,
+                        )
+                      ],
                     )
                   ],
                 ),

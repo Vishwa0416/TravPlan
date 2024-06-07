@@ -92,6 +92,9 @@ flutter:
     - assets/kandy.jpg
     - assets/star.png
     - assets/location.png
+    - assets/sig1.jpg
+    - assets/sig2.jpg
+    - assets/sig3.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
