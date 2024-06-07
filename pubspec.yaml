@@ -99,6 +99,7 @@ flutter:
     - assets/sig4.jpg
     - assets/sig5.png
     - assets/booknow.png
+    - assets/hotel.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
