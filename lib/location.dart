@@ -33,6 +33,13 @@ class Location extends StatelessWidget {
             ),
           ),
           Positioned(
+              top: 40,
+              left: 150,
+              child: Text(
+                'Details',
+                style: TextStyle(fontSize: 25),
+              )),
+          Positioned(
             bottom: 0,
             left: 0,
             right: 0,
@@ -46,7 +53,7 @@ class Location extends StatelessWidget {
                 ),
               ),
               child: const Padding(
-                padding: EdgeInsets.all(16.0),
+                padding: EdgeInsets.all(14.0),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -128,7 +135,8 @@ class Location extends StatelessWidget {
                     Text('Read more...',
                         style: TextStyle(
                           color: Color.fromARGB(255, 237, 104, 3),
-                        ))
+                        )),
+                    Image(image: AssetImage('assets/booknow.png'))
                   ],
                 ),
               ),
