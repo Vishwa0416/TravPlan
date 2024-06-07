@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:test01/homepage.dart';
 
-class View extends StatelessWidget {
-  const View({Key? key}) : super(key: key);
+class Views extends StatelessWidget {
+  const Views({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +12,7 @@ class View extends StatelessWidget {
           Container(
             decoration: const BoxDecoration(
               image: DecorationImage(
-                image: AssetImage('assets/sigiriya12.jpg'),
+                image: AssetImage('assets/sigiriya2.jpg'),
                 fit: BoxFit.cover,
               ),
             ),

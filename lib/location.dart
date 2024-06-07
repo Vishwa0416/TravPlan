@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:test01/homepage.dart';
+import 'view.dart';
 
 class Location extends StatelessWidget {
   const Location({Key? key}) : super(key: key);
@@ -33,12 +34,13 @@ class Location extends StatelessWidget {
             ),
           ),
           const Positioned(
-              top: 40,
-              left: 150,
-              child: Text(
-                'Details',
-                style: TextStyle(fontSize: 25),
-              )),
+            top: 40,
+            left: 150,
+            child: Text(
+              'Details',
+              style: TextStyle(fontSize: 25),
+            ),
+          ),
           Positioned(
             bottom: 0,
             left: 0,
@@ -52,25 +54,35 @@ class Location extends StatelessWidget {
                   topRight: Radius.circular(30),
                 ),
               ),
-              child: const Padding(
-                padding: EdgeInsets.all(14.0),
+              child: Padding(
+                padding: const EdgeInsets.all(14.0),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
-                      'Sigiriya',
-                      style:
-                          TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const Views(),
+                          ),
+                        );
+                      },
+                      child: const Text(
+                        'Sigiriya',
+                        style: TextStyle(
+                            fontSize: 24, fontWeight: FontWeight.bold),
+                      ),
                     ),
-                    SizedBox(height: 10),
-                    Text(
+                    const SizedBox(height: 10),
+                    const Text(
                       'Sigiriya, Sri Lanka',
                       style: TextStyle(fontSize: 16),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 10,
                     ),
-                    Row(
+                    const Row(
                       children: [
                         Image(image: AssetImage('assets/location.png')),
                         Text('  Sigiriya'),
@@ -85,7 +97,7 @@ class Location extends StatelessWidget {
                         Text('/Per.')
                       ],
                     ),
-                    Row(
+                    const Row(
                       children: [
                         Image(
                           image: AssetImage('assets/sig1.jpg'),
@@ -126,17 +138,17 @@ class Location extends StatelessWidget {
                         )
                       ],
                     ),
-                    Text(
+                    const Text(
                       'About Destination',
                       style: TextStyle(fontSize: 20),
                     ),
-                    Text(
-                        "Sigiriya or Sinhagiri is an ancient rock fortress located in the northern Matale District near the town of Dambulla in the Central Province, Sri Lanka.Sigiriya was designated as a world heritage site in 1982. "),
-                    Text('Read more...',
+                    const Text(
+                        "Sigiriya or Sinhagiri is an ancient rock fortress located in the northern Matale District near the town of Dambulla in the Central Province, Sri Lanka. Sigiriya was designated as a world heritage site in 1982."),
+                    const Text('Read more...',
                         style: TextStyle(
                           color: Color.fromARGB(255, 237, 104, 3),
                         )),
-                    Image(image: AssetImage('assets/booknow.png'))
+                    const Image(image: AssetImage('assets/booknow.png'))
                   ],
                 ),
               ),
