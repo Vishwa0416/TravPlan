@@ -31,7 +31,13 @@ class _CalendarState extends State<Calendar> {
                 },
                 child: Row(children: [
                   Image.asset('assets/arrow.png'),
-                  Text('Shedule')
+                  SizedBox(
+                    width: 85,
+                  ),
+                  Text(
+                    'Shedule',
+                    style: TextStyle(fontSize: 25),
+                  )
                 ])),
           ),
           Positioned(
