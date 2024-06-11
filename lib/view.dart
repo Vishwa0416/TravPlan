@@ -65,7 +65,7 @@ class Views extends StatelessWidget {
                       Padding(
                         padding: EdgeInsets.all(8.0),
                         child: Text(
-                          'Araliya-Hotel',
+                          'Araliya Hotel',
                           style: TextStyle(
                               color: Color.fromARGB(255, 255, 255, 255)),
                         ),
@@ -74,6 +74,94 @@ class Views extends StatelessWidget {
                         padding: EdgeInsets.all(8.0),
                         child: Text(
                           '2.09 mi',
+                          style: TextStyle(
+                              color: Color.fromARGB(255, 255, 255, 255)),
+                        ),
+                      )
+                    ],
+                  )
+                ],
+              ),
+            ),
+          ),
+          Positioned(
+            top: 355,
+            left: 50,
+            child: Container(
+              width: 230,
+              height: 75,
+              decoration: BoxDecoration(
+                color: Color.fromARGB(255, 51, 51, 52),
+                borderRadius: BorderRadius.circular(15),
+              ),
+              child: const Row(
+                children: [
+                  Padding(
+                    padding: EdgeInsets.all(8.0),
+                    child: Image(
+                      image: AssetImage('assets/pidurangala.jpeg'),
+                      width: 80,
+                      height: 80,
+                    ),
+                  ),
+                  Column(
+                    children: [
+                      Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text(
+                          'Pidurangala Rock',
+                          style: TextStyle(
+                              color: Color.fromARGB(255, 255, 255, 255)),
+                        ),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text(
+                          '8.18 mi',
+                          style: TextStyle(
+                              color: Color.fromARGB(255, 255, 255, 255)),
+                        ),
+                      )
+                    ],
+                  )
+                ],
+              ),
+            ),
+          ),
+          Positioned(
+            top: 540,
+            left: 20,
+            child: Container(
+              width: 350,
+              height: 255,
+              decoration: BoxDecoration(
+                color: Color.fromARGB(255, 51, 51, 52),
+                borderRadius: BorderRadius.circular(15),
+              ),
+              child: const Row(
+                children: [
+                  Padding(
+                    padding: EdgeInsets.all(8.0),
+                    child: Image(
+                      image: AssetImage('assets/pidurangala.jpeg'),
+                      width: 80,
+                      height: 80,
+                    ),
+                  ),
+                  Column(
+                    children: [
+                      Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text(
+                          'Pidurangala Rock',
+                          style: TextStyle(
+                              color: Color.fromARGB(255, 255, 255, 255)),
+                        ),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text(
+                          '8.18 mi',
                           style: TextStyle(
                               color: Color.fromARGB(255, 255, 255, 255)),
                         ),
