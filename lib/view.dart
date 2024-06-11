@@ -138,35 +138,23 @@ class Views extends StatelessWidget {
                 color: Color.fromARGB(255, 51, 51, 52),
                 borderRadius: BorderRadius.circular(15),
               ),
-              child: const Row(
+              child: const Column(
                 children: [
                   Padding(
                     padding: EdgeInsets.all(8.0),
-                    child: Image(
-                      image: AssetImage('assets/pidurangala.jpeg'),
-                      width: 80,
-                      height: 80,
+                    child: Row(
+                      children: [
+                        Text(
+                          'Sigiriya Rock',
+                          style: TextStyle(
+                            color: Color.fromARGB(255, 255, 255, 255),
+                            fontSize: 25,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        Image(image: AssetImage('assets/star.png'))
+                      ],
                     ),
-                  ),
-                  Column(
-                    children: [
-                      Padding(
-                        padding: EdgeInsets.all(8.0),
-                        child: Text(
-                          'Pidurangala Rock',
-                          style: TextStyle(
-                              color: Color.fromARGB(255, 255, 255, 255)),
-                        ),
-                      ),
-                      Padding(
-                        padding: EdgeInsets.all(8.0),
-                        child: Text(
-                          '8.18 mi',
-                          style: TextStyle(
-                              color: Color.fromARGB(255, 255, 255, 255)),
-                        ),
-                      )
-                    ],
                   )
                 ],
               ),
