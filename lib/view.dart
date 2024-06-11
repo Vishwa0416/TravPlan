@@ -152,7 +152,18 @@ class Views extends StatelessWidget {
                             fontWeight: FontWeight.bold,
                           ),
                         ),
-                        Image(image: AssetImage('assets/star.png'))
+                        SizedBox(
+                          width: 130,
+                        ),
+                        Image(image: AssetImage('assets/star.png')),
+                        Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: Text(
+                            '4.7',
+                            style: TextStyle(
+                                color: Color.fromARGB(255, 255, 255, 255)),
+                          ),
+                        )
                       ],
                     ),
                   )
