@@ -31,17 +31,17 @@ class _CalendarState extends State<Calendar> {
                 },
                 child: Row(children: [
                   Image.asset('assets/arrow.png'),
-                  SizedBox(
+                  const SizedBox(
                     width: 85,
                   ),
-                  Text(
+                  const Text(
                     'Shedule',
                     style: TextStyle(fontSize: 25),
                   )
                 ])),
           ),
           Positioned(
-            top: 100, // Adjust this value to position the calendar correctly
+            top: 100,
             left: 0,
             right: 0,
             child: Column(
@@ -65,7 +65,7 @@ class _CalendarState extends State<Calendar> {
       padding: const EdgeInsets.symmetric(vertical: 20),
       child: Text(
         '$month $year',
-        style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+        style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
       ),
     );
   }
@@ -78,7 +78,8 @@ class _CalendarState extends State<Calendar> {
                 child: Center(
                   child: Text(
                     day,
-                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                    style: const TextStyle(
+                        fontSize: 16, fontWeight: FontWeight.bold),
                   ),
                 ),
               ))
@@ -98,7 +99,7 @@ class _CalendarState extends State<Calendar> {
     List<Widget> dateWidgets = [];
 
     for (int i = 0; i < firstWeekdayOfMonth; i++) {
-      dateWidgets.add(Expanded(child: SizedBox()));
+      dateWidgets.add(const Expanded(child: SizedBox()));
     }
 
     for (int i = 1; i <= daysInMonth; i++) {
@@ -113,7 +114,7 @@ class _CalendarState extends State<Calendar> {
               });
             },
             child: Container(
-              margin: EdgeInsets.all(4),
+              margin: const EdgeInsets.all(4),
               decoration: BoxDecoration(
                 color: selectedDate.day == i ? Colors.blue : Colors.transparent,
                 shape: BoxShape.circle,
