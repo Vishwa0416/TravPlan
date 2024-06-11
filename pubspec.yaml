@@ -101,6 +101,8 @@ flutter:
     - assets/booknow.png
     - assets/hotel.jpg
     - assets/pidurangala.jpeg
+    - assets/time.png
+    - assets/map.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

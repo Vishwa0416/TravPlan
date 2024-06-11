@@ -171,10 +171,46 @@ class Views extends StatelessWidget {
                     children: [
                       Padding(
                         padding: EdgeInsets.all(8.0),
-                        child: Image(image: AssetImage('assets/location.png')),
+                        child: Row(
+                          children: [
+                            Image(image: AssetImage('assets/location.png')),
+                            SizedBox(
+                              width: 10,
+                            ),
+                            Text(
+                              'Sigiriya, Sri Lanka',
+                              style: TextStyle(
+                                  color: Color.fromARGB(255, 255, 255, 255)),
+                            )
+                          ],
+                        ),
                       )
                     ],
-                  )
+                  ),
+                  Row(
+                    children: [
+                      Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Row(
+                          children: [
+                            Image(image: AssetImage('assets/time.png')),
+                            SizedBox(
+                              width: 10,
+                            ),
+                            Text(
+                              '1h 20min',
+                              style: TextStyle(
+                                  color: Color.fromARGB(255, 255, 255, 255)),
+                            )
+                          ],
+                        ),
+                      )
+                    ],
+                  ),
+                  SizedBox(
+                    height: 25,
+                  ),
+                  Image(image: AssetImage('assets/map.png'))
                 ],
               ),
             ),
