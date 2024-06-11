@@ -69,6 +69,14 @@ class Views extends StatelessWidget {
                           style: TextStyle(
                               color: Color.fromARGB(255, 255, 255, 255)),
                         ),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text(
+                          '2.09 mi',
+                          style: TextStyle(
+                              color: Color.fromARGB(255, 255, 255, 255)),
+                        ),
                       )
                     ],
                   )
