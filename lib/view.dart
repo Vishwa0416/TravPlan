@@ -166,6 +166,14 @@ class Views extends StatelessWidget {
                         )
                       ],
                     ),
+                  ),
+                  Row(
+                    children: [
+                      Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Image(image: AssetImage('assets/location.png')),
+                      )
+                    ],
                   )
                 ],
               ),
