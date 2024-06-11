@@ -41,15 +41,41 @@ class Views extends StatelessWidget {
             ),
           ),
           Positioned(
-              top: 95,
-              left: 150,
-              child: Container(
-                  width: 150,
-                  height: 75,
-                  decoration: BoxDecoration(
-                    color: Color.fromARGB(255, 51, 51, 52),
-                    borderRadius: BorderRadius.circular(15),
-                  )))
+            top: 95,
+            left: 150,
+            child: Container(
+              width: 200,
+              height: 75,
+              decoration: BoxDecoration(
+                color: Color.fromARGB(255, 51, 51, 52),
+                borderRadius: BorderRadius.circular(15),
+              ),
+              child: const Row(
+                children: [
+                  Padding(
+                    padding: EdgeInsets.all(8.0),
+                    child: Image(
+                      image: AssetImage('assets/hotel.jpg'),
+                      width: 80,
+                      height: 80,
+                    ),
+                  ),
+                  Column(
+                    children: [
+                      Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text(
+                          'Araliya-Hotel',
+                          style: TextStyle(
+                              color: Color.fromARGB(255, 255, 255, 255)),
+                        ),
+                      )
+                    ],
+                  )
+                ],
+              ),
+            ),
+          )
         ],
       ),
     );
