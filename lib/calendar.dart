@@ -52,7 +52,7 @@ class _CalendarState extends State<Calendar> {
               ],
             ),
           ),
-          Positioned(
+          const Positioned(
             top: 400.0,
             left: 30.0,
             child: Column(
@@ -62,6 +62,40 @@ class _CalendarState extends State<Calendar> {
                     Text(
                       'My Schedule',
                       style: TextStyle(fontSize: 20, color: Colors.black),
+                    ),
+                    SizedBox(
+                      width: 170,
+                    ),
+                    Text(
+                      'View all',
+                      style: TextStyle(color: Colors.blue),
+                    )
+                  ],
+                ),
+                Row(
+                  children: [
+                    Image(image: AssetImage('assets/sig2.jpg'), width: 80.0),
+                    Column(
+                      children: [
+                        Row(
+                          children: [
+                            Icon(
+                              Icons.calendar_month,
+                            ),
+                            Text('12th June 2024')
+                          ],
+                        ),
+                        Text(
+                          'Sigiriya Rock',
+                          style: TextStyle(fontSize: 18),
+                        ),
+                        Row(
+                          children: [
+                            Image(image: AssetImage('assets/location.png')),
+                            Text('Sigiriya, Sri Lanka')
+                          ],
+                        ),
+                      ],
                     ),
                   ],
                 ),
