@@ -52,6 +52,22 @@ class _CalendarState extends State<Calendar> {
               ],
             ),
           ),
+          Positioned(
+            top: 400.0,
+            left: 30.0,
+            child: Column(
+              children: [
+                Row(
+                  children: [
+                    Text(
+                      'My Schedule',
+                      style: TextStyle(fontSize: 20, color: Colors.black),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          )
         ],
       ),
     );
