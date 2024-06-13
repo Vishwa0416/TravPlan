@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:test01/homepage.dart';
+import 'bottom_nav_bar.dart';
 
 class Calendar extends StatefulWidget {
   const Calendar({Key? key}) : super(key: key);
@@ -11,6 +12,23 @@ class Calendar extends StatefulWidget {
 
 class _CalendarState extends State<Calendar> {
   DateTime selectedDate = DateTime.now();
+  int _selectedIndex = 0;
+
+  void _onItemTapped(int index) {
+    setState(() {
+      _selectedIndex = index;
+      switch (index) {
+        case 0:
+          Navigator.pushReplacement(
+            context,
+            MaterialPageRoute(builder: (context) => const Home()),
+          );
+          break;
+        case 1:
+          break;
+      }
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -35,7 +53,7 @@ class _CalendarState extends State<Calendar> {
                     width: 85,
                   ),
                   const Text(
-                    'Shedule',
+                    'Schedule',
                     style: TextStyle(fontSize: 25),
                   )
                 ])),
@@ -110,6 +128,10 @@ class _CalendarState extends State<Calendar> {
             ),
           )
         ],
+      ),
+      bottomNavigationBar: CustomBottomNavBar(
+        selectedIndex: _selectedIndex,
+        onItemTapped: _onItemTapped,
       ),
     );
   }
