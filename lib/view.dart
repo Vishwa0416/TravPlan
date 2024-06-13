@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:test01/homepage.dart';
+import 'package:test01/location.dart';
 
 class Views extends StatelessWidget {
   const Views({Key? key}) : super(key: key);
@@ -25,7 +25,7 @@ class Views extends StatelessWidget {
                 Navigator.pushReplacement(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const Home(),
+                    builder: (context) => const Location(),
                   ),
                 );
               },
