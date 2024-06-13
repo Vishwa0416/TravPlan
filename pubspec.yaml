@@ -104,6 +104,7 @@ flutter:
     - assets/pidurangala.jpeg
     - assets/time.png
     - assets/map.png
+    - assets/goarrow.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

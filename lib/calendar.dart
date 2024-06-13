@@ -75,6 +75,9 @@ class _CalendarState extends State<Calendar> {
                 Row(
                   children: [
                     Image(image: AssetImage('assets/sig2.jpg'), width: 80.0),
+                    SizedBox(
+                      width: 65,
+                    ),
                     Column(
                       children: [
                         Row(
@@ -97,6 +100,10 @@ class _CalendarState extends State<Calendar> {
                         ),
                       ],
                     ),
+                    SizedBox(
+                      width: 20,
+                    ),
+                    Image(image: AssetImage('assets/goarrow.png'))
                   ],
                 ),
               ],
