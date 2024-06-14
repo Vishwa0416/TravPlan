@@ -27,9 +27,17 @@ class Profile extends StatelessWidget {
           const Positioned(
             top: 40,
             left: 150,
-            child: Text(
-              'Profile',
-              style: TextStyle(fontSize: 25),
+            child: Row(
+              children: [
+                Text(
+                  'Profile',
+                  style: TextStyle(fontSize: 25),
+                ),
+                SizedBox(
+                  width: 100,
+                ),
+                Image(image: AssetImage('assets/pen.png'))
+              ],
             ),
           ),
         ],

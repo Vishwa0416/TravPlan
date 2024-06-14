@@ -105,6 +105,7 @@ flutter:
     - assets/time.png
     - assets/map.png
     - assets/goarrow.png
+    - assets/pen.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
