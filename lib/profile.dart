@@ -40,6 +40,10 @@ class Profile extends StatelessWidget {
               ],
             ),
           ),
+          const Positioned(
+              top: 120,
+              left: 150,
+              child: Image(image: AssetImage('assets/man.png')))
         ],
       ),
     );
