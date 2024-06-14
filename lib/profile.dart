@@ -42,7 +42,7 @@ class Profile extends StatelessWidget {
           ),
           const Positioned(
               top: 120,
-              left: 120,
+              left: 70,
               child: Column(
                 children: [
                   Image(image: AssetImage('assets/man.png')),
@@ -64,19 +64,34 @@ class Profile extends StatelessWidget {
                       Column(
                         children: [
                           Text('Reward Points'),
-                          Text('data'),
+                          Text(
+                            '360',
+                            style: TextStyle(color: Colors.blue),
+                          ),
                         ],
+                      ),
+                      SizedBox(
+                        width: 15,
                       ),
                       Column(
                         children: [
-                          Text('data'),
-                          Text('data'),
+                          Text('Travel Trips'),
+                          Text(
+                            '478',
+                            style: TextStyle(color: Colors.blue),
+                          ),
                         ],
+                      ),
+                      SizedBox(
+                        width: 15,
                       ),
                       Column(
                         children: [
-                          Text('data'),
-                          Text('data'),
+                          Text('Bucket List'),
+                          Text(
+                            '223',
+                            style: TextStyle(color: Colors.blue),
+                          ),
                         ],
                       ),
                     ],
