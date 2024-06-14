@@ -42,8 +42,32 @@ class Profile extends StatelessWidget {
           ),
           const Positioned(
               top: 120,
-              left: 150,
-              child: Image(image: AssetImage('assets/man.png')))
+              left: 120,
+              child: Column(
+                children: [
+                  Image(image: AssetImage('assets/man.png')),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Text(
+                    'Leonardo',
+                    style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+                  ),
+                  Text(
+                    'leonardo@gmail.com',
+                    style: TextStyle(
+                        fontSize: 15,
+                        color: Color.fromARGB(255, 126, 126, 126)),
+                  ),
+                  Row(
+                    children: [
+                      Text('data'),
+                      Text('data'),
+                      Text('data'),
+                    ],
+                  )
+                ],
+              ))
         ],
       ),
     );
