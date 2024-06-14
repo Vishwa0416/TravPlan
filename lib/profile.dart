@@ -59,6 +59,9 @@ class Profile extends StatelessWidget {
                         fontSize: 15,
                         color: Color.fromARGB(255, 126, 126, 126)),
                   ),
+                  SizedBox(
+                    height: 15,
+                  ),
                   Row(
                     children: [
                       Column(
