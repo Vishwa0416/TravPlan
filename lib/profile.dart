@@ -61,9 +61,24 @@ class Profile extends StatelessWidget {
                   ),
                   Row(
                     children: [
-                      Text('data'),
-                      Text('data'),
-                      Text('data'),
+                      Column(
+                        children: [
+                          Text('Reward Points'),
+                          Text('data'),
+                        ],
+                      ),
+                      Column(
+                        children: [
+                          Text('data'),
+                          Text('data'),
+                        ],
+                      ),
+                      Column(
+                        children: [
+                          Text('data'),
+                          Text('data'),
+                        ],
+                      ),
                     ],
                   )
                 ],
