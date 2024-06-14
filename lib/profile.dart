@@ -24,6 +24,14 @@ class Profile extends StatelessWidget {
               child: Image.asset('assets/arrow.png'),
             ),
           ),
+          const Positioned(
+            top: 40,
+            left: 150,
+            child: Text(
+              'Profile',
+              style: TextStyle(fontSize: 25),
+            ),
+          ),
         ],
       ),
     );
