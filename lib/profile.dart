@@ -100,6 +100,42 @@ class Profile extends StatelessWidget {
                     ],
                   )
                 ],
+              )),
+          const Positioned(
+              top: 370,
+              left: 50,
+              child: Column(
+                children: [
+                  Row(
+                    children: [
+                      Image(image: AssetImage('assets/profile.png')),
+                      SizedBox(
+                        width: 50,
+                      ),
+                      Text('Profile'),
+                      SizedBox(
+                        width: 150,
+                      ),
+                      Image(image: AssetImage('assets/goarrow.png'))
+                    ],
+                  ),
+                  SizedBox(
+                    height: 25,
+                  ),
+                  Row(
+                    children: [
+                      Image(image: AssetImage('assets/profile.png')),
+                      SizedBox(
+                        width: 50,
+                      ),
+                      Text('Profile'),
+                      SizedBox(
+                        width: 150,
+                      ),
+                      Image(image: AssetImage('assets/goarrow.png'))
+                    ],
+                  ),
+                ],
               ))
         ],
       ),
