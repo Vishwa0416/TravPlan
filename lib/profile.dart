@@ -135,6 +135,38 @@ class Profile extends StatelessWidget {
                       Image(image: AssetImage('assets/goarrow.png'))
                     ],
                   ),
+                  SizedBox(
+                    height: 25,
+                  ),
+                  Row(
+                    children: [
+                      Image(image: AssetImage('assets/trips.png')),
+                      SizedBox(
+                        width: 50,
+                      ),
+                      Text('Previous Trips'),
+                      SizedBox(
+                        width: 150,
+                      ),
+                      Image(image: AssetImage('assets/goarrow.png'))
+                    ],
+                  ),
+                  SizedBox(
+                    height: 25,
+                  ),
+                  Row(
+                    children: [
+                      Image(image: AssetImage('assets/settings.png')),
+                      SizedBox(
+                        width: 50,
+                      ),
+                      Text('Settings'),
+                      SizedBox(
+                        width: 150,
+                      ),
+                      Image(image: AssetImage('assets/goarrow.png'))
+                    ],
+                  ),
                 ],
               ))
         ],
