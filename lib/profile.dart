@@ -124,11 +124,11 @@ class Profile extends StatelessWidget {
                   ),
                   Row(
                     children: [
-                      Image(image: AssetImage('assets/profile.png')),
+                      Image(image: AssetImage('assets/bookmark.png')),
                       SizedBox(
                         width: 50,
                       ),
-                      Text('Profile'),
+                      Text('Bookmarks'),
                       SizedBox(
                         width: 150,
                       ),

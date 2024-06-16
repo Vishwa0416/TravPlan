@@ -108,6 +108,8 @@ flutter:
     - assets/pen.png
     - assets/man.png
     - assets/profile.png
+    - assets/bookmark.png
+    - assets/trips.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
