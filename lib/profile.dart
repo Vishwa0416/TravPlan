@@ -110,11 +110,11 @@ class Profile extends StatelessWidget {
                     children: [
                       Image(image: AssetImage('assets/profile.png')),
                       SizedBox(
-                        width: 50,
+                        width: 80,
                       ),
                       Text('Profile'),
                       SizedBox(
-                        width: 150,
+                        width: 120,
                       ),
                       Image(image: AssetImage('assets/goarrow.png'))
                     ],
@@ -126,7 +126,7 @@ class Profile extends StatelessWidget {
                     children: [
                       Image(image: AssetImage('assets/bookmark.png')),
                       SizedBox(
-                        width: 50,
+                        width: 20,
                       ),
                       Text('Bookmarks'),
                       SizedBox(
@@ -161,6 +161,22 @@ class Profile extends StatelessWidget {
                         width: 50,
                       ),
                       Text('Settings'),
+                      SizedBox(
+                        width: 150,
+                      ),
+                      Image(image: AssetImage('assets/goarrow.png'))
+                    ],
+                  ),
+                  SizedBox(
+                    height: 25,
+                  ),
+                  Row(
+                    children: [
+                      Image(image: AssetImage('assets/version.png')),
+                      SizedBox(
+                        width: 50,
+                      ),
+                      Text('Version'),
                       SizedBox(
                         width: 150,
                       ),
