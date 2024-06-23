@@ -104,83 +104,76 @@ class Profile extends StatelessWidget {
           const Positioned(
               top: 370,
               left: 50,
+              right: 50,
               child: Column(
                 children: [
                   Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Image(image: AssetImage('assets/profile.png')),
-                      SizedBox(
-                        width: 80,
+                      Row(
+                        children: [
+                          Image(image: AssetImage('assets/profile.png')),
+                          SizedBox(width: 10),
+                          Text('Profile'),
+                        ],
                       ),
-                      Text('Profile'),
-                      SizedBox(
-                        width: 120,
-                      ),
-                      Image(image: AssetImage('assets/goarrow.png'))
+                      Image(image: AssetImage('assets/goarrow.png')),
                     ],
                   ),
-                  SizedBox(
-                    height: 25,
-                  ),
+                  SizedBox(height: 25),
                   Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Image(image: AssetImage('assets/bookmark.png')),
-                      SizedBox(
-                        width: 20,
+                      Row(
+                        children: [
+                          Image(image: AssetImage('assets/bookmark.png')),
+                          SizedBox(width: 10),
+                          Text('Bookmarks'),
+                        ],
                       ),
-                      Text('Bookmarks'),
-                      SizedBox(
-                        width: 150,
-                      ),
-                      Image(image: AssetImage('assets/goarrow.png'))
+                      Image(image: AssetImage('assets/goarrow.png')),
                     ],
                   ),
-                  SizedBox(
-                    height: 25,
-                  ),
+                  SizedBox(height: 25),
                   Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Image(image: AssetImage('assets/trips.png')),
-                      SizedBox(
-                        width: 50,
+                      Row(
+                        children: [
+                          Image(image: AssetImage('assets/trips.png')),
+                          SizedBox(width: 10),
+                          Text('Previous Trips'),
+                        ],
                       ),
-                      Text('Previous Trips'),
-                      SizedBox(
-                        width: 150,
-                      ),
-                      Image(image: AssetImage('assets/goarrow.png'))
+                      Image(image: AssetImage('assets/goarrow.png')),
                     ],
                   ),
-                  SizedBox(
-                    height: 25,
-                  ),
+                  SizedBox(height: 25),
                   Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Image(image: AssetImage('assets/settings.png')),
-                      SizedBox(
-                        width: 50,
+                      Row(
+                        children: [
+                          Image(image: AssetImage('assets/settings.png')),
+                          SizedBox(width: 10),
+                          Text('Settings'),
+                        ],
                       ),
-                      Text('Settings'),
-                      SizedBox(
-                        width: 150,
-                      ),
-                      Image(image: AssetImage('assets/goarrow.png'))
+                      Image(image: AssetImage('assets/goarrow.png')),
                     ],
                   ),
-                  SizedBox(
-                    height: 25,
-                  ),
+                  SizedBox(height: 25),
                   Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Image(image: AssetImage('assets/version.png')),
-                      SizedBox(
-                        width: 50,
+                      Row(
+                        children: [
+                          Image(image: AssetImage('assets/version.png')),
+                          SizedBox(width: 10),
+                          Text('Version'),
+                        ],
                       ),
-                      Text('Version'),
-                      SizedBox(
-                        width: 150,
-                      ),
-                      Image(image: AssetImage('assets/goarrow.png'))
+                      Image(image: AssetImage('assets/goarrow.png')),
                     ],
                   ),
                 ],
