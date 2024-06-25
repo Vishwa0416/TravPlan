@@ -21,7 +21,18 @@ class Messages extends StatelessWidget {
                   ),
                 );
               },
-              child: Image.asset('assets/arrow.png'),
+              child: Row(
+                children: [
+                  Image.asset('assets/arrow.png'),
+                  const SizedBox(
+                    width: 85,
+                  ),
+                  const Text(
+                    'Messages',
+                    style: TextStyle(fontSize: 25),
+                  ),
+                ],
+              ),
             ),
           ),
         ],
