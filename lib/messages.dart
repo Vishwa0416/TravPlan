@@ -35,6 +35,12 @@ class Messages extends StatelessWidget {
               ),
             ),
           ),
+          const Positioned(
+              top: 105,
+              left: 25,
+              child: Row(
+                children: [Text('Messages')],
+              ))
         ],
       ),
     );
