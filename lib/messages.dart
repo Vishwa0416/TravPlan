@@ -79,19 +79,21 @@ class Messages extends StatelessWidget {
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(
-                        'Sigiriya Rock',
-                        style: TextStyle(fontSize: 18),
+                      Row(
+                        children: [
+                          Text(
+                            'John Perera',
+                            style: TextStyle(fontSize: 18),
+                          ),
+                        ],
                       ),
                       Row(
                         children: [
-                          Text('Sigiriya, Sri Lanka'),
+                          Text('Hi, John! How are you doing?'),
                         ],
                       ),
                     ],
                   ),
-                  Spacer(),
-                  Image(image: AssetImage('assets/goarrow.png')),
                 ],
               ),
             ),
