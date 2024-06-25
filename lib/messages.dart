@@ -54,10 +54,10 @@ class Messages extends StatelessWidget {
             right: 20,
             child: TextField(
               decoration: InputDecoration(
-                hintText: 'Search',
+                hintText: 'Search for chats and messages',
                 prefixIcon: Icon(Icons.search),
                 border: OutlineInputBorder(
-                  borderRadius: BorderRadius.all(Radius.circular(25.0)),
+                  borderRadius: BorderRadius.all(Radius.circular(15.0)),
                 ),
               ),
             ),
