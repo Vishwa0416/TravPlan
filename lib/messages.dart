@@ -62,41 +62,41 @@ class Messages extends StatelessWidget {
               ),
             ),
           ),
-          const Positioned(
-            top: 220,
+          Positioned(
+            top: 240,
             left: 20,
             right: 20,
-            child: Padding(
-              padding: EdgeInsets.all(8.0),
+            child: Container(
+              color: Colors.grey[200],
+              padding: const EdgeInsets.all(8.0),
               child: Row(
                 children: [
-                  Image(
-                    image: AssetImage('assets/person.png'),
+                  Image.asset(
+                    'assets/person.png',
+                    width: 50,
+                    height: 50,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 20,
                   ),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Row(
-                        children: [
-                          Text(
-                            'John Perera',
-                            style: TextStyle(fontSize: 18),
-                          ),
-                          SizedBox(
-                            width: 150,
-                          ),
-                          Text('9.56')
-                        ],
-                      ),
-                      Row(
-                        children: [
-                          Text('Hi, John! How are you doing?'),
-                        ],
-                      ),
-                    ],
+                  const Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Row(
+                          children: [
+                            Text(
+                              'John Perera',
+                              style: TextStyle(fontSize: 18),
+                            ),
+                            Spacer(),
+                            Text('9:56'),
+                          ],
+                        ),
+                        SizedBox(height: 5),
+                        Text('Hi, John! How are you doing?'),
+                      ],
+                    ),
                   ),
                 ],
               ),
