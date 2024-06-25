@@ -62,44 +62,38 @@ class Messages extends StatelessWidget {
               ),
             ),
           ),
-          Positioned(
+          const Positioned(
             top: 220,
             left: 20,
             right: 20,
-            child: Row(
-              children: [
-                const Image(image: AssetImage('assets/sig2.jpg'), width: 80.0),
-                const SizedBox(
-                  width: 20,
-                ),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    const Row(
-                      children: [
-                        Icon(
-                          Icons.calendar_month,
-                        ),
-                        SizedBox(width: 5),
-                        Text('12th June 2024'),
-                      ],
-                    ),
-                    const Text(
-                      'Sigiriya Rock',
-                      style: TextStyle(fontSize: 18),
-                    ),
-                    Row(
-                      children: [
-                        Image.asset('assets/location.png'),
-                        const SizedBox(width: 5),
-                        const Text('Sigiriya, Sri Lanka'),
-                      ],
-                    ),
-                  ],
-                ),
-                const Spacer(),
-                const Image(image: AssetImage('assets/goarrow.png')),
-              ],
+            child: Padding(
+              padding: EdgeInsets.all(8.0),
+              child: Row(
+                children: [
+                  Image(
+                    image: AssetImage('assets/person.png'),
+                  ),
+                  SizedBox(
+                    width: 20,
+                  ),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'Sigiriya Rock',
+                        style: TextStyle(fontSize: 18),
+                      ),
+                      Row(
+                        children: [
+                          Text('Sigiriya, Sri Lanka'),
+                        ],
+                      ),
+                    ],
+                  ),
+                  Spacer(),
+                  Image(image: AssetImage('assets/goarrow.png')),
+                ],
+              ),
             ),
           ),
         ],
