@@ -85,6 +85,10 @@ class Messages extends StatelessWidget {
                             'John Perera',
                             style: TextStyle(fontSize: 18),
                           ),
+                          SizedBox(
+                            width: 150,
+                          ),
+                          Text('9.56')
                         ],
                       ),
                       Row(
