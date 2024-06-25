@@ -39,7 +39,13 @@ class Messages extends StatelessWidget {
               top: 105,
               left: 25,
               child: Row(
-                children: [Text('Messages')],
+                children: [
+                  Text('Messages'),
+                  SizedBox(
+                    width: 40,
+                  ),
+                  Image(image: AssetImage('assets/message.png'))
+                ],
               ))
         ],
       ),
