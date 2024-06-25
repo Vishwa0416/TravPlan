@@ -36,17 +36,32 @@ class Messages extends StatelessWidget {
             ),
           ),
           const Positioned(
-              top: 105,
-              left: 25,
-              child: Row(
-                children: [
-                  Text('Messages'),
-                  SizedBox(
-                    width: 40,
-                  ),
-                  Image(image: AssetImage('assets/message.png'))
-                ],
-              ))
+            top: 105,
+            left: 25,
+            child: Row(
+              children: [
+                Text('Messages'),
+                SizedBox(
+                  width: 250,
+                ),
+                Image(image: AssetImage('assets/message.png'))
+              ],
+            ),
+          ),
+          const Positioned(
+            top: 160,
+            left: 20,
+            right: 20,
+            child: TextField(
+              decoration: InputDecoration(
+                hintText: 'Search',
+                prefixIcon: Icon(Icons.search),
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.all(Radius.circular(25.0)),
+                ),
+              ),
+            ),
+          ),
         ],
       ),
     );
