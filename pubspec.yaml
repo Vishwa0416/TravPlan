@@ -112,6 +112,7 @@ flutter:
     - assets/trips.png
     - assets/settings.png
     - assets/version.png
+    - assets/call.png
     - assets/message.png
 
 

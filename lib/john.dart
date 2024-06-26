@@ -24,13 +24,14 @@ class John extends StatelessWidget {
               child: Row(
                 children: [
                   Image.asset('assets/arrow.png'),
-                  SizedBox(
+                  const SizedBox(
                     width: 70,
                   ),
-                  Text(
+                  const Text(
                     'John Perera',
                     style: TextStyle(fontSize: 25),
-                  )
+                  ),
+                  const Image(image: AssetImage('assets/call.png'))
                 ],
               ),
             ),
