@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:test01/homepage.dart';
+import 'package:test01/john.dart';
 
 class Messages extends StatelessWidget {
   const Messages({Key? key}) : super(key: key);
@@ -66,39 +67,49 @@ class Messages extends StatelessWidget {
             top: 240,
             left: 20,
             right: 20,
-            child: Container(
-              color: Colors.grey[200],
-              padding: const EdgeInsets.all(8.0),
-              child: Row(
-                children: [
-                  Image.asset(
-                    'assets/person.png',
-                    width: 50,
-                    height: 50,
+            child: GestureDetector(
+              onTap: () {
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const John(),
                   ),
-                  const SizedBox(
-                    width: 20,
-                  ),
-                  const Expanded(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Row(
-                          children: [
-                            Text(
-                              'John Perera',
-                              style: TextStyle(fontSize: 18),
-                            ),
-                            Spacer(),
-                            Text('9:56'),
-                          ],
-                        ),
-                        SizedBox(height: 5),
-                        Text('Hi, John! How are you doing?'),
-                      ],
+                );
+              },
+              child: Container(
+                color: Colors.grey[200],
+                padding: const EdgeInsets.all(8.0),
+                child: Row(
+                  children: [
+                    Image.asset(
+                      'assets/person.png',
+                      width: 50,
+                      height: 50,
                     ),
-                  ),
-                ],
+                    const SizedBox(
+                      width: 20,
+                    ),
+                    const Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Row(
+                            children: [
+                              Text(
+                                'John Perera',
+                                style: TextStyle(fontSize: 18),
+                              ),
+                              Spacer(),
+                              Text('9:56'),
+                            ],
+                          ),
+                          SizedBox(height: 5),
+                          Text('Hi, John! How are you doing?'),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
           ),
