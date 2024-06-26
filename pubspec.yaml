@@ -114,6 +114,7 @@ flutter:
     - assets/version.png
     - assets/call.png
     - assets/message.png
+    - assets/mic.png
 
 
     

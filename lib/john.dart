@@ -63,6 +63,7 @@ class John extends StatelessWidget {
                       ),
                     ),
                   ),
+                  Image(image: AssetImage('assets/mic.png'))
                 ],
               ),
             ),
