@@ -7,11 +7,10 @@ class John extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Stack(
+      body: Column(
         children: [
-          Positioned(
-            top: 40,
-            left: 20,
+          Padding(
+            padding: const EdgeInsets.only(top: 40, left: 20, right: 20),
             child: GestureDetector(
               onTap: () {
                 Navigator.pushReplacement(
@@ -31,7 +30,39 @@ class John extends StatelessWidget {
                     'John Perera',
                     style: TextStyle(fontSize: 25),
                   ),
+                  const Spacer(),
                   const Image(image: AssetImage('assets/call.png'))
+                ],
+              ),
+            ),
+          ),
+          // Add a Spacer to push the message input box to the bottom
+          const Spacer(),
+          // Positioned widget for the message input box at the bottom
+          Align(
+            alignment: Alignment.bottomCenter,
+            child: Container(
+              color: Colors.white,
+              padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+              child: Row(
+                children: [
+                  IconButton(
+                    icon: Icon(Icons.attach_file),
+                    onPressed: () {},
+                  ),
+                  Expanded(
+                    child: TextField(
+                      decoration: InputDecoration(
+                        hintText: 'Type a message',
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(30),
+                          borderSide: BorderSide.none,
+                        ),
+                        filled: true,
+                        contentPadding: const EdgeInsets.all(10),
+                      ),
+                    ),
+                  ),
                 ],
               ),
             ),
