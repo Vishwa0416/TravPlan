@@ -21,7 +21,18 @@ class John extends StatelessWidget {
                   ),
                 );
               },
-              child: Image.asset('assets/arrow.png'),
+              child: Row(
+                children: [
+                  Image.asset('assets/arrow.png'),
+                  SizedBox(
+                    width: 70,
+                  ),
+                  Text(
+                    'John Perera',
+                    style: TextStyle(fontSize: 25),
+                  )
+                ],
+              ),
             ),
           ),
         ],
