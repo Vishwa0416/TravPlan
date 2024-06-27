@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:test01/homepage.dart';
+import 'package:test01/editprofile.dart';
 
 class Profile extends StatelessWidget {
   const Profile({Key? key}) : super(key: key);
@@ -41,7 +42,7 @@ class Profile extends StatelessWidget {
                     Navigator.pushReplacement(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => const Home(),
+                        builder: (context) => const Edit(),
                       ),
                     );
                   },

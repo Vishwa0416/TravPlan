@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:test01/homepage.dart';
+import 'package:test01/profile.dart';
 
 class Edit extends StatelessWidget {
   const Edit({Key? key}) : super(key: key);
@@ -17,11 +17,37 @@ class Edit extends StatelessWidget {
                 Navigator.pushReplacement(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const Home(),
+                    builder: (context) => const Profile(),
                   ),
                 );
               },
               child: Image.asset('assets/arrow.png'),
+            ),
+          ),
+          Positioned(
+            top: 40,
+            left: 150,
+            child: Row(
+              children: [
+                const Text(
+                  'Edit Profile',
+                  style: TextStyle(fontSize: 25),
+                ),
+                const SizedBox(
+                  width: 70,
+                ),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const Edit(),
+                      ),
+                    );
+                  },
+                  child: const Text('Done'),
+                ),
+              ],
             ),
           ),
         ],
