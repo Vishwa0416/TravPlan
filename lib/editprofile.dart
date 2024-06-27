@@ -45,7 +45,10 @@ class Edit extends StatelessWidget {
                       ),
                     );
                   },
-                  child: const Text('Done'),
+                  child: const Text(
+                    'Done',
+                    style: TextStyle(color: Colors.blue),
+                  ),
                 ),
               ],
             ),
