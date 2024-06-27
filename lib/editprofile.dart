@@ -120,6 +120,55 @@ class Edit extends StatelessWidget {
               ],
             ),
           ),
+          Positioned(
+            top: 380,
+            left: 50,
+            right: 50,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const Padding(
+                  padding: EdgeInsets.all(8.0),
+                  child: Align(
+                    alignment: Alignment.centerLeft,
+                    child: Text('Last Name'),
+                  ),
+                ),
+                Container(
+                  height: 40,
+                  child: TextField(
+                    decoration: InputDecoration(
+                      filled: true,
+                      fillColor: Colors.grey[200],
+                      contentPadding: const EdgeInsets.symmetric(
+                          vertical: 10, horizontal: 10),
+                      labelText: 'Last Name',
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(20),
+                        borderSide: const BorderSide(
+                          color: Colors.grey,
+                        ),
+                      ),
+                      enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(20),
+                        borderSide: const BorderSide(
+                          color: Colors.grey,
+                          width: 2,
+                        ),
+                      ),
+                      focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(20),
+                        borderSide: const BorderSide(
+                          color: Color.fromARGB(255, 1, 1, 1),
+                          width: 2,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
         ],
       ),
     );
