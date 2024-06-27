@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:test01/homepage.dart';
-import 'bottom_nav_bar.dart';
+import 'package:test01/bottom_nav_bar.dart'; // Import the custom bottom nav bar
 
 class Calendar extends StatefulWidget {
   const Calendar({Key? key}) : super(key: key);
@@ -12,21 +12,11 @@ class Calendar extends StatefulWidget {
 
 class _CalendarState extends State<Calendar> {
   DateTime selectedDate = DateTime.now();
-  int _selectedIndex = 0;
+  int _selectedIndex = 1; // Set the initial index to the Calendar page
 
   void _onItemTapped(int index) {
     setState(() {
       _selectedIndex = index;
-      switch (index) {
-        case 0:
-          Navigator.pushReplacement(
-            context,
-            MaterialPageRoute(builder: (context) => const Home()),
-          );
-          break;
-        case 1:
-          break;
-      }
     });
   }
 
