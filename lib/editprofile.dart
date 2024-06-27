@@ -41,7 +41,8 @@ class Edit extends StatelessWidget {
                     Navigator.pushReplacement(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => const Edit(),
+                        builder: (context) =>
+                            const Profile(), // Changed from Edit to Profile
                       ),
                     );
                   },
@@ -54,21 +55,71 @@ class Edit extends StatelessWidget {
             ),
           ),
           const Positioned(
-              top: 150,
-              left: 130,
-              child: Column(
-                children: [
-                  Image(image: AssetImage('assets/man.png')),
-                  Text(
-                    'John Perera',
-                    style: TextStyle(fontSize: 20),
+            top: 150,
+            left: 130,
+            child: Column(
+              children: [
+                Image(image: AssetImage('assets/man.png')),
+                Text(
+                  'John Perera',
+                  style: TextStyle(fontSize: 20),
+                ),
+                Text(
+                  'Change Profile Picture',
+                  style: TextStyle(color: Colors.blue),
+                ),
+              ],
+            ),
+          ),
+          Positioned(
+            top: 300,
+            left: 50,
+            right: 50,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const Padding(
+                  padding: EdgeInsets.all(8.0),
+                  child: Align(
+                    alignment: Alignment.centerLeft,
+                    child: Text('First Name'),
                   ),
-                  Text(
-                    'Change Profile Picture',
-                    style: TextStyle(color: Colors.blue),
-                  )
-                ],
-              ))
+                ),
+                Container(
+                  height: 40,
+                  child: TextField(
+                    decoration: InputDecoration(
+                      filled: true,
+                      fillColor: Colors.grey[200],
+                      contentPadding: const EdgeInsets.symmetric(
+                          vertical: 10, horizontal: 10),
+                      labelText: 'First Name',
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(20),
+                        borderSide: const BorderSide(
+                          color: Colors.grey,
+                        ),
+                      ),
+                      enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(20),
+                        borderSide: const BorderSide(
+                          color: Colors.grey,
+                          width: 2,
+                        ),
+                      ),
+                      focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(20),
+                        borderSide: const BorderSide(
+                          color: Color.fromARGB(255, 1, 1, 1),
+                          width: 2,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
         ],
       ),
     );
