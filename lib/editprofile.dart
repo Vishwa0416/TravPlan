@@ -59,8 +59,14 @@ class Edit extends StatelessWidget {
               child: Column(
                 children: [
                   Image(image: AssetImage('assets/man.png')),
-                  Text('John Perera'),
-                  Text('Change Profile Picture')
+                  Text(
+                    'John Perera',
+                    style: TextStyle(fontSize: 20),
+                  ),
+                  Text(
+                    'Change Profile Picture',
+                    style: TextStyle(color: Colors.blue),
+                  )
                 ],
               ))
         ],
