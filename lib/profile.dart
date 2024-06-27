@@ -1,9 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:test01/homepage.dart';
 import 'package:test01/editprofile.dart';
+import 'package:test01/bottom_nav_bar.dart';
 
-class Profile extends StatelessWidget {
+class Profile extends StatefulWidget {
   const Profile({Key? key}) : super(key: key);
+
+  @override
+  _ProfileState createState() => _ProfileState();
+}
+
+class _ProfileState extends State<Profile> {
+  int _selectedIndex = 4;
+
+  void _onItemTapped(int index) {
+    setState(() {
+      _selectedIndex = index;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -191,6 +205,10 @@ class Profile extends StatelessWidget {
             ),
           ),
         ],
+      ),
+      bottomNavigationBar: CustomBottomNavBar(
+        selectedIndex: _selectedIndex,
+        onItemTapped: _onItemTapped,
       ),
     );
   }
