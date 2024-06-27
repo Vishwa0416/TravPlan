@@ -278,7 +278,7 @@ class Edit extends StatelessWidget {
                   padding: EdgeInsets.all(8.0),
                   child: Align(
                     alignment: Alignment.centerLeft,
-                    child: Text('Age'),
+                    child: Text('Location'),
                   ),
                 ),
                 Container(
@@ -289,7 +289,7 @@ class Edit extends StatelessWidget {
                       fillColor: Colors.grey[200],
                       contentPadding: const EdgeInsets.symmetric(
                           vertical: 10, horizontal: 10),
-                      labelText: 'Age',
+                      labelText: 'Location',
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(20),
                         borderSide: const BorderSide(
