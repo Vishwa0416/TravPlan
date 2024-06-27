@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:test01/location.dart';
 import 'bottom_nav_bar.dart';
+import 'profile.dart';
 
 void main() {
   runApp(MyApp());
@@ -36,37 +37,47 @@ class _HomeState extends State<Home> {
     return Scaffold(
       body: Stack(
         children: [
-          //Image and name box
+          // Image and name box
           Positioned(
             top: 50,
             left: 10,
             child: Row(
               children: [
-                Container(
-                  width: 120,
-                  height: 50,
-                  decoration: BoxDecoration(
-                    color: const Color.fromARGB(255, 230, 230, 230),
-                    borderRadius: BorderRadius.circular(10.0),
-                  ),
-                  child: const Row(
-                    children: [
-                      Padding(
-                        padding: EdgeInsets.all(8.0),
-                        child: Image(image: AssetImage('assets/person.png')),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const Profile(),
                       ),
-                      Text('Vishwa'),
-                    ],
+                    );
+                  },
+                  child: Container(
+                    width: 120,
+                    height: 50,
+                    decoration: BoxDecoration(
+                      color: const Color.fromARGB(255, 230, 230, 230),
+                      borderRadius: BorderRadius.circular(10.0),
+                    ),
+                    child: const Row(
+                      children: [
+                        Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: Image(image: AssetImage('assets/person.png')),
+                        ),
+                        Text('Vishwa'),
+                      ],
+                    ),
                   ),
                 ),
                 const SizedBox(width: 200),
-                //Bell icon
+                // Bell icon
                 const Image(image: AssetImage('assets/bell.png')),
               ],
             ),
           ),
           const Positioned(
-            //Big Text
+            // Big Text
             top: 120,
             left: 40,
             child: Text(
@@ -75,7 +86,7 @@ class _HomeState extends State<Home> {
             ),
           ),
           const Positioned(
-            //Small text
+            // Small text
             top: 170,
             left: 195,
             child: Text(
@@ -85,7 +96,7 @@ class _HomeState extends State<Home> {
             ),
           ),
           const Positioned(
-            //underline
+            // underline
             top: 210,
             left: 210,
             child: Image(image: AssetImage('assets/line.png')),
@@ -110,7 +121,7 @@ class _HomeState extends State<Home> {
                 ],
               )),
 
-          //Sigiriya
+          // Sigiriya
           Positioned(
             top: 300,
             left: 30,
@@ -170,7 +181,7 @@ class _HomeState extends State<Home> {
             ),
           ),
 
-          //Kandy
+          // Kandy
           const Positioned(
             top: 300,
             left: 300,
