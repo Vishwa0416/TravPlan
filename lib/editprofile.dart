@@ -53,10 +53,16 @@ class Edit extends StatelessWidget {
               ],
             ),
           ),
-          Positioned(
+          const Positioned(
               top: 150,
-              left: 150,
-              child: Image(image: AssetImage('assets/man.png')))
+              left: 130,
+              child: Column(
+                children: [
+                  Image(image: AssetImage('assets/man.png')),
+                  Text('John Perera'),
+                  Text('Change Profile Picture')
+                ],
+              ))
         ],
       ),
     );
