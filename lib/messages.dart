@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:test01/homepage.dart';
 import 'package:test01/john.dart';
-import 'package:test01/bottom_nav_bar.dart'; // Import the custom bottom nav bar
+import 'package:test01/bottom_nav_bar.dart';
 
 class Messages extends StatefulWidget {
   const Messages({Key? key}) : super(key: key);
@@ -11,7 +11,7 @@ class Messages extends StatefulWidget {
 }
 
 class _MessagesState extends State<Messages> {
-  int _selectedIndex = 3; // Set the initial index to the Messages page
+  int _selectedIndex = 3;
 
   void _onItemTapped(int index) {
     setState(() {
