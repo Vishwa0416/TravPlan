@@ -36,9 +36,7 @@ class John extends StatelessWidget {
               ),
             ),
           ),
-          // Add a Spacer to push the message input box to the bottom
           const Spacer(),
-          // Positioned widget for the message input box at the bottom
           Align(
             alignment: Alignment.bottomCenter,
             child: Container(
@@ -47,7 +45,7 @@ class John extends StatelessWidget {
               child: Row(
                 children: [
                   IconButton(
-                    icon: Icon(Icons.attach_file),
+                    icon: const Icon(Icons.attach_file),
                     onPressed: () {},
                   ),
                   Expanded(
@@ -63,7 +61,10 @@ class John extends StatelessWidget {
                       ),
                     ),
                   ),
-                  Image(image: AssetImage('assets/mic.png'))
+                  const SizedBox(
+                    width: 10,
+                  ),
+                  const Image(image: AssetImage('assets/mic.png'))
                 ],
               ),
             ),
