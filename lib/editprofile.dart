@@ -53,6 +53,10 @@ class Edit extends StatelessWidget {
               ],
             ),
           ),
+          Positioned(
+              top: 150,
+              left: 150,
+              child: Image(image: AssetImage('assets/man.png')))
         ],
       ),
     );
