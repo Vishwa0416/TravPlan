@@ -91,6 +91,15 @@ class _SearchState extends State<Search> {
                   Text(
                     'Sigiriya Rock',
                     style: TextStyle(fontSize: 15),
+                  ),
+                  Row(
+                    children: [
+                      Image(image: AssetImage('assets/location.png')),
+                      SizedBox(
+                        width: 10,
+                      ),
+                      Text('Sigiriya, Sri Lanka')
+                    ],
                   )
                 ],
               ))
