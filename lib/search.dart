@@ -57,6 +57,20 @@ class _SearchState extends State<Search> {
               ],
             ),
           ),
+          const Positioned(
+            top: 110,
+            left: 20,
+            right: 20,
+            child: TextField(
+              decoration: InputDecoration(
+                hintText: 'Search places',
+                prefixIcon: Icon(Icons.search),
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.all(Radius.circular(15.0)),
+                ),
+              ),
+            ),
+          ),
         ],
       ),
       bottomNavigationBar: CustomBottomNavBar(
