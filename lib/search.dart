@@ -77,6 +77,22 @@ class _SearchState extends State<Search> {
               child: Text(
                 'Search Places',
                 style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+              )),
+          const Positioned(
+              top: 200,
+              left: 30,
+              child: Column(
+                children: [
+                  Image(
+                    image: AssetImage('assets/sig2.jpg'),
+                    width: 120,
+                    height: 120,
+                  ),
+                  Text(
+                    'Sigiriya Rock',
+                    style: TextStyle(fontSize: 15),
+                  )
+                ],
               ))
         ],
       ),
