@@ -100,7 +100,11 @@ class _SearchState extends State<Search> {
                       ),
                       Text('Sigiriya, Sri Lanka')
                     ],
-                  )
+                  ),
+                  Text(
+                    'Rs. 5000/Person',
+                    style: TextStyle(color: Colors.blue),
+                  ),
                 ],
               ))
         ],
