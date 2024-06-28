@@ -71,6 +71,13 @@ class _SearchState extends State<Search> {
               ),
             ),
           ),
+          const Positioned(
+              top: 180,
+              left: 20,
+              child: Text(
+                'Search Places',
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+              ))
         ],
       ),
       bottomNavigationBar: CustomBottomNavBar(
