@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "727108103078",
+    "project_id": "travplan-eac84",
+    "storage_bucket": "travplan-eac84.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:727108103078:android:717d544bfc0ce924503d67",
+        "android_client_info": {
+          "package_name": "com.example.test01"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAQHvrLp0kT4kxZmrNrVdd7_vKfpJRIRno"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
