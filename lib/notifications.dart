@@ -81,7 +81,7 @@ class Notifications extends StatelessWidget {
                           Row(
                             children: [
                               Text(
-                                'John Perera',
+                                'Kandy',
                                 style: TextStyle(fontSize: 18),
                               ),
                               Spacer(),
