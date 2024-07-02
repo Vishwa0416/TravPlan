@@ -67,7 +67,7 @@ class Notifications extends StatelessWidget {
                 child: Row(
                   children: [
                     Image.asset(
-                      'assets/person.png',
+                      'assets/kandy.jpg',
                       width: 50,
                       height: 50,
                     ),
