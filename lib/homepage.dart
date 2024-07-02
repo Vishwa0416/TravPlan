@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:test01/location.dart';
+import 'package:test01/notifications.dart';
 import 'bottom_nav_bar.dart';
 import 'profile.dart';
 
@@ -72,7 +73,17 @@ class _HomeState extends State<Home> {
                 ),
                 const SizedBox(width: 200),
                 // Bell icon
-                const Image(image: AssetImage('assets/bell.png')),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const Notifications(),
+                      ),
+                    );
+                  },
+                  child: const Image(image: AssetImage('assets/bell.png')),
+                ),
               ],
             ),
           ),
@@ -226,9 +237,7 @@ class _HomeState extends State<Home> {
                             width: 80,
                           ),
                           Image(image: AssetImage('assets/location.png')),
-                          SizedBox(
-                            width: 15,
-                          ),
+                          SizedBox(width: 15),
                           Text(
                             'Kandy, Sri Lanka',
                             style: TextStyle(
