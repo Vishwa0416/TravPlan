@@ -171,6 +171,9 @@ class _HomeState extends State<Home> {
                         ),
                         Row(
                           children: [
+                            SizedBox(
+                              width: 80,
+                            ),
                             Image(image: AssetImage('assets/location.png')),
                             SizedBox(
                               width: 15,
@@ -190,13 +193,16 @@ class _HomeState extends State<Home> {
                       Image(
                         image: AssetImage('assets/kandy.jpg'),
                         width: 290,
-                        height: 336,
+                        height: 320,
                       ),
                       SizedBox(
                         height: 10,
                       ),
                       Row(
                         children: [
+                          SizedBox(
+                            width: 60,
+                          ),
                           Text(
                             'Kandy',
                             style: TextStyle(fontSize: 20),
