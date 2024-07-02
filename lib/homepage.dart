@@ -222,6 +222,9 @@ class _HomeState extends State<Home> {
                       ),
                       Row(
                         children: [
+                          SizedBox(
+                            width: 80,
+                          ),
                           Image(image: AssetImage('assets/location.png')),
                           SizedBox(
                             width: 15,
