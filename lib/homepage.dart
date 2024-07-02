@@ -120,114 +120,117 @@ class _HomeState extends State<Home> {
                   )
                 ],
               )),
-
-          // Sigiriya
           Positioned(
             top: 300,
             left: 30,
-            child: GestureDetector(
-              onTap: () {
-                Navigator.pushReplacement(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => const Location(),
-                  ),
-                );
-              },
-              child: const Column(
+            right: 30,
+            child: SizedBox(
+              height: 400,
+              child: PageView(
                 children: [
-                  Image(
-                    image: AssetImage('assets/sigiriya1.jpg'),
-                    width: 290,
-                    height: 336,
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const Location(),
+                        ),
+                      );
+                    },
+                    child: const Column(
+                      children: [
+                        Image(
+                          image: AssetImage('assets/sigiriya1.jpg'),
+                          width: 290,
+                          height: 320,
+                        ),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Row(
+                          children: [
+                            SizedBox(
+                              width: 60,
+                            ),
+                            Text(
+                              'Sigiriya',
+                              style: TextStyle(fontSize: 20),
+                            ),
+                            SizedBox(
+                              width: 85,
+                            ),
+                            Image(image: AssetImage('assets/star.png')),
+                            SizedBox(
+                              width: 15,
+                            ),
+                            Text('4.7')
+                          ],
+                        ),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Row(
+                          children: [
+                            Image(image: AssetImage('assets/location.png')),
+                            SizedBox(
+                              width: 15,
+                            ),
+                            Text(
+                              'Sigiriya, Sri Lanka',
+                              style: TextStyle(
+                                  color: Color.fromARGB(255, 123, 123, 123)),
+                            )
+                          ],
+                        )
+                      ],
+                    ),
                   ),
-                  SizedBox(
-                    height: 10,
-                  ),
-                  Row(
+                  const Column(
                     children: [
-                      Text(
-                        'Sigiriya',
-                        style: TextStyle(fontSize: 20),
+                      Image(
+                        image: AssetImage('assets/kandy.jpg'),
+                        width: 290,
+                        height: 336,
                       ),
                       SizedBox(
-                        width: 85,
+                        height: 10,
                       ),
-                      Image(image: AssetImage('assets/star.png')),
+                      Row(
+                        children: [
+                          Text(
+                            'Kandy',
+                            style: TextStyle(fontSize: 20),
+                          ),
+                          SizedBox(
+                            width: 85,
+                          ),
+                          Image(image: AssetImage('assets/star.png')),
+                          SizedBox(
+                            width: 15,
+                          ),
+                          Text('4.9')
+                        ],
+                      ),
                       SizedBox(
-                        width: 15,
+                        height: 10,
                       ),
-                      Text('4.7')
-                    ],
-                  ),
-                  SizedBox(
-                    height: 10,
-                  ),
-                  Row(
-                    children: [
-                      Image(image: AssetImage('assets/location.png')),
-                      SizedBox(
-                        width: 15,
-                      ),
-                      Text(
-                        'Sigiriya, Sri Lanka',
-                        style: TextStyle(
-                            color: Color.fromARGB(255, 123, 123, 123)),
+                      Row(
+                        children: [
+                          Image(image: AssetImage('assets/location.png')),
+                          SizedBox(
+                            width: 15,
+                          ),
+                          Text(
+                            'Kandy, Sri Lanka',
+                            style: TextStyle(
+                                color: Color.fromARGB(255, 123, 123, 123)),
+                          )
+                        ],
                       )
                     ],
-                  )
+                  ),
                 ],
               ),
-            ),
-          ),
-
-          // Kandy
-          const Positioned(
-            top: 300,
-            left: 300,
-            child: Column(
-              children: [
-                Image(
-                  image: AssetImage('assets/kandy.jpg'),
-                  width: 290,
-                  height: 336,
-                ),
-                SizedBox(
-                  height: 10,
-                ),
-                Row(
-                  children: [
-                    Text(
-                      'Kandy',
-                      style: TextStyle(fontSize: 20),
-                    ),
-                    SizedBox(
-                      width: 85,
-                    ),
-                    Image(image: AssetImage('assets/star.png')),
-                    SizedBox(
-                      width: 15,
-                    ),
-                    Text('4.9')
-                  ],
-                ),
-                SizedBox(
-                  height: 10,
-                ),
-                Row(
-                  children: [
-                    Image(image: AssetImage('assets/location.png')),
-                    SizedBox(
-                      width: 15,
-                    ),
-                    Text(
-                      'Kandy, Sri Lanka',
-                      style:
-                          TextStyle(color: Color.fromARGB(255, 123, 123, 123)),
-                    )
-                  ],
-                )
-              ],
             ),
           ),
         ],

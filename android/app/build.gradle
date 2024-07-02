@@ -22,7 +22,6 @@ if (flutterVersionName == null) {
     flutterVersionName = '1.0'
 }
 
-apply plugin: "com.google.gms.google-services"
 
 android {
     namespace "com.example.test01"
@@ -66,6 +65,3 @@ flutter {
     source '../..'
 }
 
-dependencies {
-    classpath "com.google.gms.google-services4.4.2" 
-}
