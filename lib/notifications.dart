@@ -89,7 +89,7 @@ class Notifications extends StatelessWidget {
                             ],
                           ),
                           SizedBox(height: 5),
-                          Text('Hi, John! How are you doing?'),
+                          Text('Your trip to kandy is coming up!'),
                         ],
                       ),
                     ),
