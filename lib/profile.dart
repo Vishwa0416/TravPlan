@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:test01/homepage.dart';
-import 'package:test01/editprofile.dart';
-import 'package:test01/bottom_nav_bar.dart';
+import 'homepage.dart';
+import 'editprofile.dart';
+import 'bottom_nav_bar.dart';
 
 class Profile extends StatefulWidget {
   const Profile({Key? key}) : super(key: key);
@@ -122,84 +122,112 @@ class _ProfileState extends State<Profile> {
                       ],
                     ),
                   ],
-                )
+                ),
               ],
             ),
           ),
-          const Positioned(
+          Positioned(
             top: 370,
             left: 50,
             right: 50,
             child: Column(
               children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Row(
-                      children: [
-                        Image(image: AssetImage('assets/profile.png')),
-                        SizedBox(width: 10),
-                        Text('Profile'),
-                      ],
-                    ),
-                    Image(image: AssetImage('assets/goarrow.png')),
-                  ],
+                GestureDetector(
+                  onTap: () {
+                    Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const Edit(),
+                      ),
+                    );
+                  },
+                  child: const Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Row(
+                        children: [
+                          Image(image: AssetImage('assets/profile.png')),
+                          SizedBox(width: 10),
+                          Text('Profile'),
+                        ],
+                      ),
+                      Image(image: AssetImage('assets/goarrow.png')),
+                    ],
+                  ),
                 ),
-                SizedBox(height: 25),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Row(
-                      children: [
-                        Image(image: AssetImage('assets/bookmark.png')),
-                        SizedBox(width: 10),
-                        Text('Bookmarks'),
-                      ],
-                    ),
-                    Image(image: AssetImage('assets/goarrow.png')),
-                  ],
+                const SizedBox(height: 25),
+                GestureDetector(
+                  onTap: () {},
+                  child: const Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Row(
+                        children: [
+                          Image(image: AssetImage('assets/bookmark.png')),
+                          SizedBox(width: 10),
+                          Text('Bookmarks'),
+                        ],
+                      ),
+                      Image(image: AssetImage('assets/goarrow.png')),
+                    ],
+                  ),
                 ),
-                SizedBox(height: 25),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Row(
-                      children: [
-                        Image(image: AssetImage('assets/trips.png')),
-                        SizedBox(width: 10),
-                        Text('Previous Trips'),
-                      ],
-                    ),
-                    Image(image: AssetImage('assets/goarrow.png')),
-                  ],
+                const SizedBox(height: 25),
+                GestureDetector(
+                  onTap: () {
+                    // Add the correct navigation action here
+                  },
+                  child: const Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Row(
+                        children: [
+                          Image(image: AssetImage('assets/trips.png')),
+                          SizedBox(width: 10),
+                          Text('Previous Trips'),
+                        ],
+                      ),
+                      Image(image: AssetImage('assets/goarrow.png')),
+                    ],
+                  ),
                 ),
-                SizedBox(height: 25),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Row(
-                      children: [
-                        Image(image: AssetImage('assets/settings.png')),
-                        SizedBox(width: 10),
-                        Text('Settings'),
-                      ],
-                    ),
-                    Image(image: AssetImage('assets/goarrow.png')),
-                  ],
+                const SizedBox(height: 25),
+                GestureDetector(
+                  onTap: () {
+                    // Add the correct navigation action here
+                  },
+                  child: const Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Row(
+                        children: [
+                          Image(image: AssetImage('assets/settings.png')),
+                          SizedBox(width: 10),
+                          Text('Settings'),
+                        ],
+                      ),
+                      Image(image: AssetImage('assets/goarrow.png')),
+                    ],
+                  ),
                 ),
-                SizedBox(height: 25),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Row(
-                      children: [
-                        Image(image: AssetImage('assets/version.png')),
-                        SizedBox(width: 10),
-                        Text('Version'),
-                      ],
-                    ),
-                    Image(image: AssetImage('assets/goarrow.png')),
-                  ],
+                const SizedBox(height: 25),
+                GestureDetector(
+                  onTap: () {
+                    // Add the correct navigation action here
+                  },
+                  child: const Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Row(
+                        children: [
+                          Image(image: AssetImage('assets/version.png')),
+                          SizedBox(width: 10),
+                          Text('Version'),
+                        ],
+                      ),
+                      Image(image: AssetImage('assets/goarrow.png')),
+                    ],
+                  ),
                 ),
               ],
             ),
