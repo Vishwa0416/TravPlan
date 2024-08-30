@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:test01/homepage.dart';
-import 'package:test01/john.dart';
-import 'package:test01/bottom_nav_bar.dart';
+import 'package:TravPlan/homepage.dart';
+import 'package:TravPlan/john.dart';
+import 'package:TravPlan/bottom_nav_bar.dart';
 
 class Messages extends StatefulWidget {
   const Messages({Key? key}) : super(key: key);

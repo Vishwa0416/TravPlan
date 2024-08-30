@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:test01/homepage.dart';
-import 'package:test01/calendar.dart';
-import 'package:test01/messages.dart';
-import 'package:test01/profile.dart';
-import 'package:test01/search.dart';
+import 'package:TravPlan/homepage.dart';
+import 'package:TravPlan/calendar.dart';
+import 'package:TravPlan/messages.dart';
+import 'package:TravPlan/profile.dart';
+import 'package:TravPlan/search.dart';
 
 class CustomBottomNavBar extends StatelessWidget {
   final int selectedIndex;

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:test01/signin.dart';
-import 'package:test01/otppage.dart'; // Make sure to import the OTP screen
+import 'package:TravPlan/signin.dart';
+import 'package:TravPlan/otppage.dart'; // Make sure to import the OTP screen
 
 class Forgot extends StatelessWidget {
   const Forgot({Key? key}) : super(key: key);

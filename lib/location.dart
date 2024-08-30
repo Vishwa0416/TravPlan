@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:test01/homepage.dart';
+import 'package:TravPlan/homepage.dart';
 import 'view.dart';
 
 class Location extends StatelessWidget {

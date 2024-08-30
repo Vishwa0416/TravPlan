@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'package:test01/homepage.dart';
-import 'package:test01/bottom_nav_bar.dart';
+import 'package:TravPlan/homepage.dart';
+import 'package:TravPlan/bottom_nav_bar.dart';
 
 class Calendar extends StatefulWidget {
   const Calendar({Key? key}) : super(key: key);

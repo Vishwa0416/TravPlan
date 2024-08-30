@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:test01/thirdpage.dart';
-import 'package:test01/signin.dart';
+import 'package:TravPlan/thirdpage.dart';
+import 'package:TravPlan/signin.dart';
 
 class Second extends StatelessWidget {
   const Second({Key? key}) : super(key: key);

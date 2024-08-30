@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:test01/location.dart';
-import 'package:test01/notifications.dart';
+import 'package:TravPlan/location.dart';
+import 'package:TravPlan/notifications.dart';
 import 'bottom_nav_bar.dart';
 import 'profile.dart';
 

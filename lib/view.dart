@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:test01/location.dart';
+import 'package:TravPlan/location.dart';
 
 class Views extends StatelessWidget {
   const Views({Key? key}) : super(key: key);

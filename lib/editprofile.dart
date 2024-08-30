@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:test01/profile.dart';
+import 'package:TravPlan/profile.dart';
 
 class Edit extends StatelessWidget {
   const Edit({Key? key}) : super(key: key);

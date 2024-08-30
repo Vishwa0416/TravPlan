@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:test01/signin.dart';
+import 'package:TravPlan/signin.dart';
 
 class SignUp extends StatelessWidget {
   const SignUp({Key? key}) : super(key: key);

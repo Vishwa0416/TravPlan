@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:test01/homepage.dart';
+import 'package:TravPlan/homepage.dart';
 import 'bottom_nav_bar.dart';
 
 class Search extends StatefulWidget {

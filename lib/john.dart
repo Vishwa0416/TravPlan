@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:test01/messages.dart';
+import 'package:TravPlan/messages.dart';
 
 class John extends StatelessWidget {
   const John({Key? key}) : super(key: key);

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:test01/frontpage.dart';
+import 'package:TravPlan/frontpage.dart';
 
 void main() {
   runApp(const MainApp());

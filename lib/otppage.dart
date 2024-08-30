@@ -1,8 +1,8 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:test01/forgotpassword.dart';
-import 'package:test01/signuppage.dart';
-import 'package:test01/firstpage.dart';
+import 'package:TravPlan/forgotpassword.dart';
+import 'package:TravPlan/signuppage.dart';
+import 'package:TravPlan/firstpage.dart';
 
 class OTP extends StatefulWidget {
   const OTP({Key? key}) : super(key: key);

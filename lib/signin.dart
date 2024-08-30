@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:test01/forgotpassword.dart';
-import 'package:test01/signuppage.dart';
-import 'package:test01/firstpage.dart';
-import 'package:test01/homepage.dart';
+import 'package:TravPlan/forgotpassword.dart';
+import 'package:TravPlan/signuppage.dart';
+import 'package:TravPlan/firstpage.dart';
+import 'package:TravPlan/homepage.dart';
 
 class SignIn extends StatelessWidget {
   const SignIn({Key? key}) : super(key: key);
