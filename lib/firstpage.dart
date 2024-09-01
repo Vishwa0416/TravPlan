@@ -78,10 +78,10 @@ class First extends StatelessWidget {
               left: 150,
               child: Image(image: AssetImage('assets/dots.png')),
             ),
+            //Button
             Positioned(
-              // Get started
               top: 690,
-              left: 35,
+              left: 70,
               child: GestureDetector(
                 onTap: () {
                   Navigator.pushReplacement(
@@ -91,9 +91,33 @@ class First extends StatelessWidget {
                     ),
                   );
                 },
-                child: const Image(image: AssetImage('assets/started.png')),
+                child: Container(
+                  padding: EdgeInsets.symmetric(
+                      vertical: 15,
+                      horizontal: 80), 
+                  decoration: BoxDecoration(
+                    color: Color.fromARGB(
+                        255, 33, 54, 243), 
+                    borderRadius: BorderRadius.circular(8), 
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black26,
+                        offset: Offset(0, 2),
+                        blurRadius: 6,
+                      ),
+                    ], 
+                  ),
+                  child: const Text(
+                    'Get Started',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 18, 
+                      fontWeight: FontWeight.bold, 
+                    ),
+                  ),
+                ),
               ),
-            ),
+            )
           ],
         ),
       ),
