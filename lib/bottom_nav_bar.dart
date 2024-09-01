@@ -42,7 +42,7 @@ class CustomBottomNavBar extends StatelessWidget {
         ),
       ],
       currentIndex: selectedIndex,
-      selectedItemColor: Color.fromARGB(255, 18, 132, 245),
+      selectedItemColor: Color.fromARGB(255, 33, 54, 243),
       onTap: (index) {
         if (index == 0) {
           Navigator.pushReplacement(
