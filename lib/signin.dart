@@ -88,8 +88,9 @@ class SignIn extends StatelessWidget {
                       },
                       child: const Text(
                         'Forgot Password',
-                        style:
-                            TextStyle(color: Color.fromARGB(255, 2, 133, 215)),
+                        style: TextStyle(
+                          color: Color.fromARGB(255, 33, 54, 243),
+                        ),
                       ),
                     ),
                   ),
@@ -103,7 +104,29 @@ class SignIn extends StatelessWidget {
                         ),
                       );
                     },
-                    child: Image.asset('assets/signin.png'),
+                    child: Container(
+                      padding:
+                          EdgeInsets.symmetric(vertical: 15, horizontal: 80),
+                      decoration: BoxDecoration(
+                        color: Color.fromARGB(255, 33, 54, 243),
+                        borderRadius: BorderRadius.circular(8),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.black26,
+                            offset: Offset(0, 2),
+                            blurRadius: 6,
+                          ),
+                        ],
+                      ),
+                      child: const Text(
+                        'Sign In',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
                   ),
                   const SizedBox(height: 30),
                   Row(
@@ -123,7 +146,7 @@ class SignIn extends StatelessWidget {
                         child: const Text(
                           'Signup',
                           style: TextStyle(
-                            color: Color.fromARGB(255, 2, 133, 215),
+                            color: Color.fromARGB(255, 33, 54, 243),
                           ),
                         ),
                       ),

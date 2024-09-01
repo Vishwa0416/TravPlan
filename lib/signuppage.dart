@@ -95,7 +95,39 @@ class SignUp extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 40),
-                  Image.asset('assets/signupnew.png'),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const SignIn(),
+                        ),
+                      );
+                    },
+                    child: Container(
+                      padding:
+                          EdgeInsets.symmetric(vertical: 15, horizontal: 80),
+                      decoration: BoxDecoration(
+                        color: Color.fromARGB(255, 33, 54, 243),
+                        borderRadius: BorderRadius.circular(8),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.black26,
+                            offset: Offset(0, 2),
+                            blurRadius: 6,
+                          ),
+                        ],
+                      ),
+                      child: const Text(
+                        'Sign In',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                  ),
                   const SizedBox(height: 30),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -114,7 +146,7 @@ class SignUp extends StatelessWidget {
                         child: const Text(
                           'SignIn',
                           style: TextStyle(
-                            color: Color.fromARGB(255, 2, 133, 215),
+                            color: Color.fromARGB(255, 33, 54, 243),
                           ),
                         ),
                       ),

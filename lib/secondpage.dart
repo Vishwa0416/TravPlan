@@ -78,7 +78,6 @@ class Second extends StatelessWidget {
               left: 150,
               child: Image(image: AssetImage('assets/threedots2.png')),
             ),
-            //next button
             Positioned(
               top: 690,
               left: 90,
@@ -87,7 +86,7 @@ class Second extends StatelessWidget {
                   Navigator.pushReplacement(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => const Second(),
+                      builder: (context) => const Third(),
                     ),
                   );
                 },

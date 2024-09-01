@@ -78,9 +78,8 @@ class Third extends StatelessWidget {
               child: Image(image: AssetImage('assets/threedots3.png')),
             ),
             Positioned(
-              //get started
               top: 690,
-              left: 35,
+              left: 90,
               child: GestureDetector(
                 onTap: () {
                   Navigator.pushReplacement(
@@ -90,9 +89,30 @@ class Third extends StatelessWidget {
                     ),
                   );
                 },
-                child: const Image(image: AssetImage('assets/next.png')),
+                child: Container(
+                  padding: EdgeInsets.symmetric(vertical: 15, horizontal: 80),
+                  decoration: BoxDecoration(
+                    color: Color.fromARGB(255, 33, 54, 243),
+                    borderRadius: BorderRadius.circular(8),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black26,
+                        offset: Offset(0, 2),
+                        blurRadius: 6,
+                      ),
+                    ],
+                  ),
+                  child: const Text(
+                    'Next',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
               ),
-            ),
+            )
           ],
         ),
       ),
