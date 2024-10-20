@@ -55,14 +55,34 @@ class Forgot extends StatelessWidget {
                       ),
                     ),
                   ),
-                  const SizedBox(
-                    height: 25,
-                  ),
+                  const SizedBox(height: 25),
                   GestureDetector(
                     onTap: () {
                       _showResetDialog(context);
                     },
-                    child: const Image(image: AssetImage('assets/reset.png')),
+                    child: Container(
+                      padding:
+                          EdgeInsets.symmetric(vertical: 15, horizontal: 80),
+                      decoration: BoxDecoration(
+                        color: Color.fromARGB(255, 33, 54, 243),
+                        borderRadius: BorderRadius.circular(8),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.black26,
+                            offset: Offset(0, 2),
+                            blurRadius: 6,
+                          ),
+                        ],
+                      ),
+                      child: const Text(
+                        'Reset Password',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
                   ),
                 ],
               ),

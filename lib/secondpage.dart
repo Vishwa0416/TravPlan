@@ -39,7 +39,7 @@ class Second extends StatelessWidget {
             ),
             const Positioned(
               //Big Text
-              top: 450,
+              top: 460,
               left: 80,
               child: Text(
                 "It's a big world out \nthere go ",
@@ -48,7 +48,7 @@ class Second extends StatelessWidget {
             ),
             const Positioned(
               //Small text
-              top: 493,
+              top: 503,
               left: 205,
               child: Text(
                 'explore',
@@ -58,7 +58,7 @@ class Second extends StatelessWidget {
             ),
             const Positioned(
               //underline
-              top: 530,
+              top: 540,
               left: 225,
               child: Image(image: AssetImage('assets/line.png')),
             ),

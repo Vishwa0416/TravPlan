@@ -86,6 +86,22 @@ class SignUp extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 20),
+                  const TextField(
+                    obscureText: true,
+                    decoration: InputDecoration(
+                      prefixIcon: Icon(Icons.lock),
+                      hintText: 'Confirm Password',
+                      hintStyle: TextStyle(color: Color.fromARGB(112, 0, 0, 0)),
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(10)),
+                        borderSide: BorderSide(
+                          color: Color.fromARGB(255, 1, 134, 244),
+                          width: 2.0,
+                        ),
+                      ),
+                    ),
+                  ),
+                  const SizedBox(height: 20),
                   const Align(
                     alignment: Alignment.centerLeft,
                     child: Text(
@@ -105,13 +121,13 @@ class SignUp extends StatelessWidget {
                       );
                     },
                     child: Container(
-                      padding:
-                          EdgeInsets.symmetric(vertical: 15, horizontal: 80),
+                      padding: const EdgeInsets.symmetric(
+                          vertical: 15, horizontal: 80),
                       decoration: BoxDecoration(
-                        color: Color.fromARGB(255, 33, 54, 243),
+                        color: const Color.fromARGB(255, 33, 54, 243),
                         borderRadius: BorderRadius.circular(8),
                         boxShadow: [
-                          BoxShadow(
+                          const BoxShadow(
                             color: Colors.black26,
                             offset: Offset(0, 2),
                             blurRadius: 6,

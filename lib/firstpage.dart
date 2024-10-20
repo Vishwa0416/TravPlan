@@ -39,7 +39,7 @@ class First extends StatelessWidget {
             ),
             const Positioned(
               // Big Text
-              top: 450,
+              top: 460,
               left: 80,
               child: Text(
                 'Life is short and \nthe world is ',
@@ -48,7 +48,7 @@ class First extends StatelessWidget {
             ),
             const Positioned(
               // Small text
-              top: 493,
+              top: 503,
               left: 245,
               child: Text(
                 'wide',
@@ -58,7 +58,7 @@ class First extends StatelessWidget {
             ),
             const Positioned(
               // Underline
-              top: 530,
+              top: 540,
               left: 245,
               child: Image(image: AssetImage('assets/line.png')),
             ),
@@ -92,27 +92,24 @@ class First extends StatelessWidget {
                   );
                 },
                 child: Container(
-                  padding: EdgeInsets.symmetric(
-                      vertical: 15,
-                      horizontal: 80), 
+                  padding: EdgeInsets.symmetric(vertical: 15, horizontal: 80),
                   decoration: BoxDecoration(
-                    color: Color.fromARGB(
-                        255, 33, 54, 243), 
-                    borderRadius: BorderRadius.circular(8), 
+                    color: Color.fromARGB(255, 33, 54, 243),
+                    borderRadius: BorderRadius.circular(8),
                     boxShadow: [
                       BoxShadow(
                         color: Colors.black26,
                         offset: Offset(0, 2),
                         blurRadius: 6,
                       ),
-                    ], 
+                    ],
                   ),
                   child: const Text(
                     'Get Started',
                     style: TextStyle(
                       color: Colors.white,
-                      fontSize: 18, 
-                      fontWeight: FontWeight.bold, 
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
                     ),
                   ),
                 ),

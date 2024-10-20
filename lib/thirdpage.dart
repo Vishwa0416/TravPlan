@@ -38,7 +38,7 @@ class Third extends StatelessWidget {
             ),
             const Positioned(
               //Big Text
-              top: 450,
+              top: 460,
               left: 50,
               child: Text(
                 "People don’t take trips,\n trips take",
@@ -47,7 +47,7 @@ class Third extends StatelessWidget {
             ),
             const Positioned(
               //Small text
-              top: 493,
+              top: 503,
               left: 205,
               child: Text(
                 'people',
@@ -57,7 +57,7 @@ class Third extends StatelessWidget {
             ),
             const Positioned(
               //underline
-              top: 530,
+              top: 540,
               left: 215,
               child: Image(image: AssetImage('assets/line.png')),
             ),

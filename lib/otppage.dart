@@ -152,7 +152,29 @@ class _OTPScreenState extends State<OTP> {
                     onTap: () {
                       _onOtpEntered();
                     },
-                    child: Image.asset('assets/verify.png'),
+                    child: Container(
+                      padding: const EdgeInsets.symmetric(
+                          vertical: 15, horizontal: 80),
+                      decoration: BoxDecoration(
+                        color: const Color.fromARGB(255, 33, 54, 243),
+                        borderRadius: BorderRadius.circular(8),
+                        boxShadow: [
+                          const BoxShadow(
+                            color: Colors.black26,
+                            offset: Offset(0, 2),
+                            blurRadius: 6,
+                          ),
+                        ],
+                      ),
+                      child: const Text(
+                        'Verify',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
                   ),
                   const SizedBox(height: 20),
                   Text(
