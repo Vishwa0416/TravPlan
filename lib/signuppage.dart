@@ -105,7 +105,7 @@ class SignUp extends StatelessWidget {
                   const Align(
                     alignment: Alignment.centerLeft,
                     child: Text(
-                      'Password must contain atleast 8 characters.',
+                      'Password must contain at least 8 characters.',
                       style:
                           TextStyle(color: Color.fromARGB(255, 116, 116, 115)),
                     ),

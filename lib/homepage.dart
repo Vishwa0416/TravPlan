@@ -125,7 +125,7 @@ class _HomeState extends State<Home> {
                     width: 125,
                   ),
                   Text(
-                    'view all',
+                    'View all',
                     style: TextStyle(
                       fontSize: 15,
                       color: Color.fromARGB(255, 33, 54, 243),
