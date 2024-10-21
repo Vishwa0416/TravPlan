@@ -148,7 +148,31 @@ class Location extends StatelessWidget {
                         style: TextStyle(
                           color: Color.fromARGB(255, 237, 104, 3),
                         )),
-                    const Image(image: AssetImage('assets/booknow.png'))
+                    Center(
+                      child: Container(
+                        padding:
+                            EdgeInsets.symmetric(vertical: 15, horizontal: 80),
+                        decoration: BoxDecoration(
+                          color: Color.fromARGB(255, 33, 54, 243),
+                          borderRadius: BorderRadius.circular(8),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black26,
+                              offset: Offset(0, 2),
+                              blurRadius: 6,
+                            ),
+                          ],
+                        ),
+                        child: const Text(
+                          'Book Now',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                    ),
                   ],
                 ),
               ),
