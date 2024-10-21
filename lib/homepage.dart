@@ -113,26 +113,28 @@ class _HomeState extends State<Home> {
             child: Image(image: AssetImage('assets/line.png')),
           ),
           const Positioned(
-              top: 250,
-              left: 40,
-              child: Row(
-                children: [
-                  Text(
-                    'Best Destination',
-                    style: TextStyle(fontSize: 20),
+            // Best Destination text
+            top: 250,
+            left: 40,
+            child: Row(
+              children: [
+                Text(
+                  'Best Destination',
+                  style: TextStyle(fontSize: 20),
+                ),
+                SizedBox(
+                  width: 125,
+                ),
+                Text(
+                  'View all',
+                  style: TextStyle(
+                    fontSize: 15,
+                    color: Color.fromARGB(255, 33, 54, 243),
                   ),
-                  SizedBox(
-                    width: 125,
-                  ),
-                  Text(
-                    'View all',
-                    style: TextStyle(
-                      fontSize: 15,
-                      color: Color.fromARGB(255, 33, 54, 243),
-                    ),
-                  )
-                ],
-              )),
+                )
+              ],
+            ),
+          ),
           Positioned(
             top: 300,
             left: 30,
@@ -150,54 +152,68 @@ class _HomeState extends State<Home> {
                         ),
                       );
                     },
-                    child: const Column(
+                    child: Row(
                       children: [
-                        Image(
-                          image: AssetImage('assets/sigiriya1.jpg'),
-                          width: 290,
-                          height: 320,
-                        ),
-                        SizedBox(
-                          height: 10,
-                        ),
-                        Row(
+                        const Column(
                           children: [
-                            SizedBox(
-                              width: 60,
-                            ),
-                            Text(
-                              'Sigiriya',
-                              style: TextStyle(fontSize: 20),
+                            Image(
+                              image: AssetImage('assets/sigiriya1.jpg'),
+                              width: 290,
+                              height: 320,
                             ),
                             SizedBox(
-                              width: 85,
+                              height: 10,
                             ),
-                            Image(image: AssetImage('assets/star.png')),
+                            Row(
+                              children: [
+                                SizedBox(
+                                  width: 60,
+                                ),
+                                Text(
+                                  'Sigiriya',
+                                  style: TextStyle(fontSize: 20),
+                                ),
+                                SizedBox(
+                                  width: 85,
+                                ),
+                                Image(image: AssetImage('assets/star.png')),
+                                SizedBox(
+                                  width: 15,
+                                ),
+                                Text('4.7')
+                              ],
+                            ),
                             SizedBox(
-                              width: 15,
+                              height: 10,
                             ),
-                            Text('4.7')
-                          ],
-                        ),
-                        SizedBox(
-                          height: 10,
-                        ),
-                        Row(
-                          children: [
-                            SizedBox(
-                              width: 80,
-                            ),
-                            Image(image: AssetImage('assets/location.png')),
-                            SizedBox(
-                              width: 15,
-                            ),
-                            Text(
-                              'Sigiriya, Sri Lanka',
-                              style: TextStyle(
-                                  color: Color.fromARGB(255, 123, 123, 123)),
+                            Row(
+                              children: [
+                                SizedBox(
+                                  width: 80,
+                                ),
+                                Image(image: AssetImage('assets/location.png')),
+                                SizedBox(
+                                  width: 15,
+                                ),
+                                Text(
+                                  'Sigiriya, Sri Lanka',
+                                  style: TextStyle(
+                                      color:
+                                          Color.fromARGB(255, 123, 123, 123)),
+                                )
+                              ],
                             )
                           ],
-                        )
+                        ),
+                        // Spacer to position the right arrow correctly
+                        const Spacer(),
+                        GestureDetector(
+                          onTap: () {
+                            // Add action for right arrow tap if needed
+                          },
+                          child:
+                              const Image(image: AssetImage('assets/rightarrow.png')),
+                        ),
                       ],
                     ),
                   ),
