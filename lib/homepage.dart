@@ -26,11 +26,25 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
   int _selectedIndex = 0;
+  final PageController _pageController = PageController();
+  int _currentPageIndex = 0; // Track the current page index
 
   void _onItemTapped(int index) {
     setState(() {
       _selectedIndex = index;
     });
+  }
+
+  void _onArrowTapped() {
+    if (_currentPageIndex < 1) {
+      // Ensure we don't go out of bounds
+      _currentPageIndex++;
+      _pageController.animateToPage(
+        _currentPageIndex,
+        duration: const Duration(milliseconds: 300),
+        curve: Curves.easeIn,
+      );
+    }
   }
 
   @override
@@ -142,6 +156,12 @@ class _HomeState extends State<Home> {
             child: SizedBox(
               height: 400,
               child: PageView(
+                controller: _pageController, // Set the page controller
+                onPageChanged: (index) {
+                  setState(() {
+                    _currentPageIndex = index; // Update current page index
+                  });
+                },
                 children: [
                   GestureDetector(
                     onTap: () {
@@ -166,9 +186,6 @@ class _HomeState extends State<Home> {
                             ),
                             Row(
                               children: [
-                                SizedBox(
-                                  width: 60,
-                                ),
                                 Text(
                                   'Sigiriya',
                                   style: TextStyle(fontSize: 20),
@@ -188,9 +205,6 @@ class _HomeState extends State<Home> {
                             ),
                             Row(
                               children: [
-                                SizedBox(
-                                  width: 80,
-                                ),
                                 Image(image: AssetImage('assets/location.png')),
                                 SizedBox(
                                   width: 15,
@@ -205,14 +219,11 @@ class _HomeState extends State<Home> {
                             )
                           ],
                         ),
-                        // Spacer to position the right arrow correctly
                         const Spacer(),
                         GestureDetector(
-                          onTap: () {
-                            // Add action for right arrow tap if needed
-                          },
-                          child:
-                              const Image(image: AssetImage('assets/rightarrow.png')),
+                          onTap: _onArrowTapped, // Call the arrow tap method
+                          child: const Image(
+                              image: AssetImage('assets/rightarrow.png')),
                         ),
                       ],
                     ),
