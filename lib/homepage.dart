@@ -139,7 +139,7 @@ class _HomeState extends State<Home> {
                       child: Container(
                         width: 10,
                         height: 10,
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                           color: Colors.red,
                           shape: BoxShape.circle,
                         ),
@@ -228,9 +228,9 @@ class _HomeState extends State<Home> {
                         ),
                       );
                     },
-                    child: Row(
+                    child: const Row(
                       children: [
-                        const Column(
+                        Column(
                           children: [
                             Image(
                               image: AssetImage('assets/sigiriya1.jpg'),
@@ -245,7 +245,7 @@ class _HomeState extends State<Home> {
                                   'Sigiriya',
                                   style: TextStyle(
                                       fontSize: 20,
-                                      color: Colors.white,
+                                      color: Color.fromARGB(255, 0, 0, 0),
                                       fontWeight: FontWeight.bold),
                                 ),
                                 SizedBox(width: 85),
@@ -254,7 +254,8 @@ class _HomeState extends State<Home> {
                                 Text(
                                   '4.7',
                                   style: TextStyle(
-                                      color: Colors.white, fontSize: 16),
+                                      color: Color.fromARGB(255, 0, 0, 0),
+                                      fontSize: 16),
                                 )
                               ],
                             ),
@@ -266,19 +267,11 @@ class _HomeState extends State<Home> {
                                 Text(
                                   'Sigiriya, Sri Lanka',
                                   style: TextStyle(
-                                      color:
-                                          Color.fromARGB(255, 200, 200, 200)),
+                                      color: Color.fromARGB(255, 0, 0, 0)),
                                 )
                               ],
                             )
                           ],
-                        ),
-                        const Spacer(),
-                        GestureDetector(
-                          onTap: _onArrowTapped,
-                          child: const Image(
-                            image: AssetImage('assets/rightarrow.png'),
-                          ),
                         ),
                       ],
                     ),
@@ -299,7 +292,7 @@ class _HomeState extends State<Home> {
                             'Kandy',
                             style: TextStyle(
                                 fontSize: 20,
-                                color: Colors.white,
+                                color: Color.fromARGB(255, 0, 0, 0),
                                 fontWeight: FontWeight.bold),
                           ),
                           SizedBox(width: 85),
@@ -307,7 +300,8 @@ class _HomeState extends State<Home> {
                           SizedBox(width: 15),
                           Text(
                             '4.9',
-                            style: TextStyle(color: Colors.white),
+                            style:
+                                TextStyle(color: Color.fromARGB(255, 0, 0, 0)),
                           ),
                         ],
                       ),
@@ -332,7 +326,7 @@ class _HomeState extends State<Home> {
           ),
           // Progress dots
           Positioned(
-            bottom: 350,
+            bottom: 60,
             left: MediaQuery.of(context).size.width / 2 - 30,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -346,7 +340,8 @@ class _HomeState extends State<Home> {
                     shape: BoxShape.circle,
                     color: _currentPageIndex == index
                         ? Colors.orangeAccent
-                        : Colors.white.withOpacity(0.6),
+                        : const Color.fromARGB(255, 124, 123, 123)
+                            .withOpacity(0.6),
                   ),
                 ),
               ),
