@@ -249,7 +249,12 @@ class _HomeState extends State<Home> {
                                       fontWeight: FontWeight.bold),
                                 ),
                                 SizedBox(width: 85),
-                                Image(image: AssetImage('assets/star.png')),
+                                Icon(
+                                  Icons.star, // Built-in star icon
+                                  color: Color.fromARGB(255, 255, 204,
+                                      0), // Yellow color for the star
+                                  size: 24, // Adjust the size as needed
+                                ),
                                 SizedBox(width: 15),
                                 Text(
                                   '4.7',
@@ -296,7 +301,12 @@ class _HomeState extends State<Home> {
                                 fontWeight: FontWeight.bold),
                           ),
                           SizedBox(width: 85),
-                          Image(image: AssetImage('assets/star.png')),
+                          Icon(
+                            Icons.star, // Built-in star icon
+                            color: Color.fromARGB(
+                                255, 255, 204, 0), // Yellow color for the star
+                            size: 24, // Adjust the size as needed
+                          ),
                           SizedBox(width: 15),
                           Text(
                             '4.9',
