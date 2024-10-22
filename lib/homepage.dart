@@ -207,8 +207,8 @@ class _HomeState extends State<Home> {
           ),
           Positioned(
             top: 300,
-            left: 30,
-            right: 30,
+            left: 60,
+            right: 50,
             child: SizedBox(
               height: 400,
               child: PageView(
@@ -250,10 +250,9 @@ class _HomeState extends State<Home> {
                                 ),
                                 SizedBox(width: 85),
                                 Icon(
-                                  Icons.star, // Built-in star icon
-                                  color: Color.fromARGB(255, 255, 204,
-                                      0), // Yellow color for the star
-                                  size: 24, // Adjust the size as needed
+                                  Icons.star,
+                                  color: Color.fromARGB(255, 255, 204, 0),
+                                  size: 24,
                                 ),
                                 SizedBox(width: 15),
                                 Text(
@@ -302,10 +301,9 @@ class _HomeState extends State<Home> {
                           ),
                           SizedBox(width: 85),
                           Icon(
-                            Icons.star, // Built-in star icon
-                            color: Color.fromARGB(
-                                255, 255, 204, 0), // Yellow color for the star
-                            size: 24, // Adjust the size as needed
+                            Icons.star,
+                            color: Color.fromARGB(255, 255, 204, 0),
+                            size: 24,
                           ),
                           SizedBox(width: 15),
                           Text(
@@ -359,7 +357,7 @@ class _HomeState extends State<Home> {
           ),
           // Floating action button for quick access
           Positioned(
-            bottom: 100,
+            bottom: 50,
             right: 20,
             child: FloatingActionButton(
               backgroundColor: Colors.orange,
