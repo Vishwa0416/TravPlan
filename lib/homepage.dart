@@ -50,8 +50,35 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBodyBehindAppBar: true, // Extends body to behind the AppBar
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+      ),
       body: Stack(
         children: [
+          // Background image
+          Container(
+            decoration: const BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage('assets/background.jpg'),
+                fit: BoxFit.cover,
+              ),
+            ),
+          ),
+          // Gradient overlay for better readability
+          Container(
+            decoration: BoxDecoration(
+              gradient: LinearGradient(
+                colors: [
+                  Colors.black.withOpacity(0.5),
+                  Colors.black.withOpacity(0.0),
+                ],
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+              ),
+            ),
+          ),
           // Image and name box
           Positioned(
             top: 50,
@@ -73,6 +100,13 @@ class _HomeState extends State<Home> {
                     decoration: BoxDecoration(
                       color: const Color.fromARGB(255, 230, 230, 230),
                       borderRadius: BorderRadius.circular(10.0),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.black.withOpacity(0.2),
+                          spreadRadius: 2,
+                          blurRadius: 5,
+                        ),
+                      ],
                     ),
                     child: const Row(
                       children: [
@@ -86,17 +120,32 @@ class _HomeState extends State<Home> {
                   ),
                 ),
                 const SizedBox(width: 200),
-                // Bell icon
-                GestureDetector(
-                  onTap: () {
-                    Navigator.pushReplacement(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const Notifications(),
+                // Bell icon with notification badge
+                Stack(
+                  children: [
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const Notifications(),
+                          ),
+                        );
+                      },
+                      child: const Image(image: AssetImage('assets/bell.png')),
+                    ),
+                    Positioned(
+                      right: 0,
+                      child: Container(
+                        width: 10,
+                        height: 10,
+                        decoration: BoxDecoration(
+                          color: Colors.red,
+                          shape: BoxShape.circle,
+                        ),
                       ),
-                    );
-                  },
-                  child: const Image(image: AssetImage('assets/bell.png')),
+                    ),
+                  ],
                 ),
               ],
             ),
@@ -107,7 +156,10 @@ class _HomeState extends State<Home> {
             left: 40,
             child: Text(
               "Explore the \nBeautiful ",
-              style: TextStyle(fontSize: 35),
+              style: TextStyle(
+                  fontSize: 35,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white),
             ),
           ),
           const Positioned(
@@ -117,7 +169,9 @@ class _HomeState extends State<Home> {
             child: Text(
               'world',
               style: TextStyle(
-                  fontSize: 35, color: Color.fromARGB(255, 237, 104, 3)),
+                  fontSize: 35,
+                  fontWeight: FontWeight.bold,
+                  color: Color.fromARGB(255, 237, 104, 3)),
             ),
           ),
           const Positioned(
@@ -134,18 +188,20 @@ class _HomeState extends State<Home> {
               children: [
                 Text(
                   'Best Destination',
-                  style: TextStyle(fontSize: 20),
+                  style: TextStyle(
+                    fontSize: 20,
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
-                SizedBox(
-                  width: 125,
-                ),
+                SizedBox(width: 125),
                 Text(
                   'View all',
                   style: TextStyle(
                     fontSize: 15,
                     color: Color.fromARGB(255, 33, 54, 243),
                   ),
-                )
+                ),
               ],
             ),
           ),
@@ -156,10 +212,10 @@ class _HomeState extends State<Home> {
             child: SizedBox(
               height: 400,
               child: PageView(
-                controller: _pageController, // Set the page controller
+                controller: _pageController,
                 onPageChanged: (index) {
                   setState(() {
-                    _currentPageIndex = index; // Update current page index
+                    _currentPageIndex = index;
                   });
                 },
                 children: [
@@ -180,40 +236,38 @@ class _HomeState extends State<Home> {
                               image: AssetImage('assets/sigiriya1.jpg'),
                               width: 290,
                               height: 320,
+                              fit: BoxFit.cover,
                             ),
-                            SizedBox(
-                              height: 10,
-                            ),
+                            SizedBox(height: 10),
                             Row(
                               children: [
                                 Text(
                                   'Sigiriya',
-                                  style: TextStyle(fontSize: 20),
+                                  style: TextStyle(
+                                      fontSize: 20,
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold),
                                 ),
-                                SizedBox(
-                                  width: 85,
-                                ),
+                                SizedBox(width: 85),
                                 Image(image: AssetImage('assets/star.png')),
-                                SizedBox(
-                                  width: 15,
-                                ),
-                                Text('4.7')
+                                SizedBox(width: 15),
+                                Text(
+                                  '4.7',
+                                  style: TextStyle(
+                                      color: Colors.white, fontSize: 16),
+                                )
                               ],
                             ),
-                            SizedBox(
-                              height: 10,
-                            ),
+                            SizedBox(height: 10),
                             Row(
                               children: [
                                 Image(image: AssetImage('assets/location.png')),
-                                SizedBox(
-                                  width: 15,
-                                ),
+                                SizedBox(width: 15),
                                 Text(
                                   'Sigiriya, Sri Lanka',
                                   style: TextStyle(
                                       color:
-                                          Color.fromARGB(255, 123, 123, 123)),
+                                          Color.fromARGB(255, 200, 200, 200)),
                                 )
                               ],
                             )
@@ -221,9 +275,10 @@ class _HomeState extends State<Home> {
                         ),
                         const Spacer(),
                         GestureDetector(
-                          onTap: _onArrowTapped, // Call the arrow tap method
+                          onTap: _onArrowTapped,
                           child: const Image(
-                              image: AssetImage('assets/rightarrow.png')),
+                            image: AssetImage('assets/rightarrow.png'),
+                          ),
                         ),
                       ],
                     ),
@@ -234,50 +289,79 @@ class _HomeState extends State<Home> {
                         image: AssetImage('assets/kandy.jpg'),
                         width: 290,
                         height: 320,
+                        fit: BoxFit.cover,
                       ),
-                      SizedBox(
-                        height: 10,
-                      ),
+                      SizedBox(height: 10),
                       Row(
                         children: [
-                          SizedBox(
-                            width: 60,
-                          ),
+                          SizedBox(width: 60),
                           Text(
                             'Kandy',
-                            style: TextStyle(fontSize: 20),
+                            style: TextStyle(
+                                fontSize: 20,
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold),
                           ),
-                          SizedBox(
-                            width: 85,
-                          ),
+                          SizedBox(width: 85),
                           Image(image: AssetImage('assets/star.png')),
-                          SizedBox(
-                            width: 15,
+                          SizedBox(width: 15),
+                          Text(
+                            '4.9',
+                            style: TextStyle(color: Colors.white),
                           ),
-                          Text('4.9')
                         ],
                       ),
-                      SizedBox(
-                        height: 10,
-                      ),
+                      SizedBox(height: 10),
                       Row(
                         children: [
-                          SizedBox(
-                            width: 80,
-                          ),
+                          SizedBox(width: 80),
                           Image(image: AssetImage('assets/location.png')),
                           SizedBox(width: 15),
                           Text(
                             'Kandy, Sri Lanka',
-                            style: TextStyle(
-                                color: Color.fromARGB(255, 123, 123, 123)),
-                          )
+                            style:
+                                TextStyle(color: Color.fromARGB(255, 0, 0, 0)),
+                          ),
                         ],
-                      )
+                      ),
                     ],
                   ),
                 ],
               ),
+            ),
+          ),
+          // Progress dots
+          Positioned(
+            bottom: 350,
+            left: MediaQuery.of(context).size.width / 2 - 30,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: List.generate(
+                2,
+                (index) => Container(
+                  margin: const EdgeInsets.symmetric(horizontal: 4.0),
+                  width: _currentPageIndex == index ? 12 : 8,
+                  height: _currentPageIndex == index ? 12 : 8,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: _currentPageIndex == index
+                        ? Colors.orangeAccent
+                        : Colors.white.withOpacity(0.6),
+                  ),
+                ),
+              ),
+            ),
+          ),
+          // Floating action button for quick access
+          Positioned(
+            bottom: 100,
+            right: 20,
+            child: FloatingActionButton(
+              backgroundColor: Colors.orange,
+              onPressed: () {
+                // Action for favorites or quick access
+              },
+              child: const Icon(Icons.favorite_border),
             ),
           ),
         ],
