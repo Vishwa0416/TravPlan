@@ -146,7 +146,7 @@ class _HomeState extends State<Home> {
             top: 120,
             left: 40,
             child: Text(
-              "Explore the \nBeautiful ",
+              "Explore The \nBeautiful ",
               style: TextStyle(
                   fontSize: 35,
                   fontWeight: FontWeight.bold,
@@ -158,7 +158,7 @@ class _HomeState extends State<Home> {
             top: 170,
             left: 195,
             child: Text(
-              'world',
+              'World',
               style: TextStyle(
                   fontSize: 35,
                   fontWeight: FontWeight.bold,
