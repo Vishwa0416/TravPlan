@@ -1,9 +1,8 @@
-import 'package:TravPlan/background_container.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:TravPlan/homepage.dart';
 import 'package:TravPlan/bottom_nav_bar.dart';
-import 'bottom_nav_bar.dart';
+import 'background_container.dart';
 
 class Calendar extends StatefulWidget {
   const Calendar({Key? key}) : super(key: key);
@@ -22,6 +21,30 @@ class _CalendarState extends State<Calendar> {
     });
   }
 
+  void _incrementMonth() {
+    setState(() {
+      selectedDate = DateTime(selectedDate.year, selectedDate.month + 1);
+    });
+  }
+
+  void _decrementMonth() {
+    setState(() {
+      selectedDate = DateTime(selectedDate.year, selectedDate.month - 1);
+    });
+  }
+
+  void _incrementYear() {
+    setState(() {
+      selectedDate = DateTime(selectedDate.year + 1, selectedDate.month);
+    });
+  }
+
+  void _decrementYear() {
+    setState(() {
+      selectedDate = DateTime(selectedDate.year - 1, selectedDate.month);
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -32,94 +55,122 @@ class _CalendarState extends State<Calendar> {
               top: 40,
               left: 20,
               child: GestureDetector(
-                  onTap: () {
-                    Navigator.pushReplacement(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const Home(),
-                      ),
-                    );
-                  },
-                  child: Row(children: [
+                onTap: () {
+                  Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const Home(),
+                    ),
+                  );
+                },
+                child: Row(
+                  children: [
                     Image.asset('assets/arrow.png'),
                     const SizedBox(
                       width: 85,
                     ),
                     const Text(
                       'Schedule',
-                      style: TextStyle(fontSize: 25),
+                      style: TextStyle(fontSize: 25, color: Colors.white),
                     )
-                  ])),
+                  ],
+                ),
+              ),
             ),
             Positioned(
               top: 100,
               left: 0,
               right: 0,
-              child: Column(
-                children: [
-                  buildCalendarHeader(),
-                  buildDaysOfWeek(),
-                  buildDates(),
-                ],
+              child: Card(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                elevation: 10,
+                margin: const EdgeInsets.all(10),
+                child: Column(
+                  children: [
+                    buildCalendarHeader(),
+                    buildDaysOfWeek(),
+                    buildDates(),
+                  ],
+                ),
               ),
             ),
-            const Positioned(
-              top: 400.0,
+            Positioned(
+              top: 420.0,
               left: 30.0,
+              right: 30.0,
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Row(
+                  const Row(
                     children: [
                       Text(
                         'My Schedule',
                         style: TextStyle(fontSize: 20, color: Colors.black),
                       ),
-                      SizedBox(
-                        width: 170,
-                      ),
+                      Spacer(),
                       Text(
                         'View all',
                         style: TextStyle(color: Colors.blue),
-                      )
+                      ),
                     ],
                   ),
-                  Row(
-                    children: [
-                      Image(image: AssetImage('assets/sig2.jpg'), width: 80.0),
-                      SizedBox(
-                        width: 65,
-                      ),
-                      Column(
+                  const SizedBox(height: 20),
+                  Card(
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(15),
+                    ),
+                    elevation: 5,
+                    margin: const EdgeInsets.all(10),
+                    child: const Padding(
+                      padding: EdgeInsets.all(10.0),
+                      child: Row(
                         children: [
-                          Row(
+                          Image(
+                              image: AssetImage('assets/sig2.jpg'),
+                              width: 80.0),
+                          SizedBox(
+                            width: 65,
+                          ),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Icon(
-                                Icons.calendar_month,
+                              Row(
+                                children: [
+                                  Icon(
+                                    Icons.calendar_month,
+                                  ),
+                                  SizedBox(width: 5),
+                                  Text('12th June 2024'),
+                                ],
                               ),
-                              Text('12th June 2024')
+                              SizedBox(height: 8),
+                              Text(
+                                'Sigiriya Rock',
+                                style: TextStyle(
+                                    fontSize: 18, fontWeight: FontWeight.bold),
+                              ),
+                              SizedBox(height: 8),
+                              Row(
+                                children: [
+                                  Image(
+                                      image: AssetImage('assets/location.png')),
+                                  SizedBox(width: 5),
+                                  Text('Sigiriya, Sri Lanka'),
+                                ],
+                              ),
                             ],
                           ),
-                          Text(
-                            'Sigiriya Rock',
-                            style: TextStyle(fontSize: 18),
-                          ),
-                          Row(
-                            children: [
-                              Image(image: AssetImage('assets/location.png')),
-                              Text('Sigiriya, Sri Lanka')
-                            ],
-                          ),
+                          Spacer(),
+                          Image(image: AssetImage('assets/goarrow.png')),
                         ],
                       ),
-                      SizedBox(
-                        width: 20,
-                      ),
-                      Image(image: AssetImage('assets/goarrow.png'))
-                    ],
+                    ),
                   ),
                 ],
               ),
-            )
+            ),
           ],
         ),
       ),
@@ -136,9 +187,40 @@ class _CalendarState extends State<Calendar> {
 
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 20),
-      child: Text(
-        '$month $year',
-        style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          IconButton(
+            icon: const Icon(Icons.arrow_back_ios),
+            onPressed: _decrementMonth,
+          ),
+          Column(
+            children: [
+              Text(
+                '$month $year',
+                style:
+                    const TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+              ),
+              Row(
+                children: [
+                  IconButton(
+                    icon: const Icon(Icons.arrow_left),
+                    onPressed: _decrementYear,
+                  ),
+                  Text('$year'),
+                  IconButton(
+                    icon: const Icon(Icons.arrow_right),
+                    onPressed: _incrementYear,
+                  ),
+                ],
+              ),
+            ],
+          ),
+          IconButton(
+            icon: const Icon(Icons.arrow_forward_ios),
+            onPressed: _incrementMonth,
+          ),
+        ],
       ),
     );
   }
@@ -166,7 +248,6 @@ class _CalendarState extends State<Calendar> {
         DateTime(selectedDate.year, selectedDate.month + 1, 0);
 
     int daysInMonth = lastDayOfMonth.day;
-
     int firstWeekdayOfMonth = firstDayOfMonth.weekday % 7;
 
     List<Widget> dateWidgets = [];
@@ -205,6 +286,10 @@ class _CalendarState extends State<Calendar> {
           ),
         ),
       );
+    }
+
+    while (dateWidgets.length % 7 != 0) {
+      dateWidgets.add(const Expanded(child: SizedBox()));
     }
 
     List<Row> rows = [];
