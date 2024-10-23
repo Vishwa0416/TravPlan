@@ -57,15 +57,6 @@ class _HomeState extends State<Home> {
       ),
       body: Stack(
         children: [
-          // Background image
-          Container(
-            decoration: const BoxDecoration(
-              image: DecorationImage(
-                image: AssetImage('assets/background.jpg'),
-                fit: BoxFit.cover,
-              ),
-            ),
-          ),
           // Gradient overlay for better readability
           Container(
             decoration: BoxDecoration(

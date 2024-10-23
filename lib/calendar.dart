@@ -1,7 +1,9 @@
+import 'package:TravPlan/background_container.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:TravPlan/homepage.dart';
 import 'package:TravPlan/bottom_nav_bar.dart';
+import 'bottom_nav_bar.dart';
 
 class Calendar extends StatefulWidget {
   const Calendar({Key? key}) : super(key: key);
@@ -23,101 +25,103 @@ class _CalendarState extends State<Calendar> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Stack(
-        children: [
-          Positioned(
-            top: 40,
-            left: 20,
-            child: GestureDetector(
-                onTap: () {
-                  Navigator.pushReplacement(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const Home(),
+      body: BackgroundContainer(
+        child: Stack(
+          children: [
+            Positioned(
+              top: 40,
+              left: 20,
+              child: GestureDetector(
+                  onTap: () {
+                    Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const Home(),
+                      ),
+                    );
+                  },
+                  child: Row(children: [
+                    Image.asset('assets/arrow.png'),
+                    const SizedBox(
+                      width: 85,
                     ),
-                  );
-                },
-                child: Row(children: [
-                  Image.asset('assets/arrow.png'),
-                  const SizedBox(
-                    width: 85,
-                  ),
-                  const Text(
-                    'Schedule',
-                    style: TextStyle(fontSize: 25),
-                  )
-                ])),
-          ),
-          Positioned(
-            top: 100,
-            left: 0,
-            right: 0,
-            child: Column(
-              children: [
-                buildCalendarHeader(),
-                buildDaysOfWeek(),
-                buildDates(),
-              ],
-            ),
-          ),
-          const Positioned(
-            top: 400.0,
-            left: 30.0,
-            child: Column(
-              children: [
-                Row(
-                  children: [
-                    Text(
-                      'My Schedule',
-                      style: TextStyle(fontSize: 20, color: Colors.black),
-                    ),
-                    SizedBox(
-                      width: 170,
-                    ),
-                    Text(
-                      'View all',
-                      style: TextStyle(color: Colors.blue),
+                    const Text(
+                      'Schedule',
+                      style: TextStyle(fontSize: 25),
                     )
-                  ],
-                ),
-                Row(
-                  children: [
-                    Image(image: AssetImage('assets/sig2.jpg'), width: 80.0),
-                    SizedBox(
-                      width: 65,
-                    ),
-                    Column(
-                      children: [
-                        Row(
-                          children: [
-                            Icon(
-                              Icons.calendar_month,
-                            ),
-                            Text('12th June 2024')
-                          ],
-                        ),
-                        Text(
-                          'Sigiriya Rock',
-                          style: TextStyle(fontSize: 18),
-                        ),
-                        Row(
-                          children: [
-                            Image(image: AssetImage('assets/location.png')),
-                            Text('Sigiriya, Sri Lanka')
-                          ],
-                        ),
-                      ],
-                    ),
-                    SizedBox(
-                      width: 20,
-                    ),
-                    Image(image: AssetImage('assets/goarrow.png'))
-                  ],
-                ),
-              ],
+                  ])),
             ),
-          )
-        ],
+            Positioned(
+              top: 100,
+              left: 0,
+              right: 0,
+              child: Column(
+                children: [
+                  buildCalendarHeader(),
+                  buildDaysOfWeek(),
+                  buildDates(),
+                ],
+              ),
+            ),
+            const Positioned(
+              top: 400.0,
+              left: 30.0,
+              child: Column(
+                children: [
+                  Row(
+                    children: [
+                      Text(
+                        'My Schedule',
+                        style: TextStyle(fontSize: 20, color: Colors.black),
+                      ),
+                      SizedBox(
+                        width: 170,
+                      ),
+                      Text(
+                        'View all',
+                        style: TextStyle(color: Colors.blue),
+                      )
+                    ],
+                  ),
+                  Row(
+                    children: [
+                      Image(image: AssetImage('assets/sig2.jpg'), width: 80.0),
+                      SizedBox(
+                        width: 65,
+                      ),
+                      Column(
+                        children: [
+                          Row(
+                            children: [
+                              Icon(
+                                Icons.calendar_month,
+                              ),
+                              Text('12th June 2024')
+                            ],
+                          ),
+                          Text(
+                            'Sigiriya Rock',
+                            style: TextStyle(fontSize: 18),
+                          ),
+                          Row(
+                            children: [
+                              Image(image: AssetImage('assets/location.png')),
+                              Text('Sigiriya, Sri Lanka')
+                            ],
+                          ),
+                        ],
+                      ),
+                      SizedBox(
+                        width: 20,
+                      ),
+                      Image(image: AssetImage('assets/goarrow.png'))
+                    ],
+                  ),
+                ],
+              ),
+            )
+          ],
+        ),
       ),
       bottomNavigationBar: CustomBottomNavBar(
         selectedIndex: _selectedIndex,
