@@ -97,7 +97,7 @@ class _CalendarState extends State<Calendar> {
               ),
             ),
             Positioned(
-              top: 420.0,
+              top: 450.0,
               left: 30.0,
               right: 30.0,
               child: Column(
