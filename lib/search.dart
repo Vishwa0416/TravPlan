@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:TravPlan/homepage.dart';
 import 'bottom_nav_bar.dart';
+import 'background_container.dart';
 
 class Search extends StatefulWidget {
   const Search({Key? key}) : super(key: key);
