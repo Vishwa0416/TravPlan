@@ -57,7 +57,10 @@ class _MessagesState extends State<Messages> {
               left: 25,
               child: Row(
                 children: [
-                  Text('Messages'),
+                  Text(
+                    'Messages',
+                    style: TextStyle(color: Colors.white),
+                  ),
                   SizedBox(
                     width: 250,
                   ),
@@ -69,12 +72,14 @@ class _MessagesState extends State<Messages> {
               top: 160,
               left: 20,
               right: 20,
-              child: TextField(
-                decoration: InputDecoration(
-                  hintText: 'Search for chats and messages',
-                  prefixIcon: Icon(Icons.search),
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.all(Radius.circular(15.0)),
+              child: Card(
+                child: TextField(
+                  decoration: InputDecoration(
+                    hintText: 'Search for chats and messages',
+                    prefixIcon: Icon(Icons.search),
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(15.0)),
+                    ),
                   ),
                 ),
               ),
