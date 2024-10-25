@@ -79,34 +79,38 @@ class _SearchState extends State<Search> {
                 style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
               )),
           const Positioned(
-              top: 200,
+              top: 220,
               left: 30,
-              child: Column(
-                children: [
-                  Image(
-                    image: AssetImage('assets/sig2.jpg'),
-                    width: 120,
-                    height: 120,
-                  ),
-                  Text(
-                    'Sigiriya Rock',
-                    style: TextStyle(fontSize: 15),
-                  ),
-                  Row(
-                    children: [
-                      Image(image: AssetImage('assets/location.png')),
-                      SizedBox(
-                        width: 10,
-                      ),
-                      Text('Sigiriya, Sri Lanka')
-                    ],
-                  ),
-                  Text(
-                    'Rs. 5000/Person',
-                    style: TextStyle(color: Colors.blue),
-                  ),
-                ],
-              ))
+              child: Card(
+                  child: Padding(
+                padding: EdgeInsets.all(8.0),
+                child: Column(
+                  children: [
+                    Image(
+                      image: AssetImage('assets/sig2.jpg'),
+                      width: 120,
+                      height: 120,
+                    ),
+                    Text(
+                      'Sigiriya Rock',
+                      style: TextStyle(fontSize: 15),
+                    ),
+                    Row(
+                      children: [
+                        Image(image: AssetImage('assets/location.png')),
+                        SizedBox(
+                          width: 10,
+                        ),
+                        Text('Sigiriya, Sri Lanka')
+                      ],
+                    ),
+                    Text(
+                      'Rs. 5000/Person',
+                      style: TextStyle(color: Colors.blue),
+                    ),
+                  ],
+                ),
+              )))
         ],
       ),
       bottomNavigationBar: CustomBottomNavBar(
