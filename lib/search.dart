@@ -38,22 +38,30 @@ class _SearchState extends State<Search> {
               child: Image.asset('assets/arrow.png'),
             ),
           ),
-          const Positioned(
+          Positioned(
             top: 40,
             left: 150,
             child: Row(
               children: [
-                Text(
+                const Text(
                   'Search',
                   style: TextStyle(fontSize: 25),
                 ),
-                SizedBox(
-                  width: 100,
+                const SizedBox(width: 100),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const Home(),
+                      ),
+                    );
+                  },
+                  child: const Text(
+                    'Cancel',
+                    style: TextStyle(color: Colors.blue),
+                  ),
                 ),
-                Text(
-                  'Cancel',
-                  style: TextStyle(color: Colors.blue),
-                )
               ],
             ),
           ),
@@ -79,10 +87,10 @@ class _SearchState extends State<Search> {
                 style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
               )),
           const Positioned(
-              top: 220,
-              left: 30,
-              child: Card(
-                  child: Padding(
+            top: 220,
+            left: 30,
+            child: Card(
+              child: Padding(
                 padding: EdgeInsets.all(8.0),
                 child: Column(
                   children: [
@@ -98,10 +106,8 @@ class _SearchState extends State<Search> {
                     Row(
                       children: [
                         Image(image: AssetImage('assets/location.png')),
-                        SizedBox(
-                          width: 10,
-                        ),
-                        Text('Sigiriya, Sri Lanka')
+                        SizedBox(width: 10),
+                        Text('Sigiriya, Sri Lanka'),
                       ],
                     ),
                     Text(
@@ -110,12 +116,15 @@ class _SearchState extends State<Search> {
                     ),
                   ],
                 ),
-              ))),
-          const Positioned(
-              top: 220,
-              left: 225,
-              child: Card(
-                  child: Padding(
+              ),
+            ),
+          ),
+          Positioned(
+            top: 220,
+            left:
+                MediaQuery.of(context).size.width / 2 + 30, // Adjust placement
+            child: const Card(
+              child: Padding(
                 padding: EdgeInsets.all(8.0),
                 child: Column(
                   children: [
@@ -131,10 +140,8 @@ class _SearchState extends State<Search> {
                     Row(
                       children: [
                         Image(image: AssetImage('assets/location.png')),
-                        SizedBox(
-                          width: 10,
-                        ),
-                        Text('Kandy, Sri Lanka')
+                        SizedBox(width: 10),
+                        Text('Kandy, Sri Lanka'),
                       ],
                     ),
                     Text(
@@ -143,7 +150,9 @@ class _SearchState extends State<Search> {
                     ),
                   ],
                 ),
-              )))
+              ),
+            ),
+          ),
         ],
       ),
       bottomNavigationBar: CustomBottomNavBar(
