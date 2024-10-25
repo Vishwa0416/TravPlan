@@ -119,11 +119,10 @@ class _SearchState extends State<Search> {
               ),
             ),
           ),
-          Positioned(
+          const Positioned(
             top: 220,
-            left:
-                MediaQuery.of(context).size.width / 2 + 30, // Adjust placement
-            child: const Card(
+            left: 220,
+            child: Card(
               child: Padding(
                 padding: EdgeInsets.all(8.0),
                 child: Column(
