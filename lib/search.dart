@@ -50,20 +50,28 @@ class _SearchState extends State<Search> {
                     style: TextStyle(fontSize: 25),
                   ),
                   const SizedBox(width: 100),
-                  GestureDetector(
-                    onTap: () {
-                      Navigator.pushReplacement(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => const Home(),
+                  Card(
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(5.0),
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 12.0, vertical: 8.0),
+                        child: GestureDetector(
+                          onTap: () {
+                            Navigator.pushReplacement(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const Home(),
+                              ),
+                            );
+                          },
+                          child: const Text(
+                            'Cancel',
+                            style: TextStyle(color: Colors.blue),
+                          ),
                         ),
-                      );
-                    },
-                    child: const Text(
-                      'Cancel',
-                      style: TextStyle(color: Colors.blue),
-                    ),
-                  ),
+                      )),
                 ],
               ),
             ),
