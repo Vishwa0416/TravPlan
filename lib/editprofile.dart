@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:TravPlan/profile.dart';
+import 'background_container.dart';
 
 class Edit extends StatelessWidget {
   const Edit({Key? key}) : super(key: key);
@@ -7,7 +8,8 @@ class Edit extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Stack(
+        body: BackgroundContainer(
+      child: Stack(
         children: [
           Positioned(
             top: 40,
@@ -318,6 +320,6 @@ class Edit extends StatelessWidget {
           ),
         ],
       ),
-    );
+    ));
   }
 }

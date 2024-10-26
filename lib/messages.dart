@@ -59,7 +59,7 @@ class _MessagesState extends State<Messages> {
                 children: [
                   Text(
                     'Messages',
-                    style: TextStyle(color: Colors.white),
+                    style: TextStyle(color: Color.fromARGB(255, 0, 0, 0)),
                   ),
                   SizedBox(
                     width: 250,
