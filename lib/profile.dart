@@ -136,28 +136,29 @@ class _ProfileState extends State<Profile> {
               child: Column(
                 children: [
                   GestureDetector(
-                    onTap: () {
-                      Navigator.pushReplacement(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => const Edit(),
-                        ),
-                      );
-                    },
-                    child: const Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Row(
+                      onTap: () {
+                        Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const Edit(),
+                          ),
+                        );
+                      },
+                      child: const Card(
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            Image(image: AssetImage('assets/profile.png')),
-                            SizedBox(width: 10),
-                            Text('Profile'),
+                            Row(
+                              children: [
+                                Image(image: AssetImage('assets/profile.png')),
+                                SizedBox(width: 10),
+                                Text('Profile'),
+                              ],
+                            ),
+                            Image(image: AssetImage('assets/goarrow.png')),
                           ],
                         ),
-                        Image(image: AssetImage('assets/goarrow.png')),
-                      ],
-                    ),
-                  ),
+                      )),
                   const SizedBox(height: 25),
                   GestureDetector(
                       onTap: () {},
