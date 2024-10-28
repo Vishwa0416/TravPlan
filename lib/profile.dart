@@ -200,42 +200,44 @@ class _ProfileState extends State<Profile> {
                   ),
                   const SizedBox(height: 25),
                   GestureDetector(
-                    onTap: () {
-                      // Add the correct navigation action here
-                    },
-                    child: const Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Row(
+                      onTap: () {
+                        // Add the correct navigation action here
+                      },
+                      child: const Card(
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            Image(image: AssetImage('assets/settings.png')),
-                            SizedBox(width: 10),
-                            Text('Settings'),
+                            Row(
+                              children: [
+                                Image(image: AssetImage('assets/settings.png')),
+                                SizedBox(width: 10),
+                                Text('Settings'),
+                              ],
+                            ),
+                            Image(image: AssetImage('assets/goarrow.png')),
                           ],
                         ),
-                        Image(image: AssetImage('assets/goarrow.png')),
-                      ],
-                    ),
-                  ),
+                      )),
                   const SizedBox(height: 25),
                   GestureDetector(
-                    onTap: () {
-                      // Add the correct navigation action here
-                    },
-                    child: const Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Row(
+                      onTap: () {
+                        // Add the correct navigation action here
+                      },
+                      child: const Card(
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            Image(image: AssetImage('assets/version.png')),
-                            SizedBox(width: 10),
-                            Text('Version'),
+                            Row(
+                              children: [
+                                Image(image: AssetImage('assets/version.png')),
+                                SizedBox(width: 10),
+                                Text('Version'),
+                              ],
+                            ),
+                            Image(image: AssetImage('assets/goarrow.png')),
                           ],
                         ),
-                        Image(image: AssetImage('assets/goarrow.png')),
-                      ],
-                    ),
-                  ),
+                      )),
                 ],
               ),
             ),
