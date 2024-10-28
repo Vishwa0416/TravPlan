@@ -180,18 +180,20 @@ class _ProfileState extends State<Profile> {
                     onTap: () {
                       // Add the correct navigation action here
                     },
-                    child: const Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Row(
-                          children: [
-                            Image(image: AssetImage('assets/trips.png')),
-                            SizedBox(width: 10),
-                            Text('Previous Trips'),
-                          ],
-                        ),
-                        Image(image: AssetImage('assets/goarrow.png')),
-                      ],
+                    child: const Card(
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Row(
+                            children: [
+                              Image(image: AssetImage('assets/trips.png')),
+                              SizedBox(width: 10),
+                              Text('Previous Trips'),
+                            ],
+                          ),
+                          Image(image: AssetImage('assets/goarrow.png')),
+                        ],
+                      ),
                     ),
                   ),
                   const SizedBox(height: 25),

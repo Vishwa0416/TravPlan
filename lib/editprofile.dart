@@ -48,11 +48,29 @@ class Edit extends StatelessWidget {
                       ),
                     );
                   },
-                  child: const Text(
-                    'Done',
-                    style: TextStyle(color: Colors.blue),
-                  ),
-                ),
+                  child: Card(
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(5.0),
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 12.0, vertical: 8.0),
+                        child: GestureDetector(
+                          onTap: () {
+                            Navigator.pushReplacement(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => Profile(),
+                              ),
+                            );
+                          },
+                          child: const Text(
+                            'Done',
+                            style: TextStyle(color: Colors.blue),
+                          ),
+                        ),
+                      )),
+                )
               ],
             ),
           ),
