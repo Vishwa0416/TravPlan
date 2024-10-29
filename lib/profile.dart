@@ -276,7 +276,11 @@ class _ProfileState extends State<Profile> {
                         children: [
                           Row(
                             children: [
-                              Image(image: AssetImage('assets/version.png')),
+                              Padding(
+                                padding: EdgeInsets.all(8.0),
+                                child: Image(
+                                    image: AssetImage('assets/version.png')),
+                              ),
                               SizedBox(width: 10),
                               Text('Version'),
                             ],
