@@ -149,15 +149,19 @@ class _ProfileState extends State<Profile> {
                     child: Card(
                         child: ConstrainedBox(
                       constraints: const BoxConstraints(
-                        minWidth: 50, // Desired width
-                        minHeight: 40, // Same as width for a square
+                        minWidth: 50,
+                        minHeight: 40,
                       ),
                       child: const Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Row(
                             children: [
-                              Image(image: AssetImage('assets/profile.png')),
+                              Padding(
+                                padding: EdgeInsets.all(8.0),
+                                child: Image(
+                                    image: AssetImage('assets/profile.png')),
+                              ),
                               SizedBox(width: 10),
                               Text('Profile'),
                             ],
