@@ -173,22 +173,28 @@ class _ProfileState extends State<Profile> {
                   ),
                   const SizedBox(height: 25),
                   GestureDetector(
-                      onTap: () {},
-                      child: const Card(
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Row(
-                              children: [
-                                Image(image: AssetImage('assets/bookmark.png')),
-                                SizedBox(width: 10),
-                                Text('Bookmarks'),
-                              ],
-                            ),
-                            Image(image: AssetImage('assets/goarrow.png')),
-                          ],
-                        ),
-                      )),
+                    onTap: () {},
+                    child: Card(
+                        child: ConstrainedBox(
+                      constraints: const BoxConstraints(
+                        minWidth: 50,
+                        minHeight: 40,
+                      ),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Row(
+                            children: [
+                              Image(image: AssetImage('assets/bookmark.png')),
+                              SizedBox(width: 10),
+                              Text('Bookmarks'),
+                            ],
+                          ),
+                          Image(image: AssetImage('assets/goarrow.png')),
+                        ],
+                      ),
+                    )),
+                  ),
                   const SizedBox(height: 25),
                   GestureDetector(
                     onTap: () {
