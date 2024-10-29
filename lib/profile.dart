@@ -241,12 +241,16 @@ class _ProfileState extends State<Profile> {
                         minWidth: 50,
                         minHeight: 40,
                       ),
-                      child: Row(
+                      child: const Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Row(
                             children: [
-                              Image(image: AssetImage('assets/settings.png')),
+                              Padding(
+                                padding: EdgeInsets.all(8.0),
+                                child: Image(
+                                    image: AssetImage('assets/settings.png')),
+                              ),
                               SizedBox(width: 10),
                               Text('Settings'),
                             ],
@@ -258,24 +262,30 @@ class _ProfileState extends State<Profile> {
                   ),
                   const SizedBox(height: 25),
                   GestureDetector(
-                      onTap: () {
-                        // Add the correct navigation action here
-                      },
-                      child: const Card(
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Row(
-                              children: [
-                                Image(image: AssetImage('assets/version.png')),
-                                SizedBox(width: 10),
-                                Text('Version'),
-                              ],
-                            ),
-                            Image(image: AssetImage('assets/goarrow.png')),
-                          ],
-                        ),
-                      )),
+                    onTap: () {
+                      // Add the correct navigation action here
+                    },
+                    child: Card(
+                        child: ConstrainedBox(
+                      constraints: const BoxConstraints(
+                        minWidth: 50,
+                        minHeight: 40,
+                      ),
+                      child: const Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Row(
+                            children: [
+                              Image(image: AssetImage('assets/version.png')),
+                              SizedBox(width: 10),
+                              Text('Version'),
+                            ],
+                          ),
+                          Image(image: AssetImage('assets/goarrow.png')),
+                        ],
+                      ),
+                    )),
+                  ),
                 ],
               ),
             ),
