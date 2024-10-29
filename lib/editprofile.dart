@@ -334,10 +334,44 @@ class Edit extends StatelessWidget {
                     ),
                   ),
                 ),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) =>
+                            const Profile(), // Changed from Edit to Profile
+                      ),
+                    );
+                  },
+                  child: Center(
+                    child: Card(
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(5.0),
+                        ),
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 16.0, vertical: 8.0),
+                          child: GestureDetector(
+                            onTap: () {
+                              Navigator.pushReplacement(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => Profile(),
+                                ),
+                              );
+                            },
+                            child: const Text(
+                              'Cancel',
+                              style: TextStyle(color: Colors.blue),
+                            ),
+                          ),
+                        )),
+                  ),
+                )
               ],
             ),
           ),
-          
         ],
       ),
     ));
