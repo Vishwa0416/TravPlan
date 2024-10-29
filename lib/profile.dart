@@ -232,24 +232,30 @@ class _ProfileState extends State<Profile> {
                   ),
                   const SizedBox(height: 25),
                   GestureDetector(
-                      onTap: () {
-                        // Add the correct navigation action here
-                      },
-                      child: const Card(
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Row(
-                              children: [
-                                Image(image: AssetImage('assets/settings.png')),
-                                SizedBox(width: 10),
-                                Text('Settings'),
-                              ],
-                            ),
-                            Image(image: AssetImage('assets/goarrow.png')),
-                          ],
-                        ),
-                      )),
+                    onTap: () {
+                      // Add the correct navigation action here
+                    },
+                    child: Card(
+                        child: ConstrainedBox(
+                      constraints: const BoxConstraints(
+                        minWidth: 50,
+                        minHeight: 40,
+                      ),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Row(
+                            children: [
+                              Image(image: AssetImage('assets/settings.png')),
+                              SizedBox(width: 10),
+                              Text('Settings'),
+                            ],
+                          ),
+                          Image(image: AssetImage('assets/goarrow.png')),
+                        ],
+                      ),
+                    )),
+                  ),
                   const SizedBox(height: 25),
                   GestureDetector(
                       onTap: () {
