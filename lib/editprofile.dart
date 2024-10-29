@@ -36,7 +36,7 @@ class Edit extends StatelessWidget {
                   style: TextStyle(fontSize: 25),
                 ),
                 const SizedBox(
-                  width: 70,
+                  width: 45,
                 ),
                 GestureDetector(
                   onTap: () {
@@ -54,7 +54,7 @@ class Edit extends StatelessWidget {
                       ),
                       child: Padding(
                         padding: const EdgeInsets.symmetric(
-                            horizontal: 12.0, vertical: 8.0),
+                            horizontal: 16.0, vertical: 8.0),
                         child: GestureDetector(
                           onTap: () {
                             Navigator.pushReplacement(
@@ -65,7 +65,7 @@ class Edit extends StatelessWidget {
                             );
                           },
                           child: const Text(
-                            'Done',
+                            'Cancel',
                             style: TextStyle(color: Colors.blue),
                           ),
                         ),
