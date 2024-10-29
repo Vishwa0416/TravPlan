@@ -33,7 +33,8 @@ class Edit extends StatelessWidget {
               children: [
                 const Text(
                   'Edit Profile',
-                  style: TextStyle(fontSize: 25),
+                  style: TextStyle(
+                      fontSize: 25, color: Color.fromARGB(255, 255, 255, 255)),
                 ),
                 const SizedBox(
                   width: 45,
