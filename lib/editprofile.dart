@@ -334,39 +334,46 @@ class Edit extends StatelessWidget {
                     ),
                   ),
                 ),
+                SizedBox(
+                  height: 20,
+                ),
                 GestureDetector(
                   onTap: () {
                     Navigator.pushReplacement(
                       context,
                       MaterialPageRoute(
-                        builder: (context) =>
-                            const Profile(), // Changed from Edit to Profile
+                        builder: (context) => const Profile(),
                       ),
                     );
                   },
                   child: Center(
                     child: Card(
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(5.0),
-                        ),
-                        child: Padding(
-                          padding: const EdgeInsets.symmetric(
-                              horizontal: 16.0, vertical: 8.0),
-                          child: GestureDetector(
-                            onTap: () {
-                              Navigator.pushReplacement(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => Profile(),
-                                ),
-                              );
-                            },
-                            child: const Text(
-                              'Cancel',
-                              style: TextStyle(color: Colors.blue),
+                      color: Color.fromARGB(255, 0, 122, 255),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(5.0),
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 16.0, vertical: 8.0),
+                        child: GestureDetector(
+                          onTap: () {
+                            Navigator.pushReplacement(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => Profile(),
+                              ),
+                            );
+                          },
+                          child: const Text(
+                            'Edit Profile',
+                            style: TextStyle(
+                              color: Color.fromARGB(
+                                  255, 255, 255, 255), // Text color
                             ),
                           ),
-                        )),
+                        ),
+                      ),
+                    ),
                   ),
                 )
               ],
