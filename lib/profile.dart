@@ -180,12 +180,16 @@ class _ProfileState extends State<Profile> {
                         minWidth: 50,
                         minHeight: 40,
                       ),
-                      child: Row(
+                      child: const Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Row(
                             children: [
-                              Image(image: AssetImage('assets/bookmark.png')),
+                              Padding(
+                                padding: EdgeInsets.all(8.0),
+                                child: Image(
+                                    image: AssetImage('assets/bookmark.png')),
+                              ),
                               SizedBox(width: 10),
                               Text('Bookmarks'),
                             ],
@@ -200,19 +204,29 @@ class _ProfileState extends State<Profile> {
                     onTap: () {
                       // Add the correct navigation action here
                     },
-                    child: const Card(
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Row(
-                            children: [
-                              Image(image: AssetImage('assets/trips.png')),
-                              SizedBox(width: 10),
-                              Text('Previous Trips'),
-                            ],
-                          ),
-                          Image(image: AssetImage('assets/goarrow.png')),
-                        ],
+                    child: Card(
+                      child: ConstrainedBox(
+                        constraints: const BoxConstraints(
+                          minWidth: 50,
+                          minHeight: 40,
+                        ),
+                        child: const Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Row(
+                              children: [
+                                Padding(
+                                  padding: EdgeInsets.all(8.0),
+                                  child: Image(
+                                      image: AssetImage('assets/trips.png')),
+                                ),
+                                SizedBox(width: 10),
+                                Text('Previous Trips'),
+                              ],
+                            ),
+                            Image(image: AssetImage('assets/goarrow.png')),
+                          ],
+                        ),
                       ),
                     ),
                   ),
