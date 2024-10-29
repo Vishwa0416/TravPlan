@@ -47,7 +47,9 @@ class _SearchState extends State<Search> {
                 children: [
                   const Text(
                     'Search',
-                    style: TextStyle(fontSize: 25),
+                    style: TextStyle(
+                        fontSize: 25,
+                        color: Color.fromARGB(255, 255, 255, 255)),
                   ),
                   const SizedBox(width: 100),
                   Card(

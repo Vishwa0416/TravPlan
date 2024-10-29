@@ -46,7 +46,9 @@ class _MessagesState extends State<Messages> {
                     ),
                     const Text(
                       'Messages',
-                      style: TextStyle(fontSize: 25),
+                      style: TextStyle(
+                          fontSize: 25,
+                          color: Color.fromARGB(255, 251, 251, 251)),
                     ),
                   ],
                 ),
@@ -59,7 +61,7 @@ class _MessagesState extends State<Messages> {
                 children: [
                   Text(
                     'Messages',
-                    style: TextStyle(color: Color.fromARGB(255, 0, 0, 0)),
+                    style: TextStyle(color: Color.fromARGB(255, 255, 255, 255)),
                   ),
                   SizedBox(
                     width: 250,

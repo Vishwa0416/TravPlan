@@ -48,7 +48,9 @@ class _ProfileState extends State<Profile> {
                 children: [
                   const Text(
                     'Profile',
-                    style: TextStyle(fontSize: 25),
+                    style: TextStyle(
+                        fontSize: 25,
+                        color: Color.fromARGB(255, 255, 255, 255)),
                   ),
                   const SizedBox(
                     width: 100,
@@ -84,7 +86,7 @@ class _ProfileState extends State<Profile> {
                     'leonardo@gmail.com',
                     style: TextStyle(
                         fontSize: 15,
-                        color: Color.fromARGB(255, 126, 126, 126)),
+                        color: Color.fromARGB(255, 210, 210, 210)),
                   ),
                   SizedBox(
                     height: 15,
