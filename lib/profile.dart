@@ -138,29 +138,35 @@ class _ProfileState extends State<Profile> {
               child: Column(
                 children: [
                   GestureDetector(
-                      onTap: () {
-                        Navigator.pushReplacement(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => const Edit(),
-                          ),
-                        );
-                      },
-                      child: const Card(
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Row(
-                              children: [
-                                Image(image: AssetImage('assets/profile.png')),
-                                SizedBox(width: 10),
-                                Text('Profile'),
-                              ],
-                            ),
-                            Image(image: AssetImage('assets/goarrow.png')),
-                          ],
+                    onTap: () {
+                      Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const Edit(),
                         ),
-                      )),
+                      );
+                    },
+                    child: Card(
+                        child: ConstrainedBox(
+                      constraints: const BoxConstraints(
+                        minWidth: 50, // Desired width
+                        minHeight: 40, // Same as width for a square
+                      ),
+                      child: const Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Row(
+                            children: [
+                              Image(image: AssetImage('assets/profile.png')),
+                              SizedBox(width: 10),
+                              Text('Profile'),
+                            ],
+                          ),
+                          Image(image: AssetImage('assets/goarrow.png')),
+                        ],
+                      ),
+                    )),
+                  ),
                   const SizedBox(height: 25),
                   GestureDetector(
                       onTap: () {},
