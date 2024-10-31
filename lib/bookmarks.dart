@@ -1,3 +1,4 @@
+import 'package:TravPlan/profile.dart';
 import 'package:flutter/material.dart';
 import 'package:TravPlan/homepage.dart';
 import 'bottom_nav_bar.dart';
@@ -33,7 +34,7 @@ class _SearchState extends State<Bookmarks> {
                   Navigator.pushReplacement(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => const Home(),
+                      builder: (context) => const Profile(),
                     ),
                   );
                 },
@@ -46,12 +47,12 @@ class _SearchState extends State<Bookmarks> {
               child: Row(
                 children: [
                   const Text(
-                    'Search',
+                    'Bookmarks',
                     style: TextStyle(
                         fontSize: 25,
                         color: Color.fromARGB(255, 255, 255, 255)),
                   ),
-                  const SizedBox(width: 100),
+                  const SizedBox(width: 50),
                   Card(
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(5.0),
