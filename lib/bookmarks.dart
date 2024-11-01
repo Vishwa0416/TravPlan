@@ -85,7 +85,7 @@ class _SearchState extends State<Bookmarks> {
                 child: Card(
                   child: TextField(
                     decoration: InputDecoration(
-                      hintText: 'Search places',
+                      hintText: 'Search Bookmarks',
                       prefixIcon: Icon(Icons.search),
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.all(Radius.circular(15.0)),
@@ -97,7 +97,7 @@ class _SearchState extends State<Bookmarks> {
                 top: 180,
                 left: 20,
                 child: Text(
-                  'Search Places',
+                  'Bookmarks',
                   style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                 )),
             const Positioned(
