@@ -52,7 +52,7 @@ class _SearchState extends State<Prev> {
                         fontSize: 25,
                         color: Color.fromARGB(255, 255, 255, 255)),
                   ),
-                  const SizedBox(width: 50),
+                  const SizedBox(width: 20),
                   Card(
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(5.0),
@@ -65,7 +65,7 @@ class _SearchState extends State<Prev> {
                             Navigator.pushReplacement(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => const Home(),
+                                builder: (context) => const Profile(),
                               ),
                             );
                           },
@@ -81,89 +81,80 @@ class _SearchState extends State<Prev> {
             const Positioned(
                 top: 110,
                 left: 20,
-                right: 20,
-                child: Card(
-                  child: TextField(
-                    decoration: InputDecoration(
-                      hintText: 'Search Bookmarks',
-                      prefixIcon: Icon(Icons.search),
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.all(Radius.circular(15.0)),
+                child: Text(
+                  'Bookmarks',
+                  style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white),
+                )),
+            const Positioned(
+              top: 140,
+              left: 30,
+              child: Row(
+                children: [
+                  Card(
+                    child: Padding(
+                      padding: EdgeInsets.all(8.0),
+                      child: Column(
+                        children: [
+                          Image(
+                            image: AssetImage('assets/sig2.jpg'),
+                            width: 120,
+                            height: 120,
+                          ),
+                          Text(
+                            'Sigiriya Rock',
+                            style: TextStyle(fontSize: 15),
+                          ),
+                          Row(
+                            children: [
+                              Image(image: AssetImage('assets/location.png')),
+                              SizedBox(width: 10),
+                              Text('Sigiriya, Sri Lanka'),
+                            ],
+                          ),
+                          Text(
+                            'Rs. 5000/Person',
+                            style: TextStyle(color: Colors.blue),
+                          ),
+                        ],
                       ),
                     ),
                   ),
-                )),
-            const Positioned(
-                top: 180,
-                left: 20,
-                child: Text(
-                  'Bookmarks',
-                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-                )),
-            const Positioned(
-              top: 220,
-              left: 30,
-              child: Card(
-                child: Padding(
-                  padding: EdgeInsets.all(8.0),
-                  child: Column(
-                    children: [
-                      Image(
-                        image: AssetImage('assets/sig2.jpg'),
-                        width: 120,
-                        height: 120,
-                      ),
-                      Text(
-                        'Sigiriya Rock',
-                        style: TextStyle(fontSize: 15),
-                      ),
-                      Row(
+                  SizedBox(
+                    width: 30,
+                  ),
+                  Card(
+                    child: Padding(
+                      padding: EdgeInsets.all(8.0),
+                      child: Column(
                         children: [
-                          Image(image: AssetImage('assets/location.png')),
-                          SizedBox(width: 10),
-                          Text('Sigiriya, Sri Lanka'),
+                          Image(
+                            image: AssetImage('assets/kandy2.jpg'),
+                            width: 120,
+                            height: 120,
+                          ),
+                          Text(
+                            'Sri Dalada Maligawa',
+                            style: TextStyle(fontSize: 15),
+                          ),
+                          Row(
+                            children: [
+                              Image(image: AssetImage('assets/location.png')),
+                              SizedBox(width: 10),
+                              Text('Kandy, Sri Lanka'),
+                            ],
+                          ),
+                          Text(
+                            'Rs. 5000/Person',
+                            style: TextStyle(color: Colors.blue),
+                          ),
                         ],
                       ),
-                      Text(
-                        'Rs. 5000/Person',
-                        style: TextStyle(color: Colors.blue),
-                      ),
-                    ],
+                    ),
                   ),
-                ),
-              ),
-            ),
-            const Positioned(
-              top: 220,
-              left: 220,
-              child: Card(
-                child: Padding(
-                  padding: EdgeInsets.all(8.0),
-                  child: Column(
-                    children: [
-                      Image(
-                        image: AssetImage('assets/kandy2.jpg'),
-                        width: 120,
-                        height: 120,
-                      ),
-                      Text(
-                        'Sri Dalada Maligawa',
-                        style: TextStyle(fontSize: 15),
-                      ),
-                      Row(
-                        children: [
-                          Image(image: AssetImage('assets/location.png')),
-                          SizedBox(width: 10),
-                          Text('Kandy, Sri Lanka'),
-                        ],
-                      ),
-                      Text(
-                        'Rs. 5000/Person',
-                        style: TextStyle(color: Colors.blue),
-                      ),
-                    ],
-                  ),
-                ),
+                ],
               ),
             ),
           ],

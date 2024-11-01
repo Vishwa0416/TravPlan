@@ -1,4 +1,5 @@
 import 'package:TravPlan/bookmarks.dart';
+import 'package:TravPlan/previous.dart';
 import 'package:flutter/material.dart';
 import 'homepage.dart';
 import 'editprofile.dart';
@@ -210,7 +211,12 @@ class _ProfileState extends State<Profile> {
                   const SizedBox(height: 25),
                   GestureDetector(
                     onTap: () {
-                      // Add the correct navigation action here
+                      Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const Prev(),
+                        ),
+                      );
                     },
                     child: Card(
                       child: ConstrainedBox(

@@ -102,67 +102,70 @@ class _SearchState extends State<Search> {
             const Positioned(
               top: 220,
               left: 30,
-              child: Card(
-                child: Padding(
-                  padding: EdgeInsets.all(8.0),
-                  child: Column(
-                    children: [
-                      Image(
-                        image: AssetImage('assets/sig2.jpg'),
-                        width: 120,
-                        height: 120,
-                      ),
-                      Text(
-                        'Sigiriya Rock',
-                        style: TextStyle(fontSize: 15),
-                      ),
-                      Row(
+              child: Row(
+                children: [
+                  Card(
+                    child: Padding(
+                      padding: EdgeInsets.all(8.0),
+                      child: Column(
                         children: [
-                          Image(image: AssetImage('assets/location.png')),
-                          SizedBox(width: 10),
-                          Text('Sigiriya, Sri Lanka'),
+                          Image(
+                            image: AssetImage('assets/sig2.jpg'),
+                            width: 120,
+                            height: 120,
+                          ),
+                          Text(
+                            'Sigiriya Rock',
+                            style: TextStyle(fontSize: 15),
+                          ),
+                          Row(
+                            children: [
+                              Image(image: AssetImage('assets/location.png')),
+                              SizedBox(width: 10),
+                              Text('Sigiriya, Sri Lanka'),
+                            ],
+                          ),
+                          Text(
+                            'Rs. 5000/Person',
+                            style: TextStyle(color: Colors.blue),
+                          ),
                         ],
                       ),
-                      Text(
-                        'Rs. 5000/Person',
-                        style: TextStyle(color: Colors.blue),
-                      ),
-                    ],
+                    ),
                   ),
-                ),
-              ),
-            ),
-            const Positioned(
-              top: 220,
-              left: 220,
-              child: Card(
-                child: Padding(
-                  padding: EdgeInsets.all(8.0),
-                  child: Column(
-                    children: [
-                      Image(
-                        image: AssetImage('assets/kandy2.jpg'),
-                        width: 120,
-                        height: 120,
-                      ),
-                      Text(
-                        'Sri Dalada Maligawa',
-                        style: TextStyle(fontSize: 15),
-                      ),
-                      Row(
+                  SizedBox(
+                    width: 30,
+                  ),
+                  Card(
+                    child: Padding(
+                      padding: EdgeInsets.all(8.0),
+                      child: Column(
                         children: [
-                          Image(image: AssetImage('assets/location.png')),
-                          SizedBox(width: 10),
-                          Text('Kandy, Sri Lanka'),
+                          Image(
+                            image: AssetImage('assets/kandy2.jpg'),
+                            width: 120,
+                            height: 120,
+                          ),
+                          Text(
+                            'Sri Dalada Maligawa',
+                            style: TextStyle(fontSize: 15),
+                          ),
+                          Row(
+                            children: [
+                              Image(image: AssetImage('assets/location.png')),
+                              SizedBox(width: 10),
+                              Text('Kandy, Sri Lanka'),
+                            ],
+                          ),
+                          Text(
+                            'Rs. 5000/Person',
+                            style: TextStyle(color: Colors.blue),
+                          ),
                         ],
                       ),
-                      Text(
-                        'Rs. 5000/Person',
-                        style: TextStyle(color: Colors.blue),
-                      ),
-                    ],
+                    ),
                   ),
-                ),
+                ],
               ),
             ),
           ],
