@@ -47,7 +47,7 @@ class _SearchState extends State<Prev> {
               child: Row(
                 children: [
                   const Text(
-                    'Bookmarks',
+                    'Previous Trips',
                     style: TextStyle(
                         fontSize: 25,
                         color: Color.fromARGB(255, 255, 255, 255)),
