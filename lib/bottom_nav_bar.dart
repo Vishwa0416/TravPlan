@@ -1,9 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:TravPlan/homepage.dart';
-import 'package:TravPlan/calendar.dart';
-import 'package:TravPlan/messages.dart';
-import 'package:TravPlan/profile.dart';
-import 'package:TravPlan/search.dart';
 
 class CustomBottomNavBar extends StatelessWidget {
   final int selectedIndex;
@@ -43,46 +38,8 @@ class CustomBottomNavBar extends StatelessWidget {
       ],
       currentIndex: selectedIndex,
       selectedItemColor: Color.fromARGB(255, 33, 54, 243),
-      onTap: (index) {
-        if (index == 0) {
-          Navigator.pushReplacement(
-            context,
-            MaterialPageRoute(
-              builder: (context) => const Home(),
-            ),
-          );
-        } else if (index == 1) {
-          Navigator.pushReplacement(
-            context,
-            MaterialPageRoute(
-              builder: (context) => const Calendar(),
-            ),
-          );
-        } else if (index == 2) {
-          Navigator.pushReplacement(
-            context,
-            MaterialPageRoute(
-              builder: (context) => const Search(),
-            ),
-          );
-        } else if (index == 3) {
-          Navigator.pushReplacement(
-            context,
-            MaterialPageRoute(
-              builder: (context) => const Messages(),
-            ),
-          );
-        } else if (index == 4) {
-          Navigator.pushReplacement(
-            context,
-            MaterialPageRoute(
-              builder: (context) => const Profile(),
-            ),
-          );
-        } else {
-          onItemTapped(index);
-        }
-      },
+      unselectedItemColor: Colors.grey,
+      onTap: onItemTapped,
     );
   }
 }

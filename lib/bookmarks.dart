@@ -1,6 +1,6 @@
+import 'package:TravPlan/location.dart';
 import 'package:TravPlan/profile.dart';
 import 'package:flutter/material.dart';
-import 'package:TravPlan/homepage.dart';
 import 'bottom_nav_bar.dart';
 import 'background_container.dart';
 
@@ -100,44 +100,54 @@ class _SearchState extends State<Bookmarks> {
                   'Bookmarks',
                   style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                 )),
-            const Positioned(
+            Positioned(
               top: 220,
               left: 30,
               child: Row(
                 children: [
-                  Card(
-                    child: Padding(
-                      padding: EdgeInsets.all(8.0),
-                      child: Column(
-                        children: [
-                          Image(
-                            image: AssetImage('assets/sig2.jpg'),
-                            width: 120,
-                            height: 120,
-                          ),
-                          Text(
-                            'Sigiriya Rock',
-                            style: TextStyle(fontSize: 15),
-                          ),
-                          Row(
-                            children: [
-                              Image(image: AssetImage('assets/location.png')),
-                              SizedBox(width: 10),
-                              Text('Sigiriya, Sri Lanka'),
-                            ],
-                          ),
-                          Text(
-                            'Rs. 5000/Person',
-                            style: TextStyle(color: Colors.blue),
-                          ),
-                        ],
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const Location(),
+                        ),
+                      );
+                    },
+                    child: const Card(
+                      child: Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Column(
+                          children: [
+                            Image(
+                              image: AssetImage('assets/sig2.jpg'),
+                              width: 120,
+                              height: 120,
+                            ),
+                            Text(
+                              'Sigiriya Rock',
+                              style: TextStyle(fontSize: 15),
+                            ),
+                            Row(
+                              children: [
+                                Image(image: AssetImage('assets/location.png')),
+                                SizedBox(width: 10),
+                                Text('Sigiriya, Sri Lanka'),
+                              ],
+                            ),
+                            Text(
+                              'Rs. 5000/Person',
+                              style: TextStyle(color: Colors.blue),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 30,
                   ),
-                  Card(
+                  const Card(
                     child: Padding(
                       padding: EdgeInsets.all(8.0),
                       child: Column(
@@ -168,7 +178,7 @@ class _SearchState extends State<Bookmarks> {
                   ),
                 ],
               ),
-            ),
+            )
           ],
         ),
       ),

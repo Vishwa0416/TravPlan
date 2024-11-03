@@ -1,3 +1,4 @@
+import 'package:TravPlan/location.dart';
 import 'package:TravPlan/profile.dart';
 import 'package:flutter/material.dart';
 import 'package:TravPlan/homepage.dart';
@@ -43,7 +44,7 @@ class _SearchState extends State<Prev> {
             ),
             Positioned(
               top: 40,
-              left: 150,
+              left: 120,
               child: Row(
                 children: [
                   const Text(
@@ -52,7 +53,7 @@ class _SearchState extends State<Prev> {
                         fontSize: 25,
                         color: Color.fromARGB(255, 255, 255, 255)),
                   ),
-                  const SizedBox(width: 20),
+                  const SizedBox(width: 30),
                   Card(
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(5.0),
@@ -82,50 +83,60 @@ class _SearchState extends State<Prev> {
                 top: 110,
                 left: 20,
                 child: Text(
-                  'Bookmarks',
+                  'Prevoious Trips',
                   style: TextStyle(
                       fontSize: 20,
                       fontWeight: FontWeight.bold,
                       color: Colors.white),
                 )),
-            const Positioned(
+            Positioned(
               top: 140,
               left: 30,
               child: Row(
                 children: [
-                  Card(
-                    child: Padding(
-                      padding: EdgeInsets.all(8.0),
-                      child: Column(
-                        children: [
-                          Image(
-                            image: AssetImage('assets/sig2.jpg'),
-                            width: 120,
-                            height: 120,
-                          ),
-                          Text(
-                            'Sigiriya Rock',
-                            style: TextStyle(fontSize: 15),
-                          ),
-                          Row(
-                            children: [
-                              Image(image: AssetImage('assets/location.png')),
-                              SizedBox(width: 10),
-                              Text('Sigiriya, Sri Lanka'),
-                            ],
-                          ),
-                          Text(
-                            'Rs. 5000/Person',
-                            style: TextStyle(color: Colors.blue),
-                          ),
-                        ],
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const Location(),
+                        ),
+                      );
+                    },
+                    child: const Card(
+                      child: Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Column(
+                          children: [
+                            Image(
+                              image: AssetImage('assets/sig2.jpg'),
+                              width: 120,
+                              height: 120,
+                            ),
+                            Text(
+                              'Sigiriya Rock',
+                              style: TextStyle(fontSize: 15),
+                            ),
+                            Row(
+                              children: [
+                                Image(image: AssetImage('assets/location.png')),
+                                SizedBox(width: 10),
+                                Text('Sigiriya, Sri Lanka'),
+                              ],
+                            ),
+                            Text(
+                              'Rs. 5000/Person',
+                              style: TextStyle(color: Colors.blue),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 30,
                   ),
-                  Card(
+                  const Card(
                     child: Padding(
                       padding: EdgeInsets.all(8.0),
                       child: Column(
