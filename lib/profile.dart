@@ -1,5 +1,6 @@
 import 'package:TravPlan/bookmarks.dart';
 import 'package:TravPlan/previous.dart';
+import 'package:TravPlan/settings.dart';
 import 'package:TravPlan/signin.dart';
 import 'package:flutter/material.dart';
 import 'homepage.dart';
@@ -248,7 +249,12 @@ class _ProfileState extends State<Profile> {
                   const SizedBox(height: 25),
                   GestureDetector(
                     onTap: () {
-                      // Add the correct navigation action here
+                      Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const Settings(),
+                        ),
+                      );
                     },
                     child: Card(
                         child: ConstrainedBox(
