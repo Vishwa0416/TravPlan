@@ -1,18 +1,17 @@
-import 'package:TravPlan/schedule.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:TravPlan/homepage.dart';
 import 'package:TravPlan/bottom_nav_bar.dart';
 import 'background_container.dart';
 
-class Calendar extends StatefulWidget {
-  const Calendar({Key? key}) : super(key: key);
+class Schedule extends StatefulWidget {
+  const Schedule({Key? key}) : super(key: key);
 
   @override
   _CalendarState createState() => _CalendarState();
 }
 
-class _CalendarState extends State<Calendar> {
+class _CalendarState extends State<Schedule> {
   DateTime selectedDate = DateTime.now();
   int _selectedIndex = 1;
 
@@ -24,41 +23,25 @@ class _CalendarState extends State<Calendar> {
 
   void _incrementMonth() {
     setState(() {
-      selectedDate = DateTime(
-        selectedDate.year,
-        selectedDate.month + 1,
-        selectedDate.day,
-      );
+      selectedDate = DateTime(selectedDate.year, selectedDate.month + 1);
     });
   }
 
   void _decrementMonth() {
     setState(() {
-      selectedDate = DateTime(
-        selectedDate.year,
-        selectedDate.month - 1,
-        selectedDate.day,
-      );
+      selectedDate = DateTime(selectedDate.year, selectedDate.month - 1);
     });
   }
 
   void _incrementYear() {
     setState(() {
-      selectedDate = DateTime(
-        selectedDate.year + 1,
-        selectedDate.month,
-        selectedDate.day,
-      );
+      selectedDate = DateTime(selectedDate.year + 1, selectedDate.month);
     });
   }
 
   void _decrementYear() {
     setState(() {
-      selectedDate = DateTime(
-        selectedDate.year - 1,
-        selectedDate.month,
-        selectedDate.day,
-      );
+      selectedDate = DateTime(selectedDate.year - 1, selectedDate.month);
     });
   }
 
@@ -95,51 +78,22 @@ class _CalendarState extends State<Calendar> {
               ),
             ),
             Positioned(
-              top: 100,
-              left: 0,
-              right: 0,
-              child: Card(
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(20),
-                ),
-                elevation: 10,
-                margin: const EdgeInsets.all(10),
-                child: Column(
-                  children: [
-                    buildCalendarHeader(),
-                    buildDaysOfWeek(),
-                    buildDates(),
-                  ],
-                ),
-              ),
-            ),
-            Positioned(
               top: 450.0,
               left: 30.0,
               right: 30.0,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Row(
+                  const Row(
                     children: [
-                      const Text(
+                      Text(
                         'My Schedule',
                         style: TextStyle(fontSize: 20, color: Colors.black),
                       ),
-                      const Spacer(),
-                      GestureDetector(
-                        onTap: () {
-                          Navigator.pushReplacement(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => const Schedule(),
-                            ),
-                          );
-                        },
-                        child: const Text(
-                          'View all',
-                          style: TextStyle(color: Colors.blue),
-                        ),
+                      Spacer(),
+                      Text(
+                        'View all',
+                        style: TextStyle(color: Colors.blue),
                       ),
                     ],
                   ),
