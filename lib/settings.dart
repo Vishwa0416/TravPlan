@@ -38,7 +38,7 @@ class Settings extends StatelessWidget {
                       color: Color.fromARGB(255, 255, 255, 255),
                     ),
                   ),
-                  const SizedBox(width: 45),
+                  const SizedBox(width: 60),
                   GestureDetector(
                     onTap: () {
                       Navigator.pushReplacement(
@@ -61,23 +61,6 @@ class Settings extends StatelessWidget {
                         ),
                       ),
                     ),
-                  ),
-                ],
-              ),
-            ),
-            const Positioned(
-              top: 150,
-              left: 130,
-              child: Column(
-                children: [
-                  Image(image: AssetImage('assets/man.png')),
-                  Text(
-                    'John Perera',
-                    style: TextStyle(fontSize: 20),
-                  ),
-                  Text(
-                    'Change Profile Picture',
-                    style: TextStyle(color: Colors.blue),
                   ),
                 ],
               ),
