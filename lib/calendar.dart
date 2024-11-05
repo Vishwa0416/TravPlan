@@ -1,5 +1,6 @@
 import 'package:TravPlan/schedule.dart';
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 import 'package:TravPlan/homepage.dart';
 import 'package:TravPlan/bottom_nav_bar.dart';
 import 'background_container.dart';
@@ -12,11 +13,52 @@ class Calendar extends StatefulWidget {
 }
 
 class _CalendarState extends State<Calendar> {
+  DateTime selectedDate = DateTime.now();
   int _selectedIndex = 1;
 
   void _onItemTapped(int index) {
     setState(() {
       _selectedIndex = index;
+    });
+  }
+
+  void _incrementMonth() {
+    setState(() {
+      selectedDate = DateTime(
+        selectedDate.year,
+        selectedDate.month + 1,
+        selectedDate.day,
+      );
+    });
+  }
+
+  void _decrementMonth() {
+    setState(() {
+      selectedDate = DateTime(
+        selectedDate.year,
+        selectedDate.month - 1,
+        selectedDate.day,
+      );
+    });
+  }
+
+  void _incrementYear() {
+    setState(() {
+      selectedDate = DateTime(
+        selectedDate.year + 1,
+        selectedDate.month,
+        selectedDate.day,
+      );
+    });
+  }
+
+  void _decrementYear() {
+    setState(() {
+      selectedDate = DateTime(
+        selectedDate.year - 1,
+        selectedDate.month,
+        selectedDate.day,
+      );
     });
   }
 
@@ -47,7 +89,7 @@ class _CalendarState extends State<Calendar> {
                     const Text(
                       'Schedule',
                       style: TextStyle(fontSize: 25, color: Colors.white),
-                    ),
+                    )
                   ],
                 ),
               ),
@@ -56,6 +98,25 @@ class _CalendarState extends State<Calendar> {
               top: 100,
               left: 0,
               right: 0,
+              child: Card(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                elevation: 10,
+                margin: const EdgeInsets.all(10),
+                child: Column(
+                  children: [
+                    buildCalendarHeader(),
+                    buildDaysOfWeek(),
+                    buildDates(),
+                  ],
+                ),
+              ),
+            ),
+            Positioned(
+              top: 450.0,
+              left: 30.0,
+              right: 30.0,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -71,7 +132,7 @@ class _CalendarState extends State<Calendar> {
                           Navigator.pushReplacement(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => const Schedule(),
+                              builder: (context) => const Shedule(),
                             ),
                           );
                         },
@@ -144,6 +205,130 @@ class _CalendarState extends State<Calendar> {
         selectedIndex: _selectedIndex,
         onItemTapped: _onItemTapped,
       ),
+    );
+  }
+
+  Widget buildCalendarHeader() {
+    String month = DateFormat.MMMM().format(selectedDate);
+    int year = selectedDate.year;
+
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 20),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          IconButton(
+            icon: const Icon(Icons.arrow_back_ios),
+            onPressed: _decrementMonth,
+          ),
+          Column(
+            children: [
+              Text(
+                '$month $year',
+                style:
+                    const TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+              ),
+              Row(
+                children: [
+                  IconButton(
+                    icon: const Icon(Icons.arrow_left),
+                    onPressed: _decrementYear,
+                  ),
+                  Text('$year'),
+                  IconButton(
+                    icon: const Icon(Icons.arrow_right),
+                    onPressed: _incrementYear,
+                  ),
+                ],
+              ),
+            ],
+          ),
+          IconButton(
+            icon: const Icon(Icons.arrow_forward_ios),
+            onPressed: _incrementMonth,
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget buildDaysOfWeek() {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceAround,
+      children: ['S', 'M', 'T', 'W', 'T', 'F', 'S']
+          .map((day) => Expanded(
+                child: Center(
+                  child: Text(
+                    day,
+                    style: const TextStyle(
+                        fontSize: 16, fontWeight: FontWeight.bold),
+                  ),
+                ),
+              ))
+          .toList(),
+    );
+  }
+
+  Widget buildDates() {
+    final firstDayOfMonth = DateTime(selectedDate.year, selectedDate.month, 1);
+    final lastDayOfMonth =
+        DateTime(selectedDate.year, selectedDate.month + 1, 0);
+
+    int daysInMonth = lastDayOfMonth.day;
+    int firstWeekdayOfMonth = firstDayOfMonth.weekday % 7;
+
+    List<Widget> dateWidgets = [];
+
+    for (int i = 0; i < firstWeekdayOfMonth; i++) {
+      dateWidgets.add(const Expanded(child: SizedBox()));
+    }
+
+    for (int i = 1; i <= daysInMonth; i++) {
+      DateTime currentDate = DateTime(selectedDate.year, selectedDate.month, i);
+
+      dateWidgets.add(
+        Expanded(
+          child: GestureDetector(
+            onTap: () {
+              setState(() {
+                selectedDate = currentDate;
+              });
+            },
+            child: Container(
+              margin: const EdgeInsets.all(4),
+              decoration: BoxDecoration(
+                color: selectedDate.day == i ? Colors.blue : Colors.transparent,
+                shape: BoxShape.circle,
+              ),
+              child: Center(
+                child: Text(
+                  '$i',
+                  style: TextStyle(
+                    color: selectedDate.day == i ? Colors.white : Colors.black,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+            ),
+          ),
+        ),
+      );
+    }
+
+    while (dateWidgets.length % 7 != 0) {
+      dateWidgets.add(const Expanded(child: SizedBox()));
+    }
+
+    List<Row> rows = [];
+    for (int i = 0; i < dateWidgets.length; i += 7) {
+      rows.add(Row(
+        children: dateWidgets.sublist(
+            i, i + 7 > dateWidgets.length ? dateWidgets.length : i + 7),
+      ));
+    }
+
+    return Column(
+      children: rows,
     );
   }
 }
