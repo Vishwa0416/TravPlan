@@ -1,4 +1,4 @@
-import 'package:TravPlan/schedule.dart';
+import 'package:TravPlan/calendar.dart';
 import 'package:flutter/material.dart';
 import 'package:TravPlan/homepage.dart';
 import 'package:TravPlan/bottom_nav_bar.dart';
@@ -34,7 +34,7 @@ class _CalendarState extends State<Shedule> {
                   Navigator.pushReplacement(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => const Home(),
+                      builder: (context) => const Calendar(),
                     ),
                   );
                 },
@@ -54,8 +54,8 @@ class _CalendarState extends State<Shedule> {
             ),
             Positioned(
               top: 100,
-              left: 0,
-              right: 0,
+              left: 20,
+              right: 20,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -63,22 +63,9 @@ class _CalendarState extends State<Shedule> {
                     children: [
                       const Text(
                         'My Schedule',
-                        style: TextStyle(fontSize: 20, color: Colors.black),
-                      ),
-                      const Spacer(),
-                      GestureDetector(
-                        onTap: () {
-                          Navigator.pushReplacement(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => const Shedule(),
-                            ),
-                          );
-                        },
-                        child: const Text(
-                          'View all',
-                          style: TextStyle(color: Colors.blue),
-                        ),
+                        style: TextStyle(
+                            fontSize: 20,
+                            color: Color.fromARGB(255, 255, 255, 255)),
                       ),
                     ],
                   ),
