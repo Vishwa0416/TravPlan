@@ -1,3 +1,4 @@
+import 'package:TravPlan/readmore.dart';
 import 'package:flutter/material.dart';
 import 'package:TravPlan/homepage.dart';
 import 'view.dart';
@@ -144,10 +145,20 @@ class Location extends StatelessWidget {
                     ),
                     const Text(
                         "Sigiriya or Sinhagiri is an ancient rock fortress located in the northern Matale District near the town of Dambulla in the Central Province, Sri Lanka. Sigiriya was designated as a world heritage site in 1982."),
-                    const Text('Read more...',
-                        style: TextStyle(
-                          color: Color.fromARGB(255, 237, 104, 3),
-                        )),
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const Readmore(),
+                          ),
+                        );
+                      },
+                      child: Text('Read more...',
+                          style: TextStyle(
+                            color: Color.fromARGB(255, 237, 104, 3),
+                          )),
+                    ),
                     Center(
                       child: Container(
                         padding:
