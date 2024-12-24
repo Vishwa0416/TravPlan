@@ -132,7 +132,7 @@ class _CalendarState extends State<Shedule> {
                       child: Row(
                         children: [
                           Image(
-                              image: AssetImage('assets/sig2.jpg'),
+                              image: AssetImage('assets/kandy2.jpg'),
                               width: 80.0),
                           SizedBox(
                             width: 65,
@@ -146,12 +146,12 @@ class _CalendarState extends State<Shedule> {
                                     Icons.calendar_month,
                                   ),
                                   SizedBox(width: 5),
-                                  Text('12th June 2024'),
+                                  Text('16th May 2024'),
                                 ],
                               ),
                               SizedBox(height: 8),
                               Text(
-                                'Sigiriya Rock',
+                                'Kandy Temple',
                                 style: TextStyle(
                                     fontSize: 18, fontWeight: FontWeight.bold),
                               ),
@@ -161,7 +161,7 @@ class _CalendarState extends State<Shedule> {
                                   Image(
                                       image: AssetImage('assets/location.png')),
                                   SizedBox(width: 5),
-                                  Text('Sigiriya, Sri Lanka'),
+                                  Text('Kandy, Sri Lanka'),
                                 ],
                               ),
                             ],
