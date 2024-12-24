@@ -121,6 +121,57 @@ class _CalendarState extends State<Shedule> {
                       ),
                     ),
                   ),
+                  Card(
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(15),
+                    ),
+                    elevation: 5,
+                    margin: const EdgeInsets.all(10),
+                    child: const Padding(
+                      padding: EdgeInsets.all(10.0),
+                      child: Row(
+                        children: [
+                          Image(
+                              image: AssetImage('assets/sig2.jpg'),
+                              width: 80.0),
+                          SizedBox(
+                            width: 65,
+                          ),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Row(
+                                children: [
+                                  Icon(
+                                    Icons.calendar_month,
+                                  ),
+                                  SizedBox(width: 5),
+                                  Text('12th June 2024'),
+                                ],
+                              ),
+                              SizedBox(height: 8),
+                              Text(
+                                'Sigiriya Rock',
+                                style: TextStyle(
+                                    fontSize: 18, fontWeight: FontWeight.bold),
+                              ),
+                              SizedBox(height: 8),
+                              Row(
+                                children: [
+                                  Image(
+                                      image: AssetImage('assets/location.png')),
+                                  SizedBox(width: 5),
+                                  Text('Sigiriya, Sri Lanka'),
+                                ],
+                              ),
+                            ],
+                          ),
+                          Spacer(),
+                          Image(image: AssetImage('assets/goarrow.png')),
+                        ],
+                      ),
+                    ),
+                  ),
                 ],
               ),
             ),
