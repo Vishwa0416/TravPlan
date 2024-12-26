@@ -1,0 +1,22 @@
+{
+  "name": "travplan",
+  "version": "1.0.0",
+  "description": "TravPlan is an innovative, Flutter, Node.js, MongoDB based mobile application designed to enhance the travel experience by providing users with essential travel tools and information.",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vishwa0416/TravPlan.git"
+  },
+  "author": "https://github.com/Vishwa0416",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Vishwa0416/TravPlan/issues"
+  },
+  "homepage": "https://github.com/Vishwa0416/TravPlan#readme"
+}

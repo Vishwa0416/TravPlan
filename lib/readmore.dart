@@ -20,20 +20,6 @@ class Readmore extends StatelessWidget {
                   ),
                 );
               },
-              child: Row(
-                children: [
-                  Image.asset('assets/arrow.png'),
-                  const SizedBox(
-                    width: 70,
-                  ),
-                  const Text(
-                    'John Perera',
-                    style: TextStyle(fontSize: 25),
-                  ),
-                  const Spacer(),
-                  const Image(image: AssetImage('assets/call.png'))
-                ],
-              ),
             ),
           ),
           const Spacer(),
