@@ -18,5 +18,12 @@
   "bugs": {
     "url": "https://github.com/Vishwa0416/TravPlan/issues"
   },
-  "homepage": "https://github.com/Vishwa0416/TravPlan#readme"
+  "homepage": "https://github.com/Vishwa0416/TravPlan#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "body-parser": "^1.20.3",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.9.2"
+  }
 }
