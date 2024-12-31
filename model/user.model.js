@@ -19,4 +19,8 @@ const userSchema = new Schema ({
         type:String,
         required:true,
     }
-})
+});
+
+const UserModel = db.model('user',userSchema);
+
+module.exports = UserModel;
